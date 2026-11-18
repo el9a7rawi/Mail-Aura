@@ -1,0 +1,44 @@
+name: Release
+
+# Any tag like v1.0.0 triggers: verify -> package -> publish GitHub Release.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verify
+        run: |
+          node --test tests/
+          node scripts/check-ui.mjs
+
+      - name: Package extension-only archives
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          mkdir -p dist
+          FILES=(manifest.json popup.html sidepanel.html privacy.html ui.css ui.js i18n.js background.js content.js icons lib locales)
+          for BROWSER in chrome edge brave opera firefox; do
+            zip -qr "dist/mail-aura-${BROWSER}-v${VERSION}.zip" "${FILES[@]}"
+          done
+          (cd dist && sha256sum *.zip > SHA256SUMS.txt)
+
+      - name: Prepare release notes
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          sed "s/{{VERSION}}/$VERSION/g" .github/RELEASE_TEMPLATE.md > /tmp/NOTES.md
+
+      - name: Create GitHub Release
+        run: gh release create "$GITHUB_REF_NAME" dist/* --title "Mail Aura $GITHUB_REF_NAME" --notes-file /tmp/NOTES.md --generate-notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
