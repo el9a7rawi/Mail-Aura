@@ -4,7 +4,7 @@
 
 <h1 align="center">Mail Aura — Email Verifier & List Cleaner</h1>
 
-<p align="center">Verify email addresses against eight free public sources, clean long lists in one click, and export the results as CSV — without an API key, an account, or guesswork. Eight interface languages are bundled, including full Arabic RTL.</p>
+<p align="center">Verify email addresses against eight free public sources, clean long lists in one click, and export the results as CSV — without an API key, an account, or guesswork. The interface ships in eight languages, including full Arabic RTL.</p>
 
 <p align="center">
   <a href="https://github.com/el9a7rawi/Mail-Aura/releases"><img src="https://img.shields.io/github/v/release/el9a7rawi/Mail-Aura?color=4f46e5" alt="Latest release" /></a>
@@ -20,8 +20,8 @@
 </p>
 
 <p align="center">
-  <img src="dev/preview-light.png" width="280" alt="Mail Aura popup — light theme" />
-  <img src="dev/preview-dark.png" width="280" alt="Mail Aura popup — dark theme" />
+  <img src="assets/screenshots/en/popup-light.webp" width="280" alt="Mail Aura popup — light theme" />
+  <img src="assets/screenshots/en/popup-dark.webp" width="280" alt="Mail Aura popup — dark theme" />
 </p>
 
 ---
@@ -125,10 +125,12 @@ node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&t
 
 See `privacy.html`. Addresses are sent only when you request a check, nothing is tracked, and all connections use HTTPS. The only declared exception is a single Google Fonts stylesheet loaded when the interface opens; no email or verification data is sent with it.
 
-## 8. Governance
+---
 
-`AGENTS.md` is the project authority and is linked to `TODO.md` and `OrderLog.md`. No upload to Git is performed without explicit approval.
+## 8. License
+
+The project is open source and free for everyone under the **Apache-2.0** license — use it, modify it, and share it freely; the full text is in [LICENSE](LICENSE).
 
 ---
 
-<p align="center">Built with care by <b>Ahmed Yousry</b> · <a href="https://github.com/el9a7rawi/Mail-Aura">Mail Aura</a></p>
+<p align="center">Built with care by <b>Ahmed Yousry</b> · <a href="https://github.com/el9a7rawi/Mail-Aura">Mail Aura</a> · <a href="LICENSE">Apache-2.0</a></p>
