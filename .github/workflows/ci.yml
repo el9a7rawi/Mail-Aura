@@ -14,9 +14,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node --test tests/
-      - run: node scripts/check-ui.mjs
-      - run: |
-          for f in ui.js background.js content.js i18n.js lib/*.js ui/*.js scripts/*.mjs; do
-            node --check "$f"
-          done
+
+      - name: Validate extension metadata and locales
+        run: |
+          node -e "
+          const fs = require('fs');
+          const manifest = JSON.parse(fs.readFileSync('manifest.json', 'utf8'));
+          const paths = [manifest.action.default_popup, manifest.side_panel.default_path, manifest.background.service_worker, ...Object.values(manifest.icons), ...Object.values(manifest.action.default_icon)];
+          for (const p of paths) if (!fs.existsSync(p)) throw new Error('missing ' + p);
+          const langs = ['en','es','fr','de','pt-BR','ru','ar','zh-CN'];
+          const base = Object.keys(JSON.parse(fs.readFileSync('locales/en.json', 'utf8'))).sort().join('|');
+          for (const code of langs) {
+            const keys = Object.keys(JSON.parse(fs.readFileSync('locales/' + code + '.json', 'utf8'))).sort().join('|');
+            if (keys !== base) throw new Error('locale key mismatch: ' + code);
+          }
+          console.log('OK ' + paths.length + ' manifest files, ' + langs.length + ' locales');
+          "

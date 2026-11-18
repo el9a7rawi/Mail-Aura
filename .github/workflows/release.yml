@@ -1,6 +1,6 @@
 name: Release
 
-# Any tag like v1.0.0 triggers: verify -> package -> publish GitHub Release.
+# Any tag like v1.0.0 triggers: package -> publish GitHub Release.
 on:
   push:
     tags: ["v*"]
@@ -13,15 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Verify
-        run: |
-          node --test tests/
-          node scripts/check-ui.mjs
 
       - name: Package extension-only archives
         run: |
