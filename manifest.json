@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Mail Aura — Email Verifier",
+  "short_name": "Mail Aura",
+  "version": "0.1.0",
+  "description": "Verify email addresses with eight free sources, clean lists, and export results as CSV. No API keys, no account, no guesswork.",
+  "author": "Ahmed Yousry",
+  "homepage_url": "https://github.com/el9a7rawi/Mail-Aura",
+  "minimum_chrome_version": "121",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://rapid-email-verifier.fly.dev/*",
+    "https://disify.com/*",
+    "https://disposable.debounce.io/*",
+    "https://api.mailcheck.ai/*",
+    "https://disban.io/*",
+    "https://api.emailprobe.dev/*",
+    "https://dns.google/*",
+    "https://cloudflare-dns.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png",
+    "512": "icons/icon-512.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Mail Aura",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

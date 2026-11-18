@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Mail Aura — Email Verifier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ui.css" />
+</head>
+<body data-theme="light">
+  <div class="app" aria-label="Mail Aura">
+
+    <header class="header">
+      <div class="brand">
+        <div class="brand-text">
+          <h1 data-i18n="appTitle">Mail Aura</h1>
+          <p class="subtitle" data-i18n="subtitle">Verified emails. No guesswork.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/el9a7rawi/Mail-Aura" target="_blank" rel="noopener" data-i18n-attr="aria-label:githubAria;title:githubTitle">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <div class="cselect lang" data-select="lang">
+          <button type="button" class="icon-btn cselect-btn" aria-haspopup="listbox" aria-expanded="false" data-i18n-attr="aria-label:langAria;title:langTitle">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>
+          </button>
+          <ul class="cselect-menu lang-menu" role="listbox" hidden data-i18n-attr="aria-label:langAria"></ul>
+          <select id="lang" tabindex="-1" aria-hidden="true">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="pt-BR">Português (Brasil)</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+            <option value="zh-CN">中文（简体）</option>
+          </select>
+        </div>
+        <button id="themeToggle" class="icon-btn" type="button" aria-pressed="false" data-i18n-attr="aria-label:themeAria;title:themeAria">
+          <svg class="theme-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button id="openPanel" class="icon-btn" type="button" data-i18n-attr="aria-label:panelAria;title:panelTitle">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="15" y1="4" x2="15" y2="20"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <button id="mainAction" class="primary-btn" type="button">
+        <span>
+          <strong id="mainActionTitle" data-i18n="actionScan">Scan This Page</strong>
+          <small id="mainActionHint" data-i18n="actionScanHint">Find every visible email address</small>
+        </span>
+      </button>
+      <div class="quick-row">
+        <button id="copyValid" class="ghost-btn" type="button">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span data-i18n="copyValid">Copy valid</span>
+        </button>
+        <button id="exportCsv" class="ghost-btn" type="button">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n="exportCsv">Export CSV</span>
+        </button>
+      </div>
+      <p id="statusMsg" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card" aria-labelledby="sourceTitle">
+      <div class="card-head">
+        <h2 id="sourceTitle" data-i18n="sourceTitle">Source</h2>
+      </div>
+      <div class="opts">
+        <div class="opt">
+          <label id="modeLabel" class="opt-text" for="mode"><span class="opt-num" aria-hidden="true">1.</span><span data-i18n="modeLabel">Input method</span></label>
+          <div class="cselect" data-select="mode">
+            <button type="button" class="cselect-btn" aria-labelledby="modeLabel" aria-haspopup="listbox" aria-expanded="false">
+              <span class="cselect-value">Current page</span>
+              <span class="cselect-chev" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <ul class="cselect-menu" role="listbox" aria-labelledby="modeLabel" hidden></ul>
+            <select id="mode" tabindex="-1" aria-hidden="true">
+              <option value="page" data-i18n="modePage">Current page</option>
+              <option value="manual" data-i18n="modeManual">Paste addresses</option>
+              <option value="file" data-i18n="modeFile">CSV file</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="page">
+        <p class="hint" data-i18n="hintPage">Press Scan to collect the addresses you can see. Nothing is read beforehand.</p>
+      </div>
+
+      <div class="pane" data-pane="manual" hidden>
+        <label class="sr-only" for="manualInput" data-i18n="modeManual">Paste addresses</label>
+        <textarea id="manualInput" class="field" dir="ltr" spellcheck="false" data-i18n-placeholder="manualPlaceholder" placeholder="name@example.com&#10;team@company.com"></textarea>
+        <div class="pane-foot">
+          <span id="manualCount" class="counter">0</span>
+          <button id="clearManual" class="link-btn" type="button" data-i18n="clearField">Clear field</button>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="file" hidden>
+        <div id="fileRow" class="file-row">
+          <span id="fileName" class="file-name">No file selected</span>
+          <button id="pickFile" class="link-btn" type="button" data-i18n="pickFile">Choose CSV</button>
+        </div>
+        <input id="fileInput" type="file" accept=".csv,text/csv" hidden />
+        <div class="pane-foot">
+          <span class="counter" data-i18n="fileHint">Only the first column is read</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card results-card" aria-labelledby="resultsTitle">
+      <div class="card-head">
+        <h2 id="resultsTitle"><span data-i18n="resultsTitle">Results</span> <span id="resultCount" class="count"></span></h2>
+        <div class="head-actions">
+          <div class="searchbox">
+            <button type="button" id="searchToggle" class="icon-btn sm" aria-expanded="false" data-i18n-attr="aria-label:searchAria;title:searchAria">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <input id="searchInput" type="search" tabindex="-1" data-i18n-placeholder="searchPlaceholder" data-i18n-attr="aria-label:searchAria" placeholder="Search an address…" />
+            <button type="button" id="searchClear" class="search-clear" hidden data-i18n-attr="aria-label:searchClearAria;title:searchClearAria">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+          <button id="copyVisible" class="icon-btn sm" type="button" data-i18n-attr="aria-label:copyVisibleAria;title:copyVisibleAria">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </button>
+          <button id="clearResults" class="icon-btn sm danger" type="button" data-i18n-attr="aria-label:clearResultsAria;title:clearResultsAria">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="opt filter-opt">
+        <label id="filterLabel" class="opt-text" for="filter"><span data-i18n="filterLabel">Filter</span></label>
+        <div class="cselect" data-select="filter">
+          <button type="button" class="cselect-btn" aria-labelledby="filterLabel" aria-haspopup="listbox" aria-expanded="false">
+            <span class="cselect-value">All results</span>
+            <span class="cselect-chev" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <ul class="cselect-menu" role="listbox" aria-labelledby="filterLabel" hidden></ul>
+          <select id="filter" tabindex="-1" aria-hidden="true">
+            <option value="all" data-i18n="filterAll">All results</option>
+            <option value="valid" data-i18n="filterValid">Valid</option>
+            <option value="corrected" data-i18n="filterCorrected">Corrected</option>
+            <option value="invalid" data-i18n="filterInvalid">Invalid</option>
+            <option value="suspicious" data-i18n="filterSuspicious">Suspicious</option>
+            <option value="review" data-i18n="filterReview">Needs review</option>
+            <option value="unknown" data-i18n="filterUnknown">Unknown</option>
+          </select>
+        </div>
+      </div>
+
+      <ul id="resultsList" class="results" role="list" aria-live="polite"></ul>
+      <p id="resultsEmpty" class="empty">
+        <img src="icons/icon-128.png" alt="" width="48" height="48" />
+        <strong data-i18n="emptyTitle">No results yet</strong>
+        <span data-i18n="emptyHint">Scan a page or paste a list to begin.</span>
+      </p>
+    </section>
+
+    <section class="card" aria-labelledby="optionsTitle">
+      <div class="card-head">
+        <h2 id="optionsTitle" data-i18n="optionsTitle">Options</h2>
+        <div class="head-actions">
+          <a class="link-btn" href="privacy.html" target="_blank" rel="noopener" data-i18n="privacyLink">Privacy</a>
+          <button id="resetOptions" class="icon-btn sm" type="button" data-i18n-attr="aria-label:resetAria;title:resetAria">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="opts">
+        <label class="opt switch-opt">
+          <span class="opt-text"><span class="opt-num" aria-hidden="true">1.</span><span data-i18n="privacyOption">Privacy mode — local checks only</span></span>
+          <input type="checkbox" id="privacyMode" />
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+        <label class="opt switch-opt">
+          <span class="opt-text"><span class="opt-num" aria-hidden="true">2.</span><span data-i18n="highlightOption">Highlight addresses on the page</span></span>
+          <input type="checkbox" id="highlightPage" checked />
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+        <label class="opt switch-opt">
+          <span class="opt-text"><span class="opt-num" aria-hidden="true">3.</span><span data-i18n="showSourcesOption">Show source details in each result</span></span>
+          <input type="checkbox" id="showSources" />
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span id="connection">Ready to verify</span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span data-i18n="footerMade">Made with care</span>
+      <span aria-hidden="true">❤️</span>
+      <span dir="ltr" data-i18n="footerAuthor">Ahmed Yousry</span>
+    </footer>
+  </div>
+  <script type="module" src="ui.js"></script>
+</body>
+</html>

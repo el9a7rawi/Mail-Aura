@@ -1,0 +1,20 @@
+# Governance and agent memory — never upload.
+AGENTS.md
+TODO.md
+OrderLog.md
+DESIGN.md
+
+# Reference project used for design parity — not part of the extension.
+copy url/
+
+# Development-only artifacts and tooling.
+dev/
+scripts/
+tests/
+*.zip
+
+# OS / editor noise.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

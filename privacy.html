@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Mail Aura — Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body class="privacy-page">
+    <h1>Privacy Policy and Disclosure</h1>
+
+    <p>
+      Mail Aura has a single purpose: verify email addresses and clean email lists.
+      It does not collect data for advertising, analytics, or any purpose beyond that.
+    </p>
+
+    <h2>Data the extension handles</h2>
+    <ul>
+      <li><strong>Email addresses.</strong> Sent to public verification services only when you request a check. They are not stored permanently. The single exception is a context-menu result, which is held in <code>storage.session</code> until the popup reads it and then removed immediately; results older than one minute are discarded.</li>
+      <li><strong>Page content.</strong> Visible email addresses are read only when you press <em>Scan This Page</em>. Browsing history is not tracked.</li>
+      <li><strong>Settings.</strong> Your theme, privacy mode, and display options are stored locally through <code>chrome.storage</code>. No account is created.</li>
+    </ul>
+
+    <h2>External services</h2>
+    <p>
+      By default, checks use eight free, keyless public services over HTTPS:
+      Rapid Email Validator, Disify, DeBounce, MailCheck.ai, Disban, EmailProbe, and
+      DNS-over-HTTPS from Google and Cloudflare.
+    </p>
+    <p>
+      <strong>Privacy mode</strong> stops all of these instantly; verification becomes
+      local-only. The connection indicator in the footer always shows the active state.
+    </p>
+    <p>
+      One external stylesheet is also loaded when the interface opens: a single
+      Google Fonts CSS file for Cairo, Inter, and Tajawal. No email or verification
+      data is sent with it, and the interface falls back to locally installed fonts
+      if the request is blocked.
+    </p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>activeTab + scripting.</strong> Used only to scan the page you are on when you press Scan.</li>
+      <li><strong>storage.</strong> Keeps your settings and the temporary context-menu result.</li>
+      <li><strong>contextMenus.</strong> Adds <em>Verify this email address</em> to selections and mailto links.</li>
+      <li><strong>sidePanel.</strong> Opens the wider results view for long lists.</li>
+    </ul>
+
+    <h2>Incognito</h2>
+    <p>
+      No results from private browsing are kept in persistent storage. A context-menu
+      result is removed from <code>storage.session</code> as soon as it is read and
+      does not survive a browser restart.
+    </p>
+
+    <h2>Removing data</h2>
+    <p>
+      <em>Clear results</em> removes every displayed result and the domain-level cache
+      immediately. Uninstalling the extension removes all stored settings.
+    </p>
+
+    <p class="privacy-note">
+      Compliance: data received is used only for the stated purpose, in line with the
+      Chrome Web Store User Data Policy, including the Limited Use requirements.
+    </p>
+  </body>
+</html>
