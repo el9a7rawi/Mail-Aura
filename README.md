@@ -4,7 +4,7 @@
 
 <h1 align="center">Mail Aura — Email Verifier & List Cleaner</h1>
 
-<p align="center">Verify email addresses against eight free public sources, clean long lists in one click, and export the results as CSV — without an API key, an account, or guesswork. The interface ships in eight languages, including full Arabic RTL.</p>
+<p align="center">Verify email addresses with eight free public sources, clean long lists in one click, and export the results as CSV — no API keys, no account, no guesswork. Eight interface languages are bundled, including full Arabic RTL.</p>
 
 <p align="center">
   <a href="https://github.com/el9a7rawi/Mail-Aura/releases"><img src="https://img.shields.io/github/v/release/el9a7rawi/Mail-Aura?color=4f46e5" alt="Latest release" /></a>
@@ -18,6 +18,7 @@
 <p align="center">
   <sub><b>Languages:</b> <a href="README.md"><b>English</b></a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.zh-CN.md">中文（简体）</a></sub>
 </p>
+
 <h3 align="center">Download for your browser — click the icon</h3>
 
 <div align="center">
@@ -27,10 +28,9 @@
 
 </div>
 
-
 <p align="center">
-  <img src="assets/screenshots/en/popup-light.webp" width="220" alt="Popup with results — light" />
-  <img src="assets/screenshots/en/popup-dark.webp" width="220" alt="Popup with results — dark" />
+  <img src="assets/screenshots/en/popup-light.webp" width="220" alt="Mail Aura popup — light theme" />
+  <img src="assets/screenshots/en/popup-dark.webp" width="220" alt="Mail Aura popup — dark theme" />
 </p>
 
 <p align="center">
@@ -65,34 +65,70 @@ No public service can prove that a specific mailbox exists without sending an ac
 
 ---
 
-## 3. Interface tour
+## 3. Interface tour — every part of the extension
 
-### 3.1 One primary action, three input modes
-- **Scan This Page** — collects visible addresses and highlights them without reading the page beforehand.
-- **Paste addresses** — one per line or comma-separated; duplicates are removed and invalid syntax is shown as a result.
-- **CSV file** — reads the first column and exports a new CSV with status, confidence, agreement, suggestion, and source details.
+### 3.1 Header — everything in reach
+<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="Header" /></p>
 
-### 3.2 Results you can trust
-- Each row shows the address, a status badge, and one short detail line: `Confidence N% · reason`.
-- Filter by status, search within results, and copy valid or visible rows.
-- Correct known domain typos such as `gmial.com → gmail.com` with a single click.
-- Disposable domains, role addresses, and free providers are flagged rather than hidden.
+The title, language picker, theme toggle, GitHub link, and side-panel button sit in one compact row. The filename says it is a product, not a science experiment.
 
-### 3.3 Privacy mode
-- Stops every external call instantly; verification becomes local-only.
-- The connection indicator in the footer always shows the current state.
+### 3.2 One primary action
+<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Primary action" /></p>
 
-### 3.4 Eight languages, real RTL
-- English is the default; the browser language is used on the first run when it is one of the eight.
-- Switching is instant and needs no reload.
-- Arabic uses full RTL layout with correct plural rules.
+A single gradient button does the work for the active source. Under it, **Copy valid** and **Export CSV** are one click away, and the status line tells you exactly what happened.
 
-### 3.5 True black dark theme
-- A real black background with tuned contrast, toggled from the header and remembered.
+### 3.3 Source — current page
+<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Page source" /></p>
 
-### 3.6 Support continued development
+Scan only the addresses visible on the page you are reading. Nothing is read until you press the button.
 
-- Mail Aura is free and open source. An optional InstaPay button and PayPal alternative help keep it improving. Both links open in a new tab; the extension sends no data.
+### 3.4 Source — pasted list
+<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="Manual input" /></p>
+
+Paste one address per line or separate with commas. Duplicates disappear before verification, malformed lines stay visible as results.
+
+### 3.5 Source — CSV file
+<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="CSV picker" /></p>
+
+A proper file card with icon and filename replaces a bare hyperlink. Only the first column is read, so messy exports still work.
+
+### 3.6 Results — the core of the product
+<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Results list" /></p>
+
+Each row shows the address, a colour-coded status badge, one reason line, and per-row actions. Optional source chips expose exactly which services answered.
+
+### 3.7 Filter and search
+<p align="center">
+  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Filter menu" />
+  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Live search" />
+</p>
+
+Seven filter states and an expanding search field turn a long list into the three rows you care about.
+
+### 3.8 Options
+<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Options" /></p>
+
+Privacy mode, page highlighting, and source chips are explicit switches. Nothing hidden, nothing surprising.
+
+### 3.9 Eight languages, real RTL
+<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Language menu" /></p>
+
+Switch instantly between English, Español, Français, Deutsch, Português (Brasil), Русский, العربية, and 中文（简体）. Arabic flips the whole layout logically, not cosmetically.
+
+### 3.10 Side panel for long lists
+<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Side panel" /></p>
+
+The same controller, a wider canvas, and one scroll container — no nested scrollbars.
+
+### 3.11 Empty state
+<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Empty state" /></p>
+
+An honest invite to scan or paste, never a blank box.
+
+### 3.12 Support continued development
+<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Support section" /></p>
+
+Mail Aura is free and open source. An optional InstaPay button and PayPal alternative help keep it improving. Both open in a new tab; the extension sends no data.
 
 ---
 
@@ -127,14 +163,14 @@ No build step and no external dependencies are required.
 ```powershell
 node --test tests/             # 49 unit tests
 node --check ui.js             # syntax check for every JS file
-node scripts/check-ui.mjs      # DOM ids, manifest files, CSP, HTTPS
-node scripts/build-preview.mjs # regenerate dev/preview.html and preview-side.html
+node scripts/check-ui.mjs      # DOM ids, manifest files, CSP, HTTPS, locale keys
+node scripts/build-preview.mjs # regenerate dev fixtures from the real markup
 ```
 
 Chrome is required for the screenshot helper:
 
 ```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
+node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light" --out dev/preview-light.png --format webp --round --viewport
 ```
 
 ---
