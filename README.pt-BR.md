@@ -29,13 +29,7 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/pt-BR/popup-light.webp" width="220" alt="Popup with results — light" />
-  <img src="assets/screenshots/pt-BR/popup-dark.webp" width="220" alt="Popup with results — dark" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/pt-BR/popup-empty-light.webp" width="220" alt="Empty state — light" />
-  <img src="assets/screenshots/pt-BR/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
+  <img src="assets/screenshots/pt-BR/popup-light.webp" width="280" alt="Mail Aura popup — light theme" />
 </p>
 
 ---

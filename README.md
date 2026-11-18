@@ -29,13 +29,7 @@
 </div>
 
 <p align="center">
-  <img src="assets/screenshots/en/popup-light.webp" width="220" alt="Mail Aura popup — light theme" />
-  <img src="assets/screenshots/en/popup-dark.webp" width="220" alt="Mail Aura popup — dark theme" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/en/popup-empty-light.webp" width="220" alt="Empty state — light" />
-  <img src="assets/screenshots/en/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
+  <img src="assets/screenshots/en/popup-light.webp" width="280" alt="Mail Aura popup — light theme" />
 </p>
 
 ---
@@ -115,17 +109,22 @@ Privacy mode, page highlighting, and source chips are explicit switches. Nothing
 
 Switch instantly between English, Español, Français, Deutsch, Português (Brasil), Русский, العربية, and 中文（简体）. Arabic flips the whole layout logically, not cosmetically.
 
-### 3.10 Side panel for long lists
+### 3.10 True black dark theme
+<p align="center"><img src="assets/screenshots/en/popup-dark.webp" width="280" alt="Mail Aura popup — dark theme" /></p>
+
+A real black background with tuned contrast, toggled from the header and remembered between sessions.
+
+### 3.11 Side panel for long lists
 <p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Side panel" /></p>
 
 The same controller, a wider canvas, and one scroll container — no nested scrollbars.
 
-### 3.11 Empty state
+### 3.12 Empty state
 <p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Empty state" /></p>
 
 An honest invite to scan or paste, never a blank box.
 
-### 3.12 Support continued development
+### 3.13 Support continued development
 <p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Support section" /></p>
 
 Mail Aura is free and open source. An optional InstaPay button and PayPal alternative help keep it improving. Both open in a new tab; the extension sends no data.
