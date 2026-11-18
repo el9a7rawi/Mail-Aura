@@ -338,7 +338,7 @@ a.ghost-btn { text-decoration: none; }
 
 /* ===== Search — حقل واحد يتوسع، مطابق CopyTabs ===== */
 .searchbox {
-  display: flex; align-items: center; gap: 3px;
+  display: flex; align-items: center; gap: 0;
   height: 30px; background: transparent;
   border: 1px solid transparent; border-radius: 10px;
   padding: 0; transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -346,7 +346,7 @@ a.ghost-btn { text-decoration: none; }
 .searchbox .icon-btn.sm { width: 28px; height: 28px; border-radius: 9px; }
 .searchbox.open {
   background: var(--bg); border-color: var(--border);
-  padding-inline: 6px;
+  gap: 3px; padding-inline: 6px;
 }
 .searchbox.open:focus-within {
   border-color: var(--border); box-shadow: none;
