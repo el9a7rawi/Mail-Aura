@@ -29,8 +29,13 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/ru/popup-light.webp" width="280" alt="Всплывающее окно Mail Aura — светлая тема" />
-  <img src="assets/screenshots/ru/popup-dark.webp" width="280" alt="Всплывающее окно Mail Aura — тёмная тема" />
+  <img src="assets/screenshots/ru/popup-light.webp" width="220" alt="Popup with results — light" />
+  <img src="assets/screenshots/ru/popup-dark.webp" width="220" alt="Popup with results — dark" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/ru/popup-empty-light.webp" width="220" alt="Empty state — light" />
+  <img src="assets/screenshots/ru/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
 </p>
 
 ---
@@ -84,6 +89,10 @@
 
 ### 3.5 Тёмная тема с настоящим чёрным
 - Реальный чёрный фон с подобранным контрастом; переключается в шапке и запоминается.
+
+### 3.6 Support continued development
+
+- Mail Aura бесплатен и открыт. Необязательная кнопка InstaPay и PayPal как альтернатива помогают улучшать его. Обе ссылки открываются в новой вкладке, расширение не отправляет данные.
 
 ---
 

@@ -132,5 +132,10 @@
   "scoreTitle": "Доверие {score}% — согласие источников {agreement}%",
   "confidenceLabel": "Доверие",
   "copyAddress": "Копировать адрес",
-  "applyCorrection": "Применить исправление"
+  "applyCorrection": "Применить исправление",
+  "donateTitle": "Поддержите развитие",
+  "donateText": "Mail Aura бесплатен и открыт — ваша поддержка помогает его улучшать.",
+  "paypalAria": "Пожертвовать через PayPal",
+  "instapayAria": "Пожертвовать через InstaPay",
+  "instapayTitle": "InstaPay — el9a7rawi@instapay"
 }

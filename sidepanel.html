@@ -104,13 +104,17 @@
 
       <div class="pane" data-pane="file" hidden>
         <div id="fileRow" class="file-row">
-          <span id="fileName" class="file-name">No file selected</span>
-          <button id="pickFile" class="link-btn" type="button" data-i18n="pickFile">Choose CSV</button>
+          <span class="file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+          <span class="file-info">
+            <span id="fileName" class="file-name">No file selected</span>
+            <span class="file-caption" data-i18n="fileHint">Only the first column is read</span>
+          </span>
+          <button id="pickFile" class="file-pick" type="button" data-i18n-attr="aria-label:pickFile;title:pickFile">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span data-i18n="pickFile">Choose CSV</span>
+          </button>
         </div>
         <input id="fileInput" type="file" accept=".csv,text/csv" hidden />
-        <div class="pane-foot">
-          <span class="counter" data-i18n="fileHint">Only the first column is read</span>
-        </div>
       </div>
     </section>
 
@@ -193,9 +197,18 @@
       </div>
     </section>
 
+    <section class="card donate">
+      <div class="card-head">
+        <h2 data-i18n="donateTitle">Support continued development</h2>
+      </div>
+      <p class="donate-text" data-i18n="donateText">Mail Aura is free and open source — your support helps improve it.</p>
+      <div class="quick-row">
+        <a class="ghost-btn" href="https://paypal.me/27medYousry" target="_blank" rel="noopener" title="PayPal" data-i18n-attr="aria-label:paypalAria"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M15.607 4.653H8.941L6.645 19.251H1.82L4.862 0h7.995c3.754 0 6.375 2.294 6.473 5.513-.648-.478-2.105-.86-3.722-.86m6.57 5.546c0 3.41-3.01 6.853-6.958 6.853h-2.493L11.595 24H6.74l1.845-11.538h3.592c4.208 0 7.346-3.634 7.153-6.949a5.24 5.24 0 0 1 2.848 4.686M9.653 5.546h6.408c.907 0 1.942.222 2.363.541-.195 2.741-2.655 5.483-6.441 5.483H8.714Z"/></svg><span dir="ltr">PayPal</span></a>
+        <a class="ghost-btn donate-best" href="https://ipn.eg/S/el9a7rawi/instapay/30U5SS" target="_blank" rel="noopener" data-i18n-attr="aria-label:instapayAria;title:instapayTitle"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm8 2.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg><span dir="ltr">InstaPay</span></a>
+      </div>
+    </section>
+
     <footer class="footer">
-      <span id="connection">Ready to verify</span>
-      <span class="dot" aria-hidden="true">·</span>
       <span data-i18n="footerMade">Made with care</span>
       <span aria-hidden="true">❤️</span>
       <span dir="ltr" data-i18n="footerAuthor">Ahmed Yousry</span>

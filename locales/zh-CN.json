@@ -130,5 +130,10 @@
   "scoreTitle": "置信度 {score}% — 来源一致度 {agreement}%",
   "confidenceLabel": "置信度",
   "copyAddress": "复制地址",
-  "applyCorrection": "应用更正"
+  "applyCorrection": "应用更正",
+  "donateTitle": "支持持续开发",
+  "donateText": "Mail Aura 免费且开源 — 你的支持能帮助它变得更好。",
+  "paypalAria": "通过 PayPal 捐赠",
+  "instapayAria": "通过 InstaPay 捐赠",
+  "instapayTitle": "InstaPay — el9a7rawi@instapay"
 }

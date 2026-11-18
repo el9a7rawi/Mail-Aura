@@ -54,8 +54,7 @@ const els = {
   privacyMode: $('privacyMode'),
   highlightPage: $('highlightPage'),
   showSources: $('showSources'),
-  resetOptions: $('resetOptions'),
-  connection: $('connection')
+  resetOptions: $('resetOptions')
 };
 
 let settings = { ...DEFAULT_SETTINGS };
@@ -117,12 +116,6 @@ function updateManualCount() {
   const parsed = parsedManual();
   const count = parsed.emails.length + parsed.invalid.length;
   els.manualCount.textContent = t('manualCount', { n: count });
-}
-
-function updateConnection() {
-  els.connection.textContent = settings.privacy
-    ? t('connectionPrivate')
-    : t('connectionOnline');
 }
 
 /* ---------- Status / busy ---------- */
@@ -458,7 +451,6 @@ function applySettingsToUI() {
   syncCustomSelects();
   showPane(settings.mode);
   updateManualCount();
-  updateConnection();
 }
 
 function bindEvents() {
@@ -526,7 +518,6 @@ function bindEvents() {
     settings.privacy = els.privacyMode.checked;
     clearDomainCache();
     saveSettings(settings);
-    updateConnection();
     setStatus(settings.privacy
       ? t('connectionPrivate')
       : t('connectionOnline'));

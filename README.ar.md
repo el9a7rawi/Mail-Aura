@@ -29,8 +29,13 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/ar/popup-light.webp" width="280" alt="نافذة Mail Aura المنبثقة — الثيم الفاتح" />
-  <img src="assets/screenshots/ar/popup-dark.webp" width="280" alt="نافذة Mail Aura المنبثقة — الثيم الداكن" />
+  <img src="assets/screenshots/ar/popup-light.webp" width="220" alt="Popup with results — light" />
+  <img src="assets/screenshots/ar/popup-dark.webp" width="220" alt="Popup with results — dark" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/ar/popup-empty-light.webp" width="220" alt="Empty state — light" />
+  <img src="assets/screenshots/ar/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
 </p>
 
 ---
@@ -84,6 +89,10 @@
 
 ### 3.5 ثيم داكن بأسود حقيقي
 - خلفية سوداء فعلية مع تباين مضبوط، تُبدَّل من أعلى الواجهة ويُتذكّر اختيارك.
+
+### 3.6 ادعم استمرار التطوير
+
+- Mail Aura مجاني ومفتوح المصدر. زر InstaPay اختياري وبديل PayPal يساعدان على استمرار تحسينه. كلا الرابطين يفتحان في تبويب جديد والإضافة لا ترسل أي بيانات.
 
 ---
 

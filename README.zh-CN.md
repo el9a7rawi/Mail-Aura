@@ -29,8 +29,13 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/zh-CN/popup-light.webp" width="280" alt="Mail Aura 弹窗 — 浅色主题" />
-  <img src="assets/screenshots/zh-CN/popup-dark.webp" width="280" alt="Mail Aura 弹窗 — 深色主题" />
+  <img src="assets/screenshots/zh-CN/popup-light.webp" width="220" alt="Popup with results — light" />
+  <img src="assets/screenshots/zh-CN/popup-dark.webp" width="220" alt="Popup with results — dark" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/zh-CN/popup-empty-light.webp" width="220" alt="Empty state — light" />
+  <img src="assets/screenshots/zh-CN/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
 </p>
 
 ---
@@ -84,6 +89,10 @@
 
 ### 3.5 纯黑深色主题
 - 真正的纯黑背景，经过对比度调校，可从顶部栏切换并记住设置。
+
+### 3.6 Support continued development
+
+- Mail Aura 免费且开源。可选的 InstaPay 按钮和 PayPal 备选有助于持续改进。两个链接都在新标签页打开，扩展不会发送任何数据。
 
 ---
 

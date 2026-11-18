@@ -29,8 +29,13 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/en/popup-light.webp" width="280" alt="Mail Aura popup — light theme" />
-  <img src="assets/screenshots/en/popup-dark.webp" width="280" alt="Mail Aura popup — dark theme" />
+  <img src="assets/screenshots/en/popup-light.webp" width="220" alt="Popup with results — light" />
+  <img src="assets/screenshots/en/popup-dark.webp" width="220" alt="Popup with results — dark" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/en/popup-empty-light.webp" width="220" alt="Empty state — light" />
+  <img src="assets/screenshots/en/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
 </p>
 
 ---
@@ -84,6 +89,10 @@ No public service can prove that a specific mailbox exists without sending an ac
 
 ### 3.5 True black dark theme
 - A real black background with tuned contrast, toggled from the header and remembered.
+
+### 3.6 Support continued development
+
+- Mail Aura is free and open source. An optional InstaPay button and PayPal alternative help keep it improving. Both links open in a new tab; the extension sends no data.
 
 ---
 

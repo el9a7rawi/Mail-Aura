@@ -157,6 +157,13 @@ h1 {
 .ghost-btn > span { overflow: hidden; text-overflow: ellipsis; }
 .ghost-btn svg { flex-shrink: 0; }
 .ghost-btn:hover { border-color: var(--accent); color: var(--accent); }
+a.ghost-btn { text-decoration: none; }
+.donate-text { margin: 0 0 8px; font-size: 12.5px; color: var(--muted); text-align: start; }
+.donate-best {
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  border-color: transparent; color: #ffffff;
+}
+.donate-best:hover { border-color: transparent; color: #ffffff; filter: brightness(1.07); }
 .ghost-btn:active { transform: scale(0.99); }
 .ghost-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .ghost-btn:disabled:hover { border-color: var(--border); color: var(--text); }
@@ -247,16 +254,33 @@ h1 {
 .link-btn:hover { text-decoration: underline; }
 
 .file-row {
-  display: flex; align-items: center; gap: 8px;
-  border: 1px solid var(--border); border-radius: 12px;
-  background: var(--bg); padding: 8px 10px;
+  display: flex; align-items: center; gap: 10px;
+  border: 1px dashed var(--border); border-radius: 12px;
+  background: var(--bg); padding: 10px;
 }
+.file-row.has-file { border-style: solid; border-color: var(--accent); background: var(--accent-soft); }
+.file-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  display: grid; place-items: center;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--card); color: var(--accent);
+}
+.file-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .file-name {
-  flex: 1; min-width: 0; font-family: var(--mono); font-size: 12px;
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
   color: var(--muted); direction: ltr; text-align: left;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .file-row.has-file .file-name { color: var(--text); }
+.file-caption { font-size: 11px; color: var(--muted); }
+.file-pick {
+  display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+  height: 34px; padding: 0 10px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--card); color: var(--text);
+  font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.file-pick:hover { border-color: var(--accent); color: var(--accent); }
 
 /* مكوّن select مخصص (مشترك مع CopyTabs). */
 .cselect { position: relative; flex: 0 0 auto; width: 186px; max-width: 186px; min-width: 0; }

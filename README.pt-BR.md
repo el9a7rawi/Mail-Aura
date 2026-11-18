@@ -29,8 +29,13 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/pt-BR/popup-light.webp" width="280" alt="Popup do Mail Aura — tema claro" />
-  <img src="assets/screenshots/pt-BR/popup-dark.webp" width="280" alt="Popup do Mail Aura — tema escuro" />
+  <img src="assets/screenshots/pt-BR/popup-light.webp" width="220" alt="Popup with results — light" />
+  <img src="assets/screenshots/pt-BR/popup-dark.webp" width="220" alt="Popup with results — dark" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/pt-BR/popup-empty-light.webp" width="220" alt="Empty state — light" />
+  <img src="assets/screenshots/pt-BR/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
 </p>
 
 ---
@@ -84,6 +89,10 @@ Nenhum serviço público consegue provar que uma caixa de correio específica ex
 
 ### 3.5 Tema escuro preto verdadeiro
 - Um fundo preto real com contraste ajustado, ativado no cabeçalho e lembrado.
+
+### 3.6 Support continued development
+
+- Mail Aura é gratuito e de código aberto. Um botão opcional do InstaPay e o PayPal como alternativa ajudam a melhorá-lo. Ambos os links abrem em uma nova aba; a extensão não envia dados.
 
 ---
 

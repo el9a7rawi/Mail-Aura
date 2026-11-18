@@ -29,8 +29,13 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/es/popup-light.webp" width="280" alt="Ventana de Mail Aura — tema claro" />
-  <img src="assets/screenshots/es/popup-dark.webp" width="280" alt="Ventana de Mail Aura — tema oscuro" />
+  <img src="assets/screenshots/es/popup-light.webp" width="220" alt="Popup with results — light" />
+  <img src="assets/screenshots/es/popup-dark.webp" width="220" alt="Popup with results — dark" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/es/popup-empty-light.webp" width="220" alt="Empty state — light" />
+  <img src="assets/screenshots/es/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
 </p>
 
 ---
@@ -84,6 +89,10 @@ Ningún servicio público puede demostrar que un buzón específico existe sin e
 
 ### 3.5 Tema oscuro negro real
 - Un fondo realmente negro con contraste ajustado, que se activa desde la cabecera y se recuerda.
+
+### 3.6 Support continued development
+
+- Mail Aura es gratis y de código abierto. Un botón opcional de InstaPay y PayPal como alternativa ayudan a mejorarlo. Ambos enlaces se abren en una pestaña nueva y la extensión no envía datos.
 
 ---
 

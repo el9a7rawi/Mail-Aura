@@ -29,8 +29,13 @@
 
 
 <p align="center">
-  <img src="assets/screenshots/de/popup-light.webp" width="280" alt="Mail Aura Popup — helles Design" />
-  <img src="assets/screenshots/de/popup-dark.webp" width="280" alt="Mail Aura Popup — dunkles Design" />
+  <img src="assets/screenshots/de/popup-light.webp" width="220" alt="Popup with results — light" />
+  <img src="assets/screenshots/de/popup-dark.webp" width="220" alt="Popup with results — dark" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/de/popup-empty-light.webp" width="220" alt="Empty state — light" />
+  <img src="assets/screenshots/de/popup-empty-dark.webp" width="220" alt="Empty state — dark" />
 </p>
 
 ---
@@ -84,6 +89,10 @@ Kein öffentlicher Dienst kann nachweisen, dass ein bestimmtes Postfach existier
 
 ### 3.5 Echtes Schwarz im dunklen Design
 - Ein wirklich schwarzer Hintergrund mit abgestimmtem Kontrast, umschaltbar über die Kopfzeile und gespeichert.
+
+### 3.6 Support continued development
+
+- Mail Aura ist kostenlos und Open Source. Ein optionaler InstaPay-Button und PayPal als Alternative helfen bei der Verbesserung. Beide Links öffnen in einem neuen Tab; die Erweiterung sendet keine Daten.
 
 ---
 

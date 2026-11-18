@@ -130,5 +130,10 @@
   "scoreTitle": "Vertrauen {score}% — Quellenübereinstimmung {agreement}%",
   "confidenceLabel": "Vertrauen",
   "copyAddress": "Adresse kopieren",
-  "applyCorrection": "Korrektur anwenden"
+  "applyCorrection": "Korrektur anwenden",
+  "donateTitle": "Unterstütze die Weiterentwicklung",
+  "donateText": "Mail Aura ist kostenlos und Open Source — deine Unterstützung hilft beim Verbessern.",
+  "paypalAria": "Über PayPal spenden",
+  "instapayAria": "Über InstaPay spenden",
+  "instapayTitle": "InstaPay — el9a7rawi@instapay"
 }
