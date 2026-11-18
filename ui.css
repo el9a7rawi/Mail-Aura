@@ -191,7 +191,7 @@ a.ghost-btn { text-decoration: none; }
   font-size: 12px; color: var(--muted); font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
-.head-actions { display: flex; align-items: center; gap: 6px; }
+.head-actions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
 
 /* ===== Options ===== */
 .opts { display: flex; flex-direction: column; gap: 8px; }
@@ -338,13 +338,15 @@ a.ghost-btn { text-decoration: none; }
 
 /* ===== Search — حقل واحد يتوسع، مطابق CopyTabs ===== */
 .searchbox {
-  display: flex; align-items: center; gap: 4px;
-  background: transparent; border: 1px solid transparent; border-radius: 10px;
-  padding: 2px; transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex; align-items: center; gap: 3px;
+  height: 30px; background: transparent;
+  border: 1px solid transparent; border-radius: 10px;
+  padding: 0; transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
+.searchbox .icon-btn.sm { width: 28px; height: 28px; border-radius: 9px; }
 .searchbox.open {
   background: var(--bg); border-color: var(--border);
-  padding-inline-start: 8px; padding-inline-end: 8px;
+  padding-inline: 6px;
 }
 .searchbox.open:focus-within {
   border-color: var(--border); box-shadow: none;
@@ -358,7 +360,7 @@ a.ghost-btn { text-decoration: none; }
   transition: width 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
 }
 #searchInput::-webkit-search-cancel-button { display: none; }
-.searchbox.open #searchInput { width: 128px; opacity: 1; padding: 6px 2px; pointer-events: auto; }
+.searchbox.open #searchInput { width: 100px; opacity: 1; padding: 6px 2px; pointer-events: auto; }
 .search-clear {
   display: inline-grid; place-items: center; flex-shrink: 0;
   width: 20px; height: 20px; padding: 0; margin: 0; line-height: 0;
