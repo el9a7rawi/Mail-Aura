@@ -107,9 +107,13 @@
 
       <div class="pane" data-pane="file" hidden>
         <div id="fileRow" class="file-row">
-          <span class="file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
-          <span class="file-info">
-            <span id="fileName" class="file-name">No file selected</span>
+          <span class="file-stub" aria-hidden="true">
+            <svg class="stub-icon stub-icon--idle" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h5"/></svg>
+            <svg class="stub-icon stub-icon--ready" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m8.5 15 2.2 2.2 4.8-4.8"/></svg>
+            <span class="file-stub-type">CSV</span>
+          </span>
+          <span class="file-body">
+            <span id="fileName" class="file-name" dir="ltr">No file selected</span>
             <span class="file-caption" data-i18n="fileHint">Only the first column is read</span>
           </span>
           <button id="pickFile" class="file-pick" type="button" data-i18n-attr="aria-label:pickFile;title:pickFile">
@@ -171,9 +175,9 @@
       </p>
     </section>
 
-    <section class="card" aria-labelledby="optionsTitle">
+    <section class="card" aria-labelledby="settingsTitle">
       <div class="card-head">
-        <h2 id="optionsTitle" data-i18n="optionsTitle">Options</h2>
+        <h2 id="settingsTitle" data-i18n="settingsTitle">Settings</h2>
         <div class="head-actions">
           <a class="link-btn" href="privacy.html" target="_blank" rel="noopener" data-i18n="privacyLink">Privacy</a>
           <button id="resetOptions" class="icon-btn sm" type="button" data-i18n-attr="aria-label:resetAria;title:resetAria">
@@ -195,6 +199,11 @@
         <label class="opt switch-opt">
           <span class="opt-text"><span class="opt-num" aria-hidden="true">3.</span><span data-i18n="showSourcesOption">Show source details in each result</span></span>
           <input type="checkbox" id="showSources" />
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+        <label class="opt switch-opt">
+          <span class="opt-text"><span class="opt-num" aria-hidden="true">4.</span><span data-i18n="autoFixOption">Auto-correct common CSV typos</span></span>
+          <input type="checkbox" id="autoFix" />
           <span class="switch" aria-hidden="true"></span>
         </label>
       </div>

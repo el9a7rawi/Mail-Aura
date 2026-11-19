@@ -52,7 +52,12 @@
   "filterUnknown": "Unknown",
   "emptyTitle": "No results yet",
   "emptyHint": "Scan a page or paste a list to begin.",
-  "optionsTitle": "Options",
+  "settingsTitle": "Settings",
+  "autoFixOption": "Auto-correct common CSV typos",
+  "statusAutoFixed": {
+    "one": "Auto-corrected {n} address",
+    "other": "Auto-corrected {n} addresses"
+  },
   "resetAria": "Restore defaults",
   "privacyOption": "Privacy mode — local checks only",
   "highlightOption": "Highlight addresses on the page",

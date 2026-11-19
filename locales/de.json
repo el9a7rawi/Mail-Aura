@@ -52,7 +52,12 @@
   "filterUnknown": "Unbekannt",
   "emptyTitle": "Noch keine Ergebnisse",
   "emptyHint": "Scanne eine Seite oder füge eine Liste ein, um zu beginnen.",
-  "optionsTitle": "Optionen",
+  "settingsTitle": "Einstellungen",
+  "autoFixOption": "Häufige CSV-Tippfehler automatisch korrigieren",
+  "statusAutoFixed": {
+    "one": "{n} Adresse automatisch korrigiert",
+    "other": "{n} Adressen automatisch korrigiert"
+  },
   "resetAria": "Standardeinstellungen wiederherstellen",
   "privacyOption": "Datenschutzmodus – nur lokale Prüfung",
   "highlightOption": "Adressen auf der Seite hervorheben",

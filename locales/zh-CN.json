@@ -52,7 +52,11 @@
   "filterUnknown": "未知",
   "emptyTitle": "暂无结果",
   "emptyHint": "扫描页面或粘贴列表即可开始。",
-  "optionsTitle": "选项",
+  "settingsTitle": "设置",
+  "autoFixOption": "自动修正 CSV 中的常见拼写错误",
+  "statusAutoFixed": {
+    "other": "已自动修正 {n} 个地址"
+  },
   "resetAria": "恢复默认设置",
   "privacyOption": "隐私模式 — 仅本地检查",
   "highlightOption": "在页面上高亮显示地址",

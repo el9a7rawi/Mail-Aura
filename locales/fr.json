@@ -52,7 +52,12 @@
   "filterUnknown": "Inconnues",
   "emptyTitle": "Aucun résultat pour l'instant",
   "emptyHint": "Analysez une page ou collez une liste pour commencer.",
-  "optionsTitle": "Options",
+  "settingsTitle": "Paramètres",
+  "autoFixOption": "Corriger automatiquement les fautes CSV courantes",
+  "statusAutoFixed": {
+    "one": "{n} adresse corrigée automatiquement",
+    "other": "{n} adresses corrigées automatiquement"
+  },
   "resetAria": "Rétablir les paramètres par défaut",
   "privacyOption": "Mode confidentialité — vérifications locales uniquement",
   "highlightOption": "Surligner les adresses sur la page",

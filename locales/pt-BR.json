@@ -52,7 +52,12 @@
   "filterUnknown": "Desconhecidos",
   "emptyTitle": "Nenhum resultado ainda",
   "emptyHint": "Escaneie uma página ou cole uma lista para começar.",
-  "optionsTitle": "Opções",
+  "settingsTitle": "Configurações",
+  "autoFixOption": "Corrigir automaticamente erros comuns de CSV",
+  "statusAutoFixed": {
+    "one": "{n} endereço corrigido automaticamente",
+    "other": "{n} endereços corrigidos automaticamente"
+  },
   "resetAria": "Restaurar padrões",
   "privacyOption": "Modo privacidade — apenas verificações locais",
   "highlightOption": "Destacar endereços na página",

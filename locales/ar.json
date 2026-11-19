@@ -52,7 +52,12 @@
   "filterUnknown": "غير معروف",
   "emptyTitle": "لا توجد نتائج بعد",
   "emptyHint": "امسح صفحة أو الصق قائمة للبدء.",
-  "optionsTitle": "الخيارات",
+  "settingsTitle": "الإعدادات",
+  "autoFixOption": "تصحيح تلقائي لأخطاء ملف CSV الشائعة",
+  "statusAutoFixed": {
+    "one": "صُحِّح عنوان واحد تلقائياً",
+    "other": "صُحِّح {n} عناوين تلقائياً"
+  },
   "resetAria": "استعادة الإعدادات الافتراضية",
   "privacyOption": "وضع الخصوصية — فحص محلي فقط",
   "highlightOption": "تمييز الإيميلات في الصفحة",

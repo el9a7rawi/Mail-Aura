@@ -6,6 +6,7 @@
  * Addresses are untrusted input and are written through textContent only.
  */
 
+import { autoFixEmails } from './lib/autofix.js';
 import { csvEmails } from './lib/csv.js';
 import { DEFAULT_SETTINGS, SETTINGS_KEY, loadSettings, saveSettings } from './lib/settings.js';
 import { applyTranslations, loadLocale, matchLocale, t } from './i18n.js';
@@ -54,6 +55,7 @@ const els = {
   privacyMode: $('privacyMode'),
   highlightPage: $('highlightPage'),
   showSources: $('showSources'),
+  autoFix: $('autoFix'),
   resetOptions: $('resetOptions')
 };
 
@@ -201,13 +203,14 @@ function duplicatesNote(duplicates) {
   return duplicates.length ? t('statusDuplicateNote', { n: duplicates.length }) : '';
 }
 
-async function verifyList(emails, note = '', token = scanToken) {
+async function verifyList(emails, note = '', token = scanToken, correctedFrom = []) {
   showSkeleton();
   setStatus(t('statusVerifying', { n: emails.length }), 'busy');
   try {
     const batch = await verifyBatch(emails, {
       privacyMode: settings.privacy,
-      concurrency: 4
+      concurrency: 4,
+      correctedFrom
     });
     if (token !== scanToken) return;
     results = batch;
@@ -291,13 +294,26 @@ async function checkFile(token) {
   }
 
   const parsed = parseEmailLines(csvEmails(await file.text()).join('\n'));
-  const list = fromParsed(parsed);
+  let list = fromParsed(parsed);
+  let note = duplicatesNote(parsed.duplicates);
+  let correctedFrom = [];
+
+  if (settings.autoFix) {
+    const fixed = autoFixEmails(list);
+    list = fixed.emails;
+    correctedFrom = fixed.correctedFrom;
+    if (fixed.corrections) {
+      const applied = t('statusAutoFixed', { n: fixed.corrections });
+      note = note ? `${note} ${applied}` : applied;
+    }
+  }
+
   if (!list.length) {
     setStatus(t('statusFileEmpty'), 'error');
     return;
   }
 
-  await verifyList(list, duplicatesNote(parsed.duplicates), token);
+  await verifyList(list, note, token, correctedFrom);
 }
 
 async function applyFix(result) {
@@ -447,6 +463,7 @@ function applySettingsToUI() {
   els.privacyMode.checked = settings.privacy;
   els.highlightPage.checked = settings.highlight;
   els.showSources.checked = settings.showSources;
+  els.autoFix.checked = settings.autoFix;
 
   syncCustomSelects();
   showPane(settings.mode);
@@ -539,6 +556,11 @@ function bindEvents() {
     settings.showSources = els.showSources.checked;
     saveSettings(settings);
     render();
+  });
+
+  els.autoFix.addEventListener('change', () => {
+    settings.autoFix = els.autoFix.checked;
+    saveSettings(settings);
   });
 
   els.resetOptions.addEventListener('click', async () => {
