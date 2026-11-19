@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icons/icon-128.png" width="96" alt="Mail Aura" />
+  <img src="assets/banner/mail-aura-banner-ru.webp" width="100%" alt="Mail Aura — Проверка email и очистка списков" />
 </p>
 
 <h1 align="center">Mail Aura — Проверка email и очистка списков</h1>

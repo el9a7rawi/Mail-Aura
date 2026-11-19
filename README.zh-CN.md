@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icons/icon-128.png" width="96" alt="Mail Aura" />
+  <img src="assets/banner/mail-aura-banner-zh-CN.webp" width="100%" alt="Mail Aura — 邮箱验证与列表清理工具" />
 </p>
 
 <h1 align="center">Mail Aura — 邮箱验证与列表清理工具</h1>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icons/icon-128.png" width="96" alt="Mail Aura" />
+  <img src="assets/banner/mail-aura-banner-en.webp" width="100%" alt="Mail Aura — Email Verifier &amp; List Cleaner" />
 </p>
 
 <h1 align="center">Mail Aura — Email Verifier & List Cleaner</h1>
@@ -99,10 +99,10 @@ Each row shows the address, a colour-coded status badge, one reason line, and pe
 
 Seven filter states and an expanding search field turn a long list into the three rows you care about.
 
-### 3.8 Options
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Options" /></p>
+### 3.8 Settings
+<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Settings" /></p>
 
-Privacy mode, page highlighting, and source chips are explicit switches. Nothing hidden, nothing surprising.
+Privacy mode, page highlighting, source chips, and optional auto-correction for CSV typos are explicit switches. Nothing hidden, nothing surprising.
 
 ### 3.9 Eight languages, real RTL
 <p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Language menu" /></p>
