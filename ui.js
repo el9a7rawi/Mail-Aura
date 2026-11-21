@@ -7,7 +7,7 @@
  */
 
 import { autoFixEmails } from './lib/autofix.js';
-import { csvEmails } from './lib/csv.js';
+import { csvEmails, csvResultRows } from './lib/csv.js';
 import { DEFAULT_SETTINGS, SETTINGS_KEY, loadSettings, saveSettings } from './lib/settings.js';
 import { applyTranslations, loadLocale, matchLocale, t } from './i18n.js';
 import { parseEmailLines } from './lib/validation.js';
@@ -395,14 +395,7 @@ function exportCsv() {
   }
 
   const head = ['Email', 'Status', 'Estimate', 'Agreement', 'Suggestion', 'Sources'];
-  const rows = results.map((result) => [
-    result.email,
-    result.confidence.status,
-    `${result.confidence.score}%`,
-    `${result.confidence.agreement ?? result.confidence.score}%`,
-    result.local?.suggestion ?? '',
-    (result.sources ?? []).map((source) => source.source).join(' ')
-  ]);
+  const rows = csvResultRows(results);
 
   const escape = (value) => {
     const text = String(value ?? '');
