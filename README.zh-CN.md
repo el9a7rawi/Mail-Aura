@@ -27,11 +27,6 @@
 
 </div>
 
-
-<p align="center">
-  <img src="assets/screenshots/zh-CN/popup-light.webp" width="280" alt="Mail Aura popup — light theme" />
-</p>
-
 ---
 
 ## 1. 为什么选择 Mail Aura？
