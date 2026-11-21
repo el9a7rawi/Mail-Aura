@@ -12,7 +12,7 @@
   <a href="https://github.com/el9a7rawi/Mail-Aura/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-22C55E" alt="欢迎提交 PR" /></a>
   <a href="https://developer.chrome.com/docs/extensions"><img src="https://img.shields.io/badge/Manifest-V3-4285F4" alt="Manifest V3" /></a>
   <img src="https://img.shields.io/badge/8_Languages-7c3aed" alt="8 种语言" />
-  <img src="https://img.shields.io/badge/Works-Offline-059669" alt="离线可用" />
+  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="离线可用" />
 </p>
 
 <h4 align="center">

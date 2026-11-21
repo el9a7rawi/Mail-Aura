@@ -12,7 +12,7 @@
   <a href="https://github.com/el9a7rawi/Mail-Aura/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-22C55E" alt="PRs welcome" /></a>
   <a href="https://developer.chrome.com/docs/extensions"><img src="https://img.shields.io/badge/Manifest-V3-4285F4" alt="Manifest V3" /></a>
   <img src="https://img.shields.io/badge/8_Languages-7c3aed" alt="8 languages" />
-  <img src="https://img.shields.io/badge/Works-Offline-059669" alt="Works offline" />
+  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="No API keys" />
 </p>
 
 <h4 align="center">
@@ -27,6 +27,8 @@
 |---|---|---|---|---|
 
 </div>
+
+Chrome and Chromium browsers are the primary target; the same MV3 archive is provided for the other listed browsers.
 
 ---
 
@@ -60,12 +62,12 @@ No public service can prove that a specific mailbox exists without sending an ac
 ### 3.1 Header — everything in reach
 <p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="Header" /></p>
 
-The title, language picker, theme toggle, GitHub link, and side-panel button sit in one compact row. The filename says it is a product, not a science experiment.
+The title, language picker, theme toggle, GitHub link, and side-panel button sit in one compact row.
 
 ### 3.2 One primary action
 <p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Primary action" /></p>
 
-A single gradient button does the work for the active source. Under it, **Copy valid** and **Export CSV** are one click away, and the status line tells you exactly what happened.
+A single gradient button does the work for the active source. Under it, **Copy valid** and **Export CSV** are one click away; the results toolbar also offers **Copy shown results**, **Clear results**, and a copy button on each row. The status line tells you exactly what happened.
 
 ### 3.3 Source — current page
 <p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Page source" /></p>
@@ -80,12 +82,12 @@ Paste one address per line or separate with commas. Duplicates disappear before 
 ### 3.5 Source — CSV file
 <p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="CSV picker" /></p>
 
-A proper file card with icon and filename replaces a bare hyperlink. Only the first column is read, so messy exports still work.
+A file card shows the icon and selected filename. Only the first column is read, so messy exports still work.
 
 ### 3.6 Results — the core of the product
 <p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Results list" /></p>
 
-Each row shows the address, a colour-coded status badge, one reason line, and per-row actions. Optional source chips expose exactly which services answered.
+Each row shows the address, a colour-coded status badge, one reason line, and per-row actions. Optional source chips show identifiers for the sources that actually answered.
 
 ### 3.7 Filter and search
 <p align="center">
@@ -93,37 +95,41 @@ Each row shows the address, a colour-coded status badge, one reason line, and pe
   <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Live search" />
 </p>
 
-Seven filter states and an expanding search field turn a long list into the three rows you care about.
+Seven filter states and an expanding search field work together; an 80ms debounce keeps typing smooth.
 
-### 3.8 Settings
+### 3.8 Context-menu verification
+
+Select an email address or a `mailto:` link on any page, then choose **Verify this email address**. The result opens in the popup and respects Privacy mode, so no external call happens when it is enabled.
+
+### 3.9 Settings
 <p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Settings" /></p>
 
-Privacy mode, page highlighting, source chips, and optional auto-correction for CSV typos are explicit switches. Nothing hidden, nothing surprising.
+Privacy mode, page highlighting, source chips, and optional CSV auto-correction are explicit switches. Auto-correction is off by default and only rewrites known domain typos in uploaded CSVs; unknown typos are never guessed. Toggling Privacy mode also clears the in-memory domain cache.
 
-### 3.9 Eight languages, real RTL
+### 3.10 Eight languages, real RTL
 <p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Language menu" /></p>
 
 Switch instantly between English, Español, Français, Deutsch, Português (Brasil), Русский, العربية, and 中文（简体）. Arabic flips the whole layout logically, not cosmetically.
 
-### 3.10 True black dark theme
+### 3.11 True black dark theme
 <p align="center"><img src="assets/screenshots/en/popup-dark.webp" width="280" alt="Mail Aura popup — dark theme" /></p>
 
 A real black background with tuned contrast, toggled from the header and remembered between sessions.
 
-### 3.11 Side panel for long lists
+### 3.12 Side panel for long lists
 <p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Side panel" /></p>
 
 The same controller, a wider canvas, and one scroll container — no nested scrollbars.
 
-### 3.12 Empty state
+### 3.13 Empty state
 <p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Empty state" /></p>
 
 An honest invite to scan or paste, never a blank box.
 
-### 3.13 Support continued development
+### 3.14 Support continued development
 <p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Support section" /></p>
 
-Mail Aura is free and open source. An optional InstaPay button and PayPal alternative help keep it improving. Both open in a new tab; the extension sends no data.
+Mail Aura is free and open source. PayPal and a highlighted InstaPay option help keep it improving. Both open in a new tab; the extension sends no data.
 
 ---
 
@@ -138,7 +144,7 @@ Mail Aura is free and open source. An optional InstaPay button and PayPal altern
 7. Google DNS-over-HTTPS
 8. Cloudflare DNS-over-HTTPS
 
-All calls are HTTPS and keyless. Privacy mode disables them all.
+All calls are HTTPS and keyless. Privacy mode disables them all. Unicode/IDN addresses are rejected locally; punycode is not supported in this release.
 
 ---
 
@@ -149,15 +155,15 @@ All calls are HTTPS and keyless. Privacy mode disables them all.
 3. Click **Load unpacked** and select this folder.
 4. Click the Mail Aura icon in the toolbar.
 
-No build step and no external dependencies are required.
+No build step or package install is needed; a Google Fonts stylesheet loads at runtime.
 
 ---
 
 ## 6. Development
 
 ```powershell
-node --test tests/             # 49 unit tests
-node --check ui.js             # syntax check for every JS file
+node --test tests/             # 59 unit tests
+node --check ui.js             # syntax check for ui.js (repeat for other scripts)
 node scripts/check-ui.mjs      # DOM ids, manifest files, CSP, HTTPS, locale keys
 node scripts/build-preview.mjs # regenerate dev fixtures from the real markup
 ```
@@ -172,7 +178,7 @@ node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light" 
 
 ## 7. Privacy
 
-See `privacy.html`. Addresses are sent only when you request a check, nothing is tracked, and all connections use HTTPS. The only declared exception is a single Google Fonts stylesheet loaded when the interface opens; no email or verification data is sent with it.
+See `privacy.html`. Addresses are sent only when you request a check, nothing is tracked, and all connections use HTTPS. A context-menu result is held briefly in session storage until the popup reads it, settings stay in local storage, and domain results are cached in memory only. A single Google Fonts stylesheet also loads when the interface opens; no email or verification data is sent with it.
 
 ---
 
