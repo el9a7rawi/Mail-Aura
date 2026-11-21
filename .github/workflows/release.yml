@@ -14,14 +14,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify tag matches manifest
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          MANIFEST_VERSION=$(node -p "require('./manifest.json').version")
+          test "$VERSION" = "$MANIFEST_VERSION" || { echo "tag $VERSION != manifest $MANIFEST_VERSION"; exit 1; }
+
       - name: Package extension-only archives
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           mkdir -p dist
-          FILES=(manifest.json popup.html sidepanel.html privacy.html ui.css ui.js i18n.js background.js content.js icons lib locales)
+          FILES=(manifest.json popup.html sidepanel.html privacy.html ui.css ui.js i18n.js background.js content.js icons lib locales ui)
           for BROWSER in chrome edge brave opera firefox; do
             zip -qr "dist/mail-aura-${BROWSER}-v${VERSION}.zip" "${FILES[@]}"
           done
+          unzip -l dist/mail-aura-chrome-v${VERSION}.zip | grep -q 'ui/result-row.js' || { echo 'archive missing ui/'; exit 1; }
+          unzip -l dist/mail-aura-chrome-v${VERSION}.zip | grep -q 'ui/theme.js' || { echo 'archive missing ui/theme.js'; exit 1; }
           (cd dist && sha256sum *.zip > SHA256SUMS.txt)
 
       - name: Prepare release notes
@@ -30,6 +38,6 @@ jobs:
           sed "s/{{VERSION}}/$VERSION/g" .github/RELEASE_TEMPLATE.md > /tmp/NOTES.md
 
       - name: Create GitHub Release
-        run: gh release create "$GITHUB_REF_NAME" dist/* --title "Mail Aura $GITHUB_REF_NAME" --notes-file /tmp/NOTES.md --generate-notes
+        run: gh release create "$GITHUB_REF_NAME" dist/* --title "Mail Aura $GITHUB_REF_NAME" --notes-file /tmp/NOTES.md --verify-tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

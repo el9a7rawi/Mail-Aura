@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Validate extension metadata and locales
         run: |
@@ -28,5 +28,12 @@ jobs:
             const keys = Object.keys(JSON.parse(fs.readFileSync('locales/' + code + '.json', 'utf8'))).sort().join('|');
             if (keys !== base) throw new Error('locale key mismatch: ' + code);
           }
-          console.log('OK ' + paths.length + ' manifest files, ' + langs.length + ' locales');
+          const imports = ['ui/result-row.js','ui/theme.js','ui/cselect.js','i18n.js','lib/autofix.js','lib/csv.js','lib/settings.js','lib/validation.js','lib/orchestrator.js'];
+          for (const p of imports) if (!fs.existsSync(p)) throw new Error('missing static import ' + p);
+          const en = JSON.parse(fs.readFileSync('locales/en.json', 'utf8'));
+          for (const html of fs.readdirSync('.').filter(f => f.endsWith('.html'))) {
+            const text = fs.readFileSync(html, 'utf8');
+            for (const m of text.matchAll(/data-i18n="([^"]+)"/g)) if (!(m[1] in en)) throw new Error(html + ': missing key ' + m[1]);
+          }
+          console.log('OK ' + paths.length + ' manifest files, ' + langs.length + ' locales, ' + imports.length + ' imports');
           "
