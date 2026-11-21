@@ -4,7 +4,7 @@
   --bg: #f7f8fc;
   --card: #ffffff;
   --text: #141826;
-  --muted: #6b7280;
+  --muted: #4b5563;
   --border: #e8eaf1;
 
   --primary: #4f46e5;
@@ -13,9 +13,9 @@
   --accent: #4f46e5;
   --accent-soft: #eef0ff;
 
-  --success: #059669;
+  --success: #047857;
   --success-soft: #e7f7f0;
-  --danger: #dc2626;
+  --danger: #b91c1c;
   --danger-soft: #fdecec;
   --warn: #b45309;
   --warn-soft: #fdf3e3;
@@ -172,7 +172,8 @@ a.ghost-btn { text-decoration: none; }
   font-size: 12.5px; color: var(--success); margin: 2px 2px 0;
   font-weight: 700; min-height: 0; line-height: 1.5;
 }
-.status:empty { display: none; }
+/* Keep the live region mounted so screen readers register it before text arrives. */
+.status:empty { visibility: hidden; }
 .status.error { color: var(--danger); }
 .status.busy { color: var(--accent); }
 
@@ -206,7 +207,11 @@ a.ghost-btn { text-decoration: none; }
 }
 .opt-num { flex: 0 0 auto; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
 .switch-opt { cursor: pointer; }
-.switch-opt input { display: none; }
+/* Visually hidden but focusable: keyboard and screen reader users need the switch. */
+.switch-opt input {
+  position: absolute; width: 1px; height: 1px; opacity: 0;
+  overflow: hidden; clip-path: inset(50%); margin: 0;
+}
 .switch {
   width: 40px; height: 22px; border-radius: 999px; background: var(--switch-off);
   position: relative; flex-shrink: 0; transition: background 0.2s;
@@ -248,8 +253,8 @@ a.ghost-btn { text-decoration: none; }
 .counter { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .link-btn {
   background: none; border: 0; cursor: pointer; font-family: inherit;
-  color: var(--accent); font-size: 12.5px; font-weight: 700; padding: 2px 4px;
-  border-radius: 6px;
+  color: var(--accent); font-size: 12.5px; font-weight: 700; padding: 4px 8px;
+  min-height: 24px; border-radius: 6px;
 }
 .link-btn:hover { text-decoration: underline; }
 
@@ -415,7 +420,7 @@ a.ghost-btn { text-decoration: none; }
 .searchbox.open #searchInput { width: 100px; opacity: 1; padding: 6px 2px; pointer-events: auto; }
 .search-clear {
   display: inline-grid; place-items: center; flex-shrink: 0;
-  width: 20px; height: 20px; padding: 0; margin: 0; line-height: 0;
+  width: 24px; height: 24px; padding: 0; margin: 0; line-height: 0;
   border: 0; border-radius: 50%;
   background: var(--accent-soft); color: var(--accent); cursor: pointer;
   transition: filter 0.15s ease;
@@ -449,7 +454,7 @@ a.ghost-btn { text-decoration: none; }
 .result-email {
   flex: 0 1 auto; min-width: 0;
   font-family: var(--mono); font-size: 12.5px; font-weight: 500;
-  direction: ltr; text-align: right; unicode-bidi: isolate;
+  direction: ltr; text-align: start; unicode-bidi: isolate;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   line-height: 1.5;
 }
@@ -475,6 +480,10 @@ a.ghost-btn { text-decoration: none; }
 .result-detail .sep { opacity: 0.5; flex-shrink: 0; }
 .result-reason {
   min-width: 0; overflow: hidden; text-overflow: ellipsis;
+}
+.result-caveat {
+  margin: 4px 0 0; font-size: 11px; line-height: 1.35; color: var(--muted);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .sources { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
 .source-chip {
@@ -541,7 +550,7 @@ a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
-.field:focus-visible { outline: none; }
+/* Keep the 2px accent outline from the global focus rule on text fields. */
 
 /* لوحة جانبية: حاوية تمرير واحدة؛ البطاقات لا تُقلّص وإلا قصّ Chrome القائمة. */
 body.sidepanel {

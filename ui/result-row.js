@@ -173,6 +173,12 @@ export function createResultRow(result, options = {}) {
   );
   main.appendChild(detail);
 
+  const caveat = result.confidence?.caveat;
+  if (caveat) {
+    const caveatKey = result.confidence?.caveatKey;
+    main.appendChild(el('p', 'result-caveat', caveatKey ? translate(caveatKey) : caveat));
+  }
+
   if (showSources) {
     const sources = (Array.isArray(result.sources) ? result.sources : [])
       .filter((item) => item.verdict !== 'unknown')

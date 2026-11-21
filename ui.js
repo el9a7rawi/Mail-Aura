@@ -7,9 +7,9 @@
  */
 
 import { autoFixEmails } from './lib/autofix.js';
-import { csvEmails, csvResultRows } from './lib/csv.js';
+import { CSV_MAX_BYTES, csvEmails, csvEscape, csvResultRows } from './lib/csv.js';
 import { DEFAULT_SETTINGS, SETTINGS_KEY, loadSettings, saveSettings } from './lib/settings.js';
-import { applyTranslations, loadLocale, matchLocale, t } from './i18n.js';
+import { applyTranslations, localeCode, loadLocale, matchLocale, t } from './i18n.js';
 import { parseEmailLines } from './lib/validation.js';
 import { clearDomainCache, verifyBatch, verifyEmail } from './lib/orchestrator.js';
 import { createResultRow } from './ui/result-row.js';
@@ -43,6 +43,7 @@ const els = {
   fileRow: $('fileRow'),
   pickFile: $('pickFile'),
   list: $('resultsList'),
+  resultsAnnounce: $('resultsAnnounce'),
   empty: $('resultsEmpty'),
   resultCount: $('resultCount'),
   filter: $('filter'),
@@ -160,6 +161,11 @@ function visibleResults() {
 function render() {
   const visible = visibleResults();
   els.resultCount.textContent = results.length ? `(${visible.length})` : '';
+  if (els.resultsAnnounce) {
+    els.resultsAnnounce.textContent = results.length
+      ? t('resultCountAnnounce', { n: visible.length })
+      : '';
+  }
 
   els.list.replaceChildren(...visible.map((result) => createResultRow(result, {
     showSources: settings.showSources,
@@ -292,6 +298,10 @@ async function checkFile(token) {
     setStatus(t('statusNeedFile'), 'error');
     return;
   }
+  if (file.size > CSV_MAX_BYTES) {
+    setStatus(t('statusFileTooLarge'), 'error');
+    return;
+  }
 
   const parsed = parseEmailLines(csvEmails(await file.text()).join('\n'));
   let list = fromParsed(parsed);
@@ -397,12 +407,7 @@ function exportCsv() {
   const head = ['Email', 'Status', 'Estimate', 'Agreement', 'Suggestion', 'Sources'];
   const rows = csvResultRows(results);
 
-  const escape = (value) => {
-    const text = String(value ?? '');
-    return /[",\r\n]/u.test(text) ? `"${text.replace(/"/gu, '""')}"` : text;
-  };
-
-  const csv = `\uFEFF${[head, ...rows].map((row) => row.map(escape).join(',')).join('\r\n')}`;
+  const csv = `\uFEFF${[head, ...rows].map((row) => row.map(csvEscape).join(',')).join('\r\n')}`;
   const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
   const link = document.createElement('a');
   const stamp = new Date().toISOString().slice(0, 10);
@@ -432,6 +437,7 @@ function expandSearch() {
   const box = els.searchToggle.closest('.searchbox');
   box.classList.add('open');
   els.searchToggle.setAttribute('aria-expanded', 'true');
+  els.searchInput.removeAttribute('aria-hidden');
   els.searchInput.tabIndex = 0;
   els.searchInput.focus();
 }
@@ -441,6 +447,7 @@ function collapseSearch() {
   box.classList.remove('open');
   els.searchToggle.setAttribute('aria-expanded', 'false');
   els.searchInput.value = '';
+  els.searchInput.setAttribute('aria-hidden', 'true');
   els.searchInput.tabIndex = -1;
   els.searchClear.hidden = true;
   query = '';
@@ -622,10 +629,27 @@ async function pendingResult() {
   }
 }
 
+function syncWebFonts() {
+  const id = 'mail-aura-fonts';
+  document.getElementById(id)?.remove();
+  if (settings.privacy) return;
+  const link = document.createElement('link');
+  link.id = id;
+  link.rel = 'stylesheet';
+  link.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap';
+  document.head.appendChild(link);
+}
+
 function bindStorageSync() {
-  chrome.storage?.onChanged?.addListener((changes, area) => {
+  chrome.storage?.onChanged?.addListener(async (changes, area) => {
     if (area === 'local' && changes[SETTINGS_KEY]) {
       settings = { ...DEFAULT_SETTINGS, ...(changes[SETTINGS_KEY].newValue ?? {}) };
+      syncWebFonts();
+      if (changes[SETTINGS_KEY].newValue?.lang && changes[SETTINGS_KEY].newValue.lang !== localeCode()) {
+        await loadLocale(settings.lang);
+        applyTranslations(document);
+        refreshCustomSelects();
+      }
       applySettingsToUI();
       render();
     }
@@ -644,6 +668,7 @@ async function init() {
     await saveSettings(settings);
   }
 
+  syncWebFonts();
   theme = await loadTheme();
   await loadLocale(settings.lang);
   applyTheme(theme, t);

@@ -140,5 +140,14 @@
   "donateText": "Mail Aura is free and open source — your support helps improve it.",
   "paypalAria": "Donate via PayPal",
   "instapayAria": "Donate via InstaPay",
-  "instapayTitle": "InstaPay — el9a7rawi@instapay"
+  "instapayTitle": "InstaPay — el9a7rawi@instapay",
+  "resultCountAnnounce": "{n} results shown",
+  "statusFileTooLarge": "CSV file is too large (max 5 MB).",
+  "caveatInvalidLocal": "Invalid format — confirmed locally",
+  "caveatInvalidRemote": "Sources indicate the domain cannot receive mail",
+  "caveatValid": "Domain-level estimate — does not prove the mailbox exists or receives mail",
+  "caveatCorrected": "Known domain typo — review the suggestion",
+  "caveatSuspicious": "Warning signals on the address or domain",
+  "caveatReview": "Sources conflict or are insufficient — manual review needed",
+  "caveatUnknown": "No answers from external sources"
 }
