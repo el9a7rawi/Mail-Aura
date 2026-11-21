@@ -35,3 +35,6 @@ tests/
 
 # Local social graphics (not needed by the extension or the release archive)
 social/
+
+# Promo video work — local only, never staged or uploaded
+video/
