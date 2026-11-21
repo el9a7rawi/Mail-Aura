@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner/mail-aura-banner-ru.webp" width="100%" alt="Mail Aura — Проверка email и очистка списков" />
+  <img src="assets/banner/mail-aura-banner-ru.webp" width="100%" alt="Без ключей API" />
 </p>
 
 <h1 align="center">Mail Aura — Проверка email и очистка списков</h1>
@@ -12,7 +12,7 @@
   <a href="https://github.com/el9a7rawi/Mail-Aura/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-22C55E" alt="PR приветствуются" /></a>
   <a href="https://developer.chrome.com/docs/extensions"><img src="https://img.shields.io/badge/Manifest-V3-4285F4" alt="Manifest V3" /></a>
   <img src="https://img.shields.io/badge/8_Languages-7c3aed" alt="8 языков" />
-  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="Работает офлайн" />
+  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="Без ключей API" />
 </p>
 
 <h4 align="center">
@@ -114,7 +114,7 @@
 ## 6. Разработка
 
 ```powershell
-node --test tests/             # 49 модульных тестов
+node --test tests/             # 59 модульных тестов
 node --check ui.js             # проверка синтаксиса каждого JS-файла
 node scripts/check-ui.mjs      # ID в DOM, файлы манифеста, CSP, HTTPS
 node scripts/build-preview.mjs # пересоздать dev/preview.html и preview-side.html

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner/mail-aura-banner-de.webp" width="100%" alt="Mail Aura — E-Mail-Verifizierer &amp; Listenbereiniger" />
+  <img src="assets/banner/mail-aura-banner-de.webp" width="100%" alt="Keine API-Schlüssel" />
 </p>
 
 <h1 align="center">Mail Aura — E-Mail-Verifizierer & Listenbereiniger</h1>
@@ -12,7 +12,7 @@
   <a href="https://github.com/el9a7rawi/Mail-Aura/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-22C55E" alt="PRs welcome" /></a>
   <a href="https://developer.chrome.com/docs/extensions"><img src="https://img.shields.io/badge/Manifest-V3-4285F4" alt="Manifest V3" /></a>
   <img src="https://img.shields.io/badge/8_Languages-7c3aed" alt="8 languages" />
-  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="Works offline" />
+  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="Keine API-Schlüssel" />
 </p>
 
 <h4 align="center">
@@ -114,7 +114,7 @@ Es ist kein Build-Schritt und sind keine externen Abhängigkeiten erforderlich.
 ## 6. Entwicklung
 
 ```powershell
-node --test tests/             # 49 Unit-Tests
+node --test tests/             # 59 Unit-Tests
 node --check ui.js             # Syntaxprüfung für jede JS-Datei
 node scripts/check-ui.mjs      # DOM-IDs, Manifestdateien, CSP, HTTPS
 node scripts/build-preview.mjs # dev/preview.html und preview-side.html neu erzeugen

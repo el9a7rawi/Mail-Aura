@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner/mail-aura-banner-zh-CN.webp" width="100%" alt="Mail Aura — 邮箱验证与列表清理工具" />
+  <img src="assets/banner/mail-aura-banner-zh-CN.webp" width="100%" alt="无需 API 密钥" />
 </p>
 
 <h1 align="center">Mail Aura — 邮箱验证与列表清理工具</h1>
@@ -12,7 +12,7 @@
   <a href="https://github.com/el9a7rawi/Mail-Aura/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-22C55E" alt="欢迎提交 PR" /></a>
   <a href="https://developer.chrome.com/docs/extensions"><img src="https://img.shields.io/badge/Manifest-V3-4285F4" alt="Manifest V3" /></a>
   <img src="https://img.shields.io/badge/8_Languages-7c3aed" alt="8 种语言" />
-  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="离线可用" />
+  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="无需 API 密钥" />
 </p>
 
 <h4 align="center">
@@ -114,7 +114,7 @@
 ## 6. 开发
 
 ```powershell
-node --test tests/             # 49 个单元测试
+node --test tests/             # 59 个单元测试
 node --check ui.js             # 检查所有 JS 文件的语法
 node scripts/check-ui.mjs      # 检查 DOM ID、清单文件、CSP、HTTPS
 node scripts/build-preview.mjs # 重新生成 dev/preview.html 和 preview-side.html

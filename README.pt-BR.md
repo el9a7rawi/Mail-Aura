@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner/mail-aura-banner-pt-BR.webp" width="100%" alt="Mail Aura — Verificador de E-mails e Limpador de Listas" />
+  <img src="assets/banner/mail-aura-banner-pt-BR.webp" width="100%" alt="Sem chaves de API" />
 </p>
 
 <h1 align="center">Mail Aura — Verificador de E-mails e Limpador de Listas</h1>
@@ -12,7 +12,7 @@
   <a href="https://github.com/el9a7rawi/Mail-Aura/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-22C55E" alt="PRs bem-vindos" /></a>
   <a href="https://developer.chrome.com/docs/extensions"><img src="https://img.shields.io/badge/Manifest-V3-4285F4" alt="Manifest V3" /></a>
   <img src="https://img.shields.io/badge/8_Languages-7c3aed" alt="8 idiomas" />
-  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="Funciona offline" />
+  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="Sem chaves de API" />
 </p>
 
 <h4 align="center">
@@ -114,7 +114,7 @@ Não é necessária nenhuma etapa de compilação nem dependências externas.
 ## 6. Desenvolvimento
 
 ```powershell
-node --test tests/             # 49 testes unitários
+node --test tests/             # 59 testes unitários
 node --check ui.js             # verificação de sintaxe de todos os arquivos JS
 node scripts/check-ui.mjs      # IDs do DOM, arquivos do manifesto, CSP, HTTPS
 node scripts/build-preview.mjs # regenera dev/preview.html e preview-side.html

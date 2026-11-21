@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner/mail-aura-banner-ar.webp" width="100%" alt="Mail Aura — مدقّق البريد الإلكتروني ومنظّق القوائم" />
+  <img src="assets/banner/mail-aura-banner-ar.webp" width="100%" alt="لا مفاتيح API" />
 </p>
 
 <h1 align="center">Mail Aura — مدقّق البريد الإلكتروني ومنظّق القوائم</h1>
@@ -12,7 +12,7 @@
   <a href="https://github.com/el9a7rawi/Mail-Aura/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-22C55E" alt="PRs welcome" /></a>
   <a href="https://developer.chrome.com/docs/extensions"><img src="https://img.shields.io/badge/Manifest-V3-4285F4" alt="Manifest V3" /></a>
   <img src="https://img.shields.io/badge/8_Languages-7c3aed" alt="8 languages" />
-  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="Works offline" />
+  <img src="https://img.shields.io/badge/No_API_Keys-059669" alt="لا مفاتيح API" />
 </p>
 
 <h4 align="center">
