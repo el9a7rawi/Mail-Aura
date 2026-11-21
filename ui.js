@@ -629,22 +629,10 @@ async function pendingResult() {
   }
 }
 
-function syncWebFonts() {
-  const id = 'mail-aura-fonts';
-  document.getElementById(id)?.remove();
-  if (settings.privacy) return;
-  const link = document.createElement('link');
-  link.id = id;
-  link.rel = 'stylesheet';
-  link.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap';
-  document.head.appendChild(link);
-}
-
 function bindStorageSync() {
   chrome.storage?.onChanged?.addListener(async (changes, area) => {
     if (area === 'local' && changes[SETTINGS_KEY]) {
       settings = { ...DEFAULT_SETTINGS, ...(changes[SETTINGS_KEY].newValue ?? {}) };
-      syncWebFonts();
       if (changes[SETTINGS_KEY].newValue?.lang && changes[SETTINGS_KEY].newValue.lang !== localeCode()) {
         await loadLocale(settings.lang);
         applyTranslations(document);
@@ -668,7 +656,6 @@ async function init() {
     await saveSettings(settings);
   }
 
-  syncWebFonts();
   theme = await loadTheme();
   await loadLocale(settings.lang);
   applyTheme(theme, t);
