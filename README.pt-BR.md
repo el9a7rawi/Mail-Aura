@@ -130,7 +130,7 @@ node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&t
 
 ## 7. Privacidade
 
-Consulte `privacy.html`. Os endereços são enviados somente quando você solicita uma verificação, nada é rastreado e todas as conexões usam HTTPS. A única exceção declarada é uma única folha de estilo do Google Fonts carregada quando a interface é aberta; nenhum dado de e-mail ou verificação é enviado junto com ela.
+Consulte `privacy.html`. Os endereços são enviados apenas quando você solicita, nada é rastreado e todas as conexões usam HTTPS. O resultado do menu de contexto fica brevemente em storage.session. As fontes são incluídas localmente.
 
 ---
 

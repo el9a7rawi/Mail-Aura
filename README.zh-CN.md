@@ -130,7 +130,7 @@ node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&t
 
 ## 7. 隐私
 
-请参阅 `privacy.html`。仅当您请求验证时才会发送地址，不会进行任何跟踪，所有连接均使用 HTTPS。唯一声明的例外是界面打开时加载的一份 Google Fonts 样式表；其中不会发送任何电子邮件或验证数据。
+请参阅 `privacy.html`。仅在您请求时发送地址，不进行任何跟踪，所有连接均使用 HTTPS。上下文菜单结果短暂保存在 storage.session 中。字体已随扩展本地打包。
 
 ---
 

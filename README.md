@@ -155,7 +155,7 @@ All calls are HTTPS and keyless. Privacy mode disables them all. Unicode/IDN add
 3. Click **Load unpacked** and select this folder.
 4. Click the Mail Aura icon in the toolbar.
 
-No build step or package install is needed; a Google Fonts stylesheet loads at runtime.
+See `privacy.html`. Addresses are sent only when you request a check, nothing is tracked, and all connections use HTTPS. A context-menu result is held briefly in session storage until the popup reads it, settings stay in local storage, and domain results are cached in memory only. Fonts are bundled locally; no font request leaves the extension.
 
 ---
 
@@ -178,7 +178,7 @@ node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light" 
 
 ## 7. Privacy
 
-See `privacy.html`. Addresses are sent only when you request a check, nothing is tracked, and all connections use HTTPS. A context-menu result is held briefly in session storage until the popup reads it, settings stay in local storage, and domain results are cached in memory only. A single Google Fonts stylesheet also loads when the interface opens; no email or verification data is sent with it.
+See `privacy.html`. Addresses are sent only when you request a check, nothing is tracked, and all connections use HTTPS. A context-menu result is held briefly in session storage until the popup reads it, settings stay in local storage, and domain results are cached in memory only. Fonts are bundled locally; no font request leaves the extension.
 
 ---
 

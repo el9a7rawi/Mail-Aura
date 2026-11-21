@@ -130,7 +130,7 @@ node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&t
 
 ## 7. Privacidad
 
-Consulta `privacy.html`. Las direcciones solo se envían cuando solicitas una comprobación, no se registra nada y todas las conexiones usan HTTPS. La única excepción declarada es una única hoja de estilo de Google Fonts que se carga al abrir la interfaz; no se envían con ella datos de correo ni de verificación.
+Consulta `privacy.html`. Las direcciones solo se envían cuando solicitas una comprobación, no se registra nada y todas las conexiones usan HTTPS. El resultado del menú contextual se conserva brevemente en storage.session. Las fuentes están incluidas localmente.
 
 ---
 
