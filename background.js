@@ -38,7 +38,7 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
   if (info.menuItemId !== 'mail-aura-verify') return;
 
   const raw = info.linkUrl?.startsWith('mailto:')
-    ? info.linkUrl.slice(7)
+    ? decodeURIComponent(info.linkUrl.slice(7).split(/[?#]/u)[0])
     : (info.selectionText ?? '');
 
   const parsed = normalizeEmail(raw);
@@ -49,5 +49,6 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
   const settings = await loadSettings();
   const result = await verifyEmail(parsed.normalized, { privacyMode: settings.privacy });
   await chrome.storage.session.set({ pendingResult: { ...result, at: Date.now() } });
-  await chrome.action.openPopup?.();
+  if (chrome.action?.openPopup) await chrome.action.openPopup();
+  else await chrome.sidePanel?.open({ windowId: info.tab?.windowId });
 });
