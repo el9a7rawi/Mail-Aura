@@ -32,3 +32,6 @@ copy url/
 dev/
 scripts/
 tests/
+
+# Local social graphics (not needed by the extension or the release archive)
+social/
