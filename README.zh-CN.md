@@ -15,9 +15,9 @@
   <img src="https://img.shields.io/badge/Works-Offline-059669" alt="离线可用" />
 </p>
 
-<p align="center">
-  <sub><b>语言：</b> <a href="README.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.zh-CN.md"><b>中文（简体）</b></a></sub>
-</p>
+<h4 align="center">
+  <a href="README.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.de.md">Deutsch</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.zh-CN.md"><b>中文（简体）</b></a>
+</h4>
 <h3 align="center">Download for your browser — click the icon</h3>
 
 <div align="center">
