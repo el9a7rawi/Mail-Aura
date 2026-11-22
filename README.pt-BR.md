@@ -89,10 +89,7 @@ Um cartão mostra o ícone e o nome do arquivo selecionado. Apenas a primeira co
 Cada linha mostra o endereço, um selo de status com cor, uma linha de motivo e ações por linha. Chips de fontes opcionais mostram os identificadores das fontes que realmente responderam.
 
 ### 3.7 Filtro e busca
-<p align="center">
-  <img src="assets/screenshots/pt-BR/sections/section-filter.webp" width="220" alt="Menu de filtro" />
-  <img src="assets/screenshots/pt-BR/sections/section-search.webp" width="220" alt="Busca ao vivo" />
-</p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-filtersearch.webp" width="400" alt="Filtro e busca ao vivo" /></p>
 
 Sete estados de filtro e um campo de busca expansível trabalham juntos; um atraso de 80 ms mantém a digitação suave.
 

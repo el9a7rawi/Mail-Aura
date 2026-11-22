@@ -75,7 +75,7 @@
   /* >=3:1 against the card, since the clipped checkbox makes this the only
      visible indicator of the OFF state. */
   --switch-off: #8b93a7;
-  --switch-knob-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  --switch-knob-shadow: 0 0 2px rgba(0, 0, 0, 0.22);
   --menu-shadow: 0 12px 32px rgba(20, 24, 38, 0.14);
 
   --radius: 16px;
@@ -307,7 +307,7 @@ a.ghost-btn { text-decoration: none; }
   font-size: 13px; font-weight: 400; background: var(--bg); min-height: 52px;
 }
 .opt-text {
-  flex: 1 1 auto; min-width: 0; display: flex; align-items: baseline; gap: 4px;
+  flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 4px;
   line-height: 1.35;
 }
 .opt-num { flex: 0 0 auto; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -322,9 +322,9 @@ a.ghost-btn { text-decoration: none; }
   position: relative; flex-shrink: 0; transition: background 0.2s;
 }
 .switch::after {
-  content: ""; position: absolute; top: 2px; inset-inline-start: 2px;
-  width: 18px; height: 18px; border-radius: 50%; background: #ffffff; transition: transform 0.2s;
-  box-shadow: var(--switch-knob-shadow); border: 1px solid rgba(0, 0, 0, 0.25);
+  content: ""; position: absolute; top: 3px; inset-inline-start: 3px;
+  width: 16px; height: 16px; border-radius: 50%; background: #ffffff; transition: transform 0.2s;
+  box-shadow: var(--switch-knob-shadow);
 }
 .switch-opt input:checked + .switch { background: var(--primary); }
 .switch-opt input:checked + .switch::after { transform: translateX(18px); }

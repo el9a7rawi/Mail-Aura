@@ -89,10 +89,7 @@ Una tarjeta muestra el icono y el nombre del archivo seleccionado. Solo se lee l
 Cada fila muestra la dirección, una insignia de estado con color, una línea de motivo y acciones por fila. Los chips de fuentes opcionales muestran los identificadores de las fuentes que respondieron.
 
 ### 3.7 Filtro y búsqueda
-<p align="center">
-  <img src="assets/screenshots/es/sections/section-filter.webp" width="220" alt="Menú de filtro" />
-  <img src="assets/screenshots/es/sections/section-search.webp" width="220" alt="Búsqueda en vivo" />
-</p>
+<p align="center"><img src="assets/screenshots/es/sections/section-filtersearch.webp" width="400" alt="Filtro y búsqueda en vivo" /></p>
 
 Siete estados de filtro y un campo de búsqueda expandible funcionan juntos; un retardo de 80 ms mantiene la escritura fluida.
 

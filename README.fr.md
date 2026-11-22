@@ -89,10 +89,7 @@ Une carte affiche l'icône et le nom du fichier sélectionné. Seule la premièr
 Chaque ligne affiche l'adresse, un badge de statut coloré, une ligne de motif et des actions par ligne. Les pastilles de sources optionnelles montrent les identifiants des sources ayant répondu.
 
 ### 3.7 Filtre et recherche
-<p align="center">
-  <img src="assets/screenshots/fr/sections/section-filter.webp" width="220" alt="Menu de filtre" />
-  <img src="assets/screenshots/fr/sections/section-search.webp" width="220" alt="Recherche en direct" />
-</p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-filtersearch.webp" width="400" alt="Filtre et recherche en direct" /></p>
 
 Sept états de filtre et un champ de recherche déployable fonctionnent ensemble ; un délai de 80 ms garde la saisie fluide.
 

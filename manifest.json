@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Mail Aura — Email Verifier",
   "short_name": "Mail Aura",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Verify email addresses with eight free sources, clean lists, and export results as CSV. No API keys, no account, no guesswork.",
   "author": "Ahmed Yousry",
   "homepage_url": "https://github.com/el9a7rawi/Mail-Aura",

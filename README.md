@@ -90,10 +90,7 @@ A file card shows the icon and selected filename. Only the first column is read,
 Each row shows the address, a colour-coded status badge, one reason line, and per-row actions. Optional source chips show identifiers for the sources that actually answered.
 
 ### 3.7 Filter and search
-<p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Filter menu" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Live search" />
-</p>
+<p align="center"><img src="assets/screenshots/en/sections/section-filtersearch.webp" width="400" alt="Filter and live search" /></p>
 
 Seven filter states and an expanding search field work together; an 80ms debounce keeps typing smooth.
 

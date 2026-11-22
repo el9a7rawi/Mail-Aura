@@ -89,10 +89,7 @@ Chrome ومتصفحات Chromium هي الهدف الأساسي. يدعم Firefo
 كل صف يعرض العنوان وشارة حالة ملونة وسطر سبب وإجراءات خاصة بالصف. شرائح المصادر الاختيارية تعرض معرّفات المصادر التي أجابت فعلاً.
 
 ### 3.7 التصفية والبحث
-<p align="center">
-  <img src="assets/screenshots/ar/sections/section-filter.webp" width="220" alt="قائمة التصفية" />
-  <img src="assets/screenshots/ar/sections/section-search.webp" width="220" alt="بحث مباشر" />
-</p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-filtersearch.webp" width="400" alt="التصفية والبحث المباشر" /></p>
 
 سبع حالات تصفية وحقل بحث قابل للتوسيع يعملان معاً؛ تأخير 80 مللي ثانية يحافظ على سلاسة الكتابة.
 

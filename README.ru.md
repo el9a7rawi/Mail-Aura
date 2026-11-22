@@ -89,10 +89,7 @@
 Каждая строка показывает адрес, цветной значок состояния, строку причины и действия для строки. Дополнительные метки источников показывают идентификаторы ответивших служб.
 
 ### 3.7 Фильтр и поиск
-<p align="center">
-  <img src="assets/screenshots/ru/sections/section-filter.webp" width="220" alt="Меню фильтра" />
-  <img src="assets/screenshots/ru/sections/section-search.webp" width="220" alt="Живой поиск" />
-</p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-filtersearch.webp" width="400" alt="Фильтр и живой поиск" /></p>
 
 Семь состояний фильтра и раскрывающееся поле поиска работают вместе; задержка 80 мс сохраняет плавность ввода.
 

@@ -89,10 +89,7 @@ Chrome 和 Chromium 浏览器是主要目标。从 140 版起通过专用归档�
 每行显示地址、彩色状态徽章、一行原因和行内操作。可选来源标签显示实际响应的来源标识。
 
 ### 3.7 筛选与搜索
-<p align="center">
-  <img src="assets/screenshots/zh-CN/sections/section-filter.webp" width="220" alt="筛选菜单" />
-  <img src="assets/screenshots/zh-CN/sections/section-search.webp" width="220" alt="实时搜索" />
-</p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-filtersearch.webp" width="400" alt="筛选与实时搜索" /></p>
 
 七种筛选状态与可展开的搜索框协同工作；80 毫秒防抖让输入保持流畅。
 

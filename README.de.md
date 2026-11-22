@@ -89,10 +89,7 @@ Eine Dateikarte zeigt Symbol und Dateinamen. Es wird nur die erste Spalte gelese
 Jede Zeile zeigt die Adresse, ein farbiges Statussymbol, eine Begründung und Aktionen pro Zeile. Optionale Quellen-Chips zeigen die Bezeichnungen der tatsächlich antwortenden Dienste.
 
 ### 3.7 Filter und Suche
-<p align="center">
-  <img src="assets/screenshots/de/sections/section-filter.webp" width="220" alt="Filtermenü" />
-  <img src="assets/screenshots/de/sections/section-search.webp" width="220" alt="Live-Suche" />
-</p>
+<p align="center"><img src="assets/screenshots/de/sections/section-filtersearch.webp" width="400" alt="Filter und Live-Suche" /></p>
 
 Sieben Filterzustände und ein ausklappbares Suchfeld arbeiten zusammen; eine Verzögerung von 80 ms hält die Eingabe flüssig.
 
