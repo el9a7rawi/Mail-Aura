@@ -140,5 +140,14 @@
   "donateText": "Mail Aura مجاني ومفتوح المصدر — دعمك يساعد في تحسينه.",
   "paypalAria": "التبرع عبر PayPal",
   "instapayAria": "التبرع عبر InstaPay",
-  "instapayTitle": "InstaPay — el9a7rawi@instapay"
+  "instapayTitle": "InstaPay — el9a7rawi@instapay",
+  "resultCountAnnounce": "{n} نتيجة معروضة",
+  "statusFileTooLarge": "ملف CSV كبير جداً (الحد الأقصى 5 ميغابايت).",
+  "caveatInvalidLocal": "صيغة غير صالحة — تم التأكد محلياً",
+  "caveatInvalidRemote": "تشير المصادر إلى أن النطاق لا يمكنه استقبال البريد",
+  "caveatValid": "تقدير على مستوى النطاق — لا يثبت وجود صندوق البريد أو استقباله للرسائل",
+  "caveatCorrected": "خطأ إملائي معروف في النطاق — راجع الاقتراح",
+  "caveatSuspicious": "إشارات تحذيرية في العنوان أو النطاق",
+  "caveatReview": "المصادر متضاربة أو غير كافية — يلزم مراجعة يدوية",
+  "caveatUnknown": "لا توجد إجابات من المصادر الخارجية"
 }

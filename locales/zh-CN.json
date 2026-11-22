@@ -139,5 +139,14 @@
   "donateText": "Mail Aura 免费且开源 — 你的支持能帮助它变得更好。",
   "paypalAria": "通过 PayPal 捐赠",
   "instapayAria": "通过 InstaPay 捐赠",
-  "instapayTitle": "InstaPay — el9a7rawi@instapay"
+  "instapayTitle": "InstaPay — el9a7rawi@instapay",
+  "resultCountAnnounce": "显示 {n} 条结果",
+  "statusFileTooLarge": "CSV 文件过大（最大 5 MB）。",
+  "caveatInvalidLocal": "格式无效 — 已在本地确认",
+  "caveatInvalidRemote": "来源显示该域名无法接收邮件",
+  "caveatValid": "仅基于域名估算 — 不能证明邮箱存在或能接收邮件",
+  "caveatCorrected": "域名有已知拼写错误 — 请查看建议",
+  "caveatSuspicious": "地址或域名存在警告信号",
+  "caveatReview": "来源相互矛盾或信息不足 — 需要人工审核",
+  "caveatUnknown": "外部来源没有返回结果"
 }

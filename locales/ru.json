@@ -144,5 +144,14 @@
   "donateText": "Mail Aura бесплатен и открыт — ваша поддержка помогает его улучшать.",
   "paypalAria": "Пожертвовать через PayPal",
   "instapayAria": "Пожертвовать через InstaPay",
-  "instapayTitle": "InstaPay — el9a7rawi@instapay"
+  "instapayTitle": "InstaPay — el9a7rawi@instapay",
+  "resultCountAnnounce": "Показано результатов: {n}",
+  "statusFileTooLarge": "CSV-файл слишком большой (макс. 5 МБ).",
+  "caveatInvalidLocal": "Некорректный формат — подтверждено локально",
+  "caveatInvalidRemote": "Источники указывают, что домен не может получать почту",
+  "caveatValid": "Оценка на уровне домена — не подтверждает существование ящика или получение почты",
+  "caveatCorrected": "Известная опечатка в домене — проверьте предложение",
+  "caveatSuspicious": "Предупреждающие признаки в адресе или домене",
+  "caveatReview": "Источники противоречат друг другу или их недостаточно — нужна ручная проверка",
+  "caveatUnknown": "Нет ответов от внешних источников"
 }
