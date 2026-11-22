@@ -6,6 +6,14 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-11-22
+
+### Changed
+
+- Redesign the status notification as an animated pill with a countdown bar; it
+  now auto-dismisses and collapses to zero height when empty instead of leaving
+  a blank gap between the hero actions and the source card.
+
 ## [0.1.3] - 2026-11-22
 
 ### Added
@@ -58,7 +66,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Initial MV3 release: eight keyless HTTPS sources, eight locales, CSV import and
   export, context-menu verification, side panel, dark theme, and privacy mode.
 
-[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.0...v0.1.1

@@ -123,10 +123,32 @@ function updateManualCount() {
 
 /* ---------- Status / busy ---------- */
 
+let statusTimer = 0;
+
 function setStatus(message, kind = '') {
-  els.statusMsg.textContent = message;
-  els.statusMsg.classList.toggle('error', kind === 'error');
-  els.statusMsg.classList.toggle('busy', kind === 'busy');
+  clearTimeout(statusTimer);
+  statusTimer = 0;
+  const node = els.statusMsg;
+  node.textContent = message;
+  node.classList.toggle('error', kind === 'error');
+  node.classList.toggle('busy', kind === 'busy');
+  node.classList.remove('show');
+  if (!message) return;
+
+  const duration = kind === 'error' ? 7000 : 5000;
+  node.style.setProperty('--status-duration', `${duration}ms`);
+  // Replaying the entry animation needs a style flush; the node itself stays
+  // mounted so the polite live region keeps working.
+  void node.offsetWidth;
+  node.classList.add('show');
+
+  // A busy message is replaced by the result that ends it, so it must persist.
+  if (kind !== 'busy') {
+    statusTimer = setTimeout(() => {
+      node.classList.remove('show');
+      node.textContent = '';
+    }, duration);
+  }
 }
 
 function setBusy(on) {
