@@ -24,13 +24,73 @@ jobs:
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           mkdir -p dist
-          FILES=(manifest.json popup.html sidepanel.html privacy.html ui.css ui.js i18n.js background.js content.js icons lib locales ui fonts)
+          FILES=(manifest.json popup.html sidepanel.html privacy.html privacy.js ui.css ui.js i18n.js background.js content.js LICENSE icons lib locales ui fonts)
           for BROWSER in chrome edge brave opera firefox; do
-            zip -qr "dist/mail-aura-${BROWSER}-v${VERSION}.zip" "${FILES[@]}"
+            STAGE="dist/stage-${BROWSER}"
+            mkdir -p "$STAGE"
+            cp -R "${FILES[@]}" "$STAGE/"
+            if [ "$BROWSER" = "firefox" ]; then
+              # Firefox has no service-worker backgrounds or sidePanel API.
+              # Rewrite only the manifest; the runtime already feature-detects
+              # both APIs and falls back to sidebarAction / a plain tab.
+              node -e '
+              const fs = require("fs");
+              const file = "dist/stage-firefox/manifest.json";
+              const m = JSON.parse(fs.readFileSync(file, "utf8"));
+              delete m.minimum_chrome_version;
+              m.background = { scripts: ["background.js"], type: "module" };
+              m.permissions = m.permissions.filter((p) => p !== "sidePanel");
+              delete m.side_panel;
+              m.sidebar_action = {
+                default_panel: "sidepanel.html",
+                default_title: "Mail Aura",
+                default_icon: m.action.default_icon
+              };
+              m.browser_specific_settings = {
+                gecko: {
+                  id: "mail-aura@el9a7rawi",
+                  strict_min_version: "140.0",
+                  data_collection_permissions: {
+                    required: ["personallyIdentifyingInfo", "websiteContent"]
+                  }
+                },
+                gecko_android: { strict_min_version: "142.0" }
+              };
+              fs.writeFileSync(file, JSON.stringify(m, null, 2) + "\n");
+              '
+              node -e '
+              const m = require("./dist/stage-firefox/manifest.json");
+              const ok = m.background.scripts && !m.background.service_worker &&
+                m.sidebar_action.default_panel === "sidepanel.html" &&
+                m.browser_specific_settings.gecko.strict_min_version === "140.0" &&
+                !m.permissions.includes("sidePanel");
+              if (!ok) process.exit(1);
+              ' || { echo "Firefox manifest rewrite failed"; exit 1; }
+              # Drop the Chrome-only sidePanel branch from the Firefox artifact.
+              # The runtime falls through to sidebarAction / a tab, so removing
+              # the unreachable branch also clears web-ext's unsupported-API warnings.
+              for JS in ui.js background.js; do
+                sed -i '/chrome\.sidePanel\.open/d' "$STAGE/$JS"
+                sed -i 's/chrome\.sidePanel?\.open/undefined/g' "$STAGE/$JS"
+              done
+              npx --yes web-ext@10 lint --source-dir "$STAGE" --no-input || {
+                echo "Firefox manifest lint failed"; exit 1;
+              }
+            fi
+            ARCHIVE="dist/mail-aura-${BROWSER}-v${VERSION}.zip"
+            (cd "$STAGE" && zip -qr "${GITHUB_WORKSPACE}/${ARCHIVE}" .)
+            CONTENTS=$(unzip -Z1 "$ARCHIVE")
+            for REQUIRED in ui/result-row.js ui/theme.js ui/cselect.js i18n.js \
+                            background.js content.js privacy.html privacy.js LICENSE \
+                            fonts/inter-latin.woff2 fonts/cairo-arabic.woff2 fonts/OFL.txt \
+                            locales/en.json locales/ar.json; do
+              echo "$CONTENTS" | grep -qx "$REQUIRED" || { echo "$ARCHIVE missing $REQUIRED"; exit 1; }
+            done
+            if echo "$CONTENTS" | grep -Eq '^(AGENTS|TODO|OrderLog|DESIGN)\.md$|^([A-Za-z0-9_-]+/)?(scripts|dev|tests|social|video|assets)/'; then
+              echo "$ARCHIVE contains governance or development files"; exit 1
+            fi
+            rm -rf "$STAGE"
           done
-          unzip -l dist/mail-aura-chrome-v${VERSION}.zip | grep -q 'ui/result-row.js' || { echo 'archive missing ui/'; exit 1; }
-          unzip -l dist/mail-aura-chrome-v${VERSION}.zip | grep -q 'ui/theme.js' || { echo 'archive missing ui/theme.js'; exit 1; }
-          unzip -l dist/mail-aura-chrome-v${VERSION}.zip | grep -q 'fonts/inter-latin.woff2' || { echo 'archive missing bundled fonts'; exit 1; }
           (cd dist && sha256sum *.zip > SHA256SUMS.txt)
 
       - name: Prepare release notes

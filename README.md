@@ -28,7 +28,7 @@
 
 </div>
 
-Chrome and Chromium browsers are the primary target; the same MV3 archive is provided for the other listed browsers.
+Chrome and Chromium browsers are the primary target. Firefox is supported from version 140 through a dedicated archive with a Firefox-specific manifest (sidebar action and a classic background script).
 
 ---
 
@@ -155,14 +155,14 @@ All calls are HTTPS and keyless. Privacy mode disables them all. Unicode/IDN add
 3. Click **Load unpacked** and select this folder.
 4. Click the Mail Aura icon in the toolbar.
 
-See `privacy.html`. Addresses are sent only when you request a check, nothing is tracked, and all connections use HTTPS. A context-menu result is held briefly in session storage until the popup reads it, settings stay in local storage, and domain results are cached in memory only. Fonts are bundled locally; no font request leaves the extension.
+Privacy is covered in section 7 below and in `privacy.html`.
 
 ---
 
 ## 6. Development
 
 ```powershell
-node --test tests/             # 59 unit tests
+node --test tests/
 node --check ui.js             # syntax check for ui.js (repeat for other scripts)
 node scripts/check-ui.mjs      # DOM ids, manifest files, CSP, HTTPS, locale keys
 node scripts/build-preview.mjs # regenerate dev fixtures from the real markup
@@ -184,7 +184,7 @@ See `privacy.html`. Addresses are sent only when you request a check, nothing is
 
 ## 8. License
 
-The project is open source and free for everyone under the **Apache-2.0** license — use it, modify it, and share it freely; the full text is in [LICENSE](LICENSE).
+The project is open source and free for everyone under the **Apache-2.0** license — use it, modify it, and share it freely; the full text is in [LICENSE](LICENSE). Bundled fonts are licensed separately under [SIL OFL 1.1](fonts/OFL.txt). See [CHANGELOG.md](CHANGELOG.md) for the release history.
 
 ---
 

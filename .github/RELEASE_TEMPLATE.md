@@ -29,7 +29,7 @@
 | `mail-aura-opera-v{{VERSION}}.zip` | Opera |
 | `mail-aura-firefox-v{{VERSION}}.zip` | Firefox |
 | `SHA256SUMS.txt` | Checksums for verifying the integrity of every file above |
-| `Source code (zip / tar.gz)` | Full source code (attached automatically by GitHub) |
+| `Source code (zip / tar.gz)` | Tracked source — extension files plus docs (dev tooling excluded) |
 
 </div>
 
@@ -45,6 +45,8 @@
 
 **Firefox** (file `mail-aura-firefox-v{{VERSION}}.zip`):
 
+This archive has its own Firefox manifest (sidebar action, classic background script). Do not use the Chrome archive on Firefox.
+
 1. Unzip the archive.
 2. Open `about:debugging` → This Firefox → Load Temporary Add-on → select `manifest.json`.
 
@@ -57,7 +59,7 @@
 | Browser | Minimum version |
 |---|---|
 | Chrome / Edge / Brave / Opera | **121+** |
-| Firefox | **121+** |
+| Firefox | **140+** (Firefox Android 142+) |
 
 </div>
 
@@ -85,9 +87,15 @@ sha256sum -c SHA256SUMS.txt
 
 ---
 
-## 5. Source code and license
+## 5. What's changed
 
-<p align="center">The full source code is attached below, and the project is licensed under <b>Apache-2.0</b> — free to use, modify, and share.</p>
+See [`CHANGELOG.md`](https://github.com/el9a7rawi/Mail-Aura/blob/main/CHANGELOG.md) for the complete list of changes.
+
+---
+
+## 6. Source code and license
+
+<p align="center">The tracked source code is attached below, and the project is licensed under <b>Apache-2.0</b> — free to use, modify, and share. Bundled fonts carry their own SIL OFL 1.1 notice in <code>fonts/OFL.txt</code>.</p>
 
 ---
 

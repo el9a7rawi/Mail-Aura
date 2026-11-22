@@ -23,6 +23,8 @@
 <div align="center">
 
 | [<img src="assets/browsers/chrome.svg" width="52" alt="Chrome" /><br><b>Chrome</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/edge.svg" width="52" alt="Edge" /><br><b>Edge</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/firefox.svg" width="52" alt="Firefox" /><br><b>Firefox</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/brave.svg" width="52" alt="Brave" /><br><b>Brave</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/opera.svg" width="52" alt="Opera" /><br><b>Opera</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) |
+
+Chrome ومتصفحات Chromium هي الهدف الأساسي. يدعم Firefox ابتداءً من الإصدار 140 عبر أرشيف مخصص بمانيفست خاص به (إجراء اللوحة الجانبية وسكربت خلفي كلاسيكي).
 |---|---|---|---|---|
 
 </div>
@@ -54,37 +56,78 @@
 
 ---
 
-## 3. جولة في الواجهة
+## 3. جولة في الواجهة — كل جزء من الإضافة
 
-### 3.1 إجراء رئيسي واحد، وثلاثة أنماط للإدخال
-- **مسح هذه الصفحة** — يجمع العناوين الظاهرة ويُبرزها دون قراءة الصفحة مسبقاً.
-- **لصق العناوين** — عنوان في كل سطر أو مفصولة بفواصل؛ تُزال التكرارات ويظهر التنسيق غير الصالح كنتيجة.
-- **ملف CSV** — يقرأ العمود الأول ويُصدّر ملف CSV جديداً يحتوي على الحالة، ودرجة الثقة، ودرجة الاتفاق، والاقتراح، وتفاصيل المصدر.
+### 3.1 الرأس — كل شيء في متناول اليد
+<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="الرأس" /></p>
 
-### 3.2 نتائج يمكنك الوثوق بها
-- يعرض كل صف العنوان، وشارة الحالة، وسطر تفاصيل موجز: `Confidence N% · reason`.
-- تصفية حسب الحالة، والبحث داخل النتائج، ونسخ الصفوف الصحيحة أو الظاهرة.
-- تصحيح الأخطاء الإملائية المعروفة في النطاقات مثل `gmial.com → gmail.com` بنقرة واحدة.
-- تُوسَم نطاقات البريد المؤقتة وعناوين الأدوار والمزوّدون المجانيون بدل أن تُخفى.
+العنوان ومختر اللغة وتبديل الثيم ورابط GitHub وزر اللوحة الجانبية كلها في صف واحد مدمج.
 
-### 3.3 وضع الخصوصية
-- يوقف كل الاتصالات الخارجية فوراً؛ فيصبح التحقق محلياً فقط.
-- يعرض مؤشر الاتصال في التذييل الحالة الحالية دائماً.
+### 3.2 إجراء رئيسي واحد
+<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="الإجراء الرئيسي" /></p>
 
-### 3.4 ثماني لغات، ودعم RTL حقيقي
-- الإنجليزية هي الافتراضية، وتُستخدم لغة المتصفح عند التشغيل الأول إن كانت ضمن اللغات الثماني.
-- التبديل فوري ولا يتطلب إعادة تحميل.
-- تستخدم العربية تخطيط RTL كاملاً مع قواعد الجمع الصحيحة.
+زر واحد بتدرج لوني ينجز العمل للمصدر النشط. تحته مباشرة **نسخ الصالحات** و**تصدير CSV** بنقرة واحدة؛ كما توفر شريط النتائج **نسخ النتائج المعروضة** و**مسح النتائج** وزر نسخ لكل صف. سطر الحالة يخبرك بالضبط بما حدث.
 
-### 3.5 ثيم داكن بأسود حقيقي
-- خلفية سوداء فعلية مع تباين مضبوط، تُبدَّل من أعلى الواجهة ويُتذكّر اختيارك.
+### 3.3 المصدر — الصفحة الحالية
+<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="مصدر الصفحة" /></p>
 
-### 3.6 ادعم استمرار التطوير
+امسح فقط العناوين الظاهرة في الصفحة التي تقرأها. لا تُقرأ أي بيانات قبل أن تضغط الزر.
 
-- Mail Aura مجاني ومفتوح المصدر. زر InstaPay اختياري وبديل PayPal يساعدان على استمرار تحسينه. كلا الرابطين يفتحان في تبويب جديد والإضافة لا ترسل أي بيانات.
+### 3.4 المصدر — القائمة الملصقة
+<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="الإدخال اليدوي" /></p>
 
----
+الصق عنواناً في كل سطر أو افصل بينها بفواصل. تختفي التكرارات قبل التحقق، وتبقى الأسطر غير الصحيحة ظاهرة كنتائج.
 
+### 3.5 المصدر — ملف CSV
+<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="اختيار CSV" /></p>
+
+بطاقة الملف تعرض الأيقونة واسم الملف المحدد. تُقرأ الأعمدة الأولى فقط، لذا حتى التصديرات الفوضوية تعمل.
+
+### 3.6 النتائج — جوهر المنتج
+<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="قائمة النتائج" /></p>
+
+كل صف يعرض العنوان وشارة حالة ملونة وسطر سبب وإجراءات خاصة بالصف. شرائح المصادر الاختيارية تعرض معرّفات المصادر التي أجابت فعلاً.
+
+### 3.7 التصفية والبحث
+<p align="center">
+  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="قائمة التصفية" />
+  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="بحث مباشر" />
+</p>
+
+سبع حالات تصفية وحقل بحث قابل للتوسيع يعملان معاً؛ تأخير 80 مللي ثانية يحافظ على سلاسة الكتابة.
+
+### 3.8 التحقق من قائمة السياق
+
+حدد عنوان بريد أو رابط `mailto:` في أي صفحة ثم اختر **التحقق من عنوان البريد هذا**. تظهر النتيجة في النافذة المنبثقة مع احترام وضع الخصوصية، فلا يحدث أي اتصال خارجي عند تفعيله.
+
+### 3.9 الإعدادات
+<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="الإعدادات" /></p>
+
+وضع الخصوصية وإبراز العناوين في الصفحة وشرائح المصادر والتصحيح التلقائي الاختياري لملفات CSV كلها مفاتيح صريحة. التصحيح التلقائي مطفأ افتراضياً ولا يصلح إلا أخطاء النطاقات المعروفة في ملفات CSV المرفوعة؛ ولا يُخمّن أخطاء غير معروفة. تبديل وضع الخصوصية يمسح أيضاً ذاكرة تخزين النطاقات المؤقتة.
+
+### 3.10 ثماني لغات وRTL حقيقي
+<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="قائمة اللغات" /></p>
+
+التبديل فوراً بين English وEspañol وFrançais وDeutsch وPortuguês (Brasil) وРусский والعربية و中文（简体）. العربية تعكس التخطيط بالكامل بمنطق وليس بمظهر شكلي فقط.
+
+### 3.11 ثيم داكن أسود حقيقي
+
+خلفية سوداء حقيقية بتباين مضبوط، تُفعّل من الرأس وتُتذكر بين الجلسات.
+
+### 3.12 اللوحة الجانبية للقوائم الطويلة
+<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="اللوحة الجانبية" /></p>
+
+نفس المتحكم ومساحة أوسع وحاوية تمرير واحدة — بلا أشرطة تمرير متداخلة.
+
+### 3.13 الحالة الفارغة
+<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="الحالة الفارغة" /></p>
+
+دعوة صادقة للمسح أو اللصق، وليس مربعاً فارغاً أبداً.
+
+### 3.14 دعم التطوير المستمر
+<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="قسم الدعم" /></p>
+
+Mail Aura مجاني ومفتوح المصدر. PayPal وخيار InstaPay البارز يساعدان على تحسينه. كلاهما يُفتح في تبويب جديد، والإضافة لا ترسل أي بيانات.
 ## 4. ثمانية مصادر مجانية
 
 1. Rapid Email Validator
@@ -114,7 +157,7 @@
 ## 6. التطوير
 
 ```powershell
-node --test tests/             # 59 unit tests
+node --test tests/
 node --check ui.js             # syntax check for ui.js (repeat for other scripts)
 node scripts/check-ui.mjs      # DOM ids, manifest files, CSP, HTTPS
 node scripts/build-preview.mjs # regenerate dev/preview.html and preview-side.html

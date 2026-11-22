@@ -23,6 +23,8 @@
 <div align="center">
 
 | [<img src="assets/browsers/chrome.svg" width="52" alt="Chrome" /><br><b>Chrome</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/edge.svg" width="52" alt="Edge" /><br><b>Edge</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/firefox.svg" width="52" alt="Firefox" /><br><b>Firefox</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/brave.svg" width="52" alt="Brave" /><br><b>Brave</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) | [<img src="assets/browsers/opera.svg" width="52" alt="Opera" /><br><b>Opera</b>](https://github.com/el9a7rawi/Mail-Aura/releases/latest) |
+
+Chrome y los navegadores Chromium son el objetivo principal. Firefox se admite desde la versión 140 mediante un archivo específico con su propio manifiesto (sidebar action y script de fondo clásico).
 |---|---|---|---|---|
 
 </div>
@@ -54,37 +56,78 @@ Ningún servicio público puede demostrar que un buzón específico existe sin e
 
 ---
 
-## 3. Recorrido por la interfaz
+## 3. Recorrido por la interfaz — cada parte de la extensión
 
-### 3.1 Una acción principal, tres modos de entrada
-- **Escanear esta página** — recopila las direcciones visibles y las resalta sin leer la página de antemano.
-- **Pegar direcciones** — una por línea o separadas por comas; se eliminan los duplicados y la sintaxis inválida se muestra como resultado.
-- **Archivo CSV** — lee la primera columna y exporta un nuevo CSV con estado, confianza, coincidencia, sugerencia y detalles de la fuente.
+### 3.1 Cabecera — todo al alcance
+<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="Cabecera" /></p>
 
-### 3.2 Resultados en los que puedes confiar
-- Cada fila muestra la dirección, una insignia de estado y una línea de detalle breve: `Confianza N % · motivo`.
-- Filtra por estado, busca entre los resultados y copia las filas válidas o visibles.
-- Corrige errores tipográficos conocidos en dominios como `gmial.com → gmail.com` con un solo clic.
-- Los dominios desechables, las direcciones de rol y los proveedores gratuitos se señalan, no se ocultan.
+El título, el selector de idioma, el cambio de tema, el enlace a GitHub y el botón del panel lateral están en una sola fila compacta.
 
-### 3.3 Modo privacidad
-- Detiene al instante todas las llamadas externas; la verificación pasa a ser solo local.
-- El indicador de conexión en el pie de página muestra siempre el estado actual.
+### 3.2 Una acción principal
+<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Acción principal" /></p>
 
-### 3.4 Ocho idiomas, RTL real
-- El inglés es el predeterminado; en el primer uso se emplea el idioma del navegador si es uno de los ocho.
-- El cambio es instantáneo y no requiere recargar.
-- El árabe usa un diseño RTL completo con reglas de plural correctas.
+Un único botón degradado realiza el trabajo para la fuente activa. Debajo, **Copiar válidos** y **Exportar CSV** están a un clic; la barra de resultados también ofrece **Copiar resultados visibles**, **Borrar resultados** y un botón de copia en cada fila. La línea de estado indica exactamente qué ocurrió.
 
-### 3.5 Tema oscuro negro real
-- Un fondo realmente negro con contraste ajustado, que se activa desde la cabecera y se recuerda.
+### 3.3 Fuente — página actual
+<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Fuente de página" /></p>
 
-### 3.6 Support continued development
+Escanea solo las direcciones visibles en la página que estás leyendo. No se lee nada hasta que pulsas el botón.
 
-- Mail Aura es gratis y de código abierto. Un botón opcional de InstaPay y PayPal como alternativa ayudan a mejorarlo. Ambos enlaces se abren en una pestaña nueva y la extensión no envía datos.
+### 3.4 Fuente — lista pegada
+<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="Entrada manual" /></p>
 
----
+Pega una dirección por línea o sepáralas con comas. Los duplicados desaparecen antes de la verificación; las líneas mal formadas se muestran como resultados.
 
+### 3.5 Fuente — archivo CSV
+<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="Selector de CSV" /></p>
+
+Una tarjeta muestra el icono y el nombre del archivo seleccionado. Solo se lee la primera columna, así que funcionan incluso las exportaciones desordenadas.
+
+### 3.6 Resultados — el corazón del producto
+<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Lista de resultados" /></p>
+
+Cada fila muestra la dirección, una insignia de estado con color, una línea de motivo y acciones por fila. Los chips de fuentes opcionales muestran los identificadores de las fuentes que respondieron.
+
+### 3.7 Filtro y búsqueda
+<p align="center">
+  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Menú de filtro" />
+  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Búsqueda en vivo" />
+</p>
+
+Siete estados de filtro y un campo de búsqueda expandible funcionan juntos; un retardo de 80 ms mantiene la escritura fluida.
+
+### 3.8 Verificación desde el menú contextual
+
+Selecciona una dirección o un enlace `mailto:` en cualquier página y elige **Verificar esta dirección de correo**. El resultado se abre en el popup y respeta el modo privacidad, por lo que no se realiza ninguna llamada externa cuando está activado.
+
+### 3.9 Ajustes
+<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Ajustes" /></p>
+
+El modo privacidad, el resaltado de la página, los chips de fuentes y la autocorrección opcional de CSV son interruptores explícitos. La autocorrección está desactivada por defecto y solo reescribe errores conocidos de dominio en CSV subidos; nunca adivina errores desconocidos. Activar el modo privacidad también vacía la caché de dominio en memoria.
+
+### 3.10 Ocho idiomas, RTL real
+<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Menú de idiomas" /></p>
+
+Cambia al instante entre English, Español, Français, Deutsch, Português (Brasil), Русский, العربية y 中文（简体）. El árabe invierte todo el diseño de forma lógica, no cosmética.
+
+### 3.11 Tema oscuro negro real
+
+Un fondo realmente negro con contraste ajustado, activado desde la cabecera y recordado entre sesiones.
+
+### 3.12 Panel lateral para listas largas
+<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Panel lateral" /></p>
+
+El mismo controlador, un lienzo más ancho y un único contenedor de desplazamiento: sin barras anidadas.
+
+### 3.13 Estado vacío
+<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Estado vacío" /></p>
+
+Una invitación honesta a escanear o pegar, nunca una caja vacía.
+
+### 3.14 Apoyar el desarrollo continuo
+<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Sección de apoyo" /></p>
+
+Mail Aura es gratuito y de código abierto. PayPal y una opción destacada de InstaPay ayudan a mejorarlo. Ambos se abren en una pestaña nueva; la extensión no envía datos.
 ## 4. Ocho fuentes gratuitas
 
 1. Rapid Email Validator
@@ -114,7 +157,7 @@ No se requiere ningún paso de compilación ni dependencias externas.
 ## 6. Desarrollo
 
 ```powershell
-node --test tests/             # 59 pruebas unitarias
+node --test tests/
 node --check ui.js             # comprobación de sintaxis de cada archivo JS
 node scripts/check-ui.mjs      # IDs del DOM, archivos del manifiesto, CSP, HTTPS
 node scripts/build-preview.mjs # regenera dev/preview.html y preview-side.html
