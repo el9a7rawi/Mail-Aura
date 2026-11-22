@@ -104,7 +104,7 @@ Select an email address or a `mailto:` link on any page, then choose **Verify th
 Privacy mode, page highlighting, source chips, and optional CSV auto-correction are explicit switches. Auto-correction is off by default and only rewrites known domain typos in uploaded CSVs; unknown typos are never guessed. Toggling Privacy mode also clears the in-memory domain cache.
 
 ### 3.10 Eight languages, real RTL
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Language menu" /></p>
+<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="400" alt="Language menu" /></p>
 
 Switch instantly between English, Español, Français, Deutsch, Português (Brasil), Русский, العربية, and 中文（简体）. Arabic flips the whole layout logically, not cosmetically.
 

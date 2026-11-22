@@ -103,7 +103,7 @@ Selecciona una dirección o un enlace `mailto:` en cualquier página y elige **V
 El modo privacidad, el resaltado de la página, los chips de fuentes y la autocorrección opcional de CSV son interruptores explícitos. La autocorrección está desactivada por defecto y solo reescribe errores conocidos de dominio en CSV subidos; nunca adivina errores desconocidos. Activar el modo privacidad también vacía la caché de dominio en memoria.
 
 ### 3.10 Ocho idiomas, RTL real
-<p align="center"><img src="assets/screenshots/es/sections/section-language.webp" width="220" alt="Menú de idiomas" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-language.webp" width="400" alt="Menú de idiomas" /></p>
 
 Cambia al instante entre English, Español, Français, Deutsch, Português (Brasil), Русский, العربية y 中文（简体）. El árabe invierte todo el diseño de forma lógica, no cosmética.
 

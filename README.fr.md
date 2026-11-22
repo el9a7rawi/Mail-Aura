@@ -103,7 +103,7 @@ Sélectionnez une adresse ou un lien `mailto:` sur n'importe quelle page, puis c
 Le mode confidentialité, la mise en évidence de la page, les pastilles de sources et la correction automatique optionnelle des CSV sont des interrupteurs explicites. La correction est désactivée par défaut et ne réécrit que les erreurs de domaine connues dans les CSV importés ; aucune erreur inconnue n'est devinée. Activer le mode confidentialité vide aussi le cache de domaine en mémoire.
 
 ### 3.10 Huit langues, vrai RTL
-<p align="center"><img src="assets/screenshots/fr/sections/section-language.webp" width="220" alt="Menu des langues" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-language.webp" width="400" alt="Menu des langues" /></p>
 
 Basculez instantanément entre English, Español, Français, Deutsch, Português (Brasil), Русский, العربية et 中文（简体）. L'arabe inverse toute la mise en page de façon logique, et non cosmétique.
 

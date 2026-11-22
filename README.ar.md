@@ -103,7 +103,7 @@ Chrome ومتصفحات Chromium هي الهدف الأساسي. يدعم Firefo
 وضع الخصوصية وإبراز العناوين في الصفحة وشرائح المصادر والتصحيح التلقائي الاختياري لملفات CSV كلها مفاتيح صريحة. التصحيح التلقائي مطفأ افتراضياً ولا يصلح إلا أخطاء النطاقات المعروفة في ملفات CSV المرفوعة؛ ولا يُخمّن أخطاء غير معروفة. تبديل وضع الخصوصية يمسح أيضاً ذاكرة تخزين النطاقات المؤقتة.
 
 ### 3.10 ثماني لغات وRTL حقيقي
-<p align="center"><img src="assets/screenshots/ar/sections/section-language.webp" width="220" alt="قائمة اللغات" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-language.webp" width="400" alt="قائمة اللغات" /></p>
 
 التبديل فوراً بين English وEspañol وFrançais وDeutsch وPortuguês (Brasil) وРусский والعربية و中文（简体）. العربية تعكس التخطيط بالكامل بمنطق وليس بمظهر شكلي فقط.
 

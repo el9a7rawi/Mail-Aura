@@ -103,7 +103,7 @@ Chrome 和 Chromium 浏览器是主要目标。从 140 版起通过专用归档�
 隐私模式、页面高亮、来源标签和可选的 CSV 自动更正都是明确开关。自动更正默认关闭，只修正上传 CSV 中已知域名拼写错误；绝不猜测未知错误。切换隐私模式还会清除内存中的域名缓存。
 
 ### 3.10 八种语言与真正的 RTL
-<p align="center"><img src="assets/screenshots/zh-CN/sections/section-language.webp" width="220" alt="语言菜单" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-language.webp" width="400" alt="语言菜单" /></p>
 
 即时切换 English、Español、Français、Deutsch、Português (Brasil)、Русский、العربية 和 中文（简体）。阿拉伯语按逻辑而非表面完整地翻转整个布局。
 

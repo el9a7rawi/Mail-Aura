@@ -103,7 +103,7 @@ Markieren Sie eine Adresse oder einen `mailto:`-Link auf einer beliebigen Seite 
 Datenschutzmodus, Hervorhebung auf der Seite, Quellen-Chips und die optionale CSV-Autokorrektur sind ausdrückliche Schalter. Die Autokorrektur ist standardmäßig aus und korrigiert nur bekannte Domain-Tippfehler in hochgeladenen CSVs; unbekannte Fehler werden nie geraten. Das Umschalten des Datenschutzmodus leert außerdem den Domain-Cache im Speicher.
 
 ### 3.10 Acht Sprachen, echtes RTL
-<p align="center"><img src="assets/screenshots/de/sections/section-language.webp" width="220" alt="Sprachmenü" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-language.webp" width="400" alt="Sprachmenü" /></p>
 
 Sofortiger Wechsel zwischen English, Español, Français, Deutsch, Português (Brasil), Русский, العربية und 中文（简体）. Arabisch kehrt das gesamte Layout logisch um, nicht nur optisch.
 
