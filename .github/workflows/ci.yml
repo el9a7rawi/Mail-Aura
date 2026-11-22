@@ -34,7 +34,7 @@ jobs:
           for (const html of fs.readdirSync('.').filter(f => f.endsWith('.html'))) {
             const text = fs.readFileSync(html, 'utf8');
             if (/<script(?![^>]*\bsrc=)/iu.test(text)) throw new Error(html + ': inline script violates the CSP');
-            for (const m of text.matchAll(/data-i18n="([^"]+)"/g)) if (!(m[1] in en)) throw new Error(html + ': missing key ' + m[1]);
+            for (const m of text.matchAll(/data-i18n=\x22([^\x22]+)\x22/g)) if (!(m[1] in en)) throw new Error(html + ': missing key ' + m[1]);
           }
           const bundled = ['privacy.js', 'fonts/inter-latin.woff2', 'fonts/cairo-arabic.woff2', 'fonts/OFL.txt'];
           for (const p of bundled) if (!fs.existsSync(p)) throw new Error('missing bundled asset ' + p);
