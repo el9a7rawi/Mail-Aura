@@ -59,39 +59,39 @@ Ningún servicio público puede demostrar que un buzón específico existe sin e
 ## 3. Recorrido por la interfaz — cada parte de la extensión
 
 ### 3.1 Cabecera — todo al alcance
-<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="Cabecera" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-header.webp" width="400" alt="Cabecera" /></p>
 
 El título, el selector de idioma, el cambio de tema, el enlace a GitHub y el botón del panel lateral están en una sola fila compacta.
 
 ### 3.2 Una acción principal
-<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Acción principal" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-hero.webp" width="400" alt="Acción principal" /></p>
 
 Un único botón degradado realiza el trabajo para la fuente activa. Debajo, **Copiar válidos** y **Exportar CSV** están a un clic; la barra de resultados también ofrece **Copiar resultados visibles**, **Borrar resultados** y un botón de copia en cada fila. La línea de estado indica exactamente qué ocurrió.
 
 ### 3.3 Fuente — página actual
-<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Fuente de página" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-source.webp" width="400" alt="Fuente de página" /></p>
 
 Escanea solo las direcciones visibles en la página que estás leyendo. No se lee nada hasta que pulsas el botón.
 
 ### 3.4 Fuente — lista pegada
-<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="Entrada manual" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-manual.webp" width="400" alt="Entrada manual" /></p>
 
 Pega una dirección por línea o sepáralas con comas. Los duplicados desaparecen antes de la verificación; las líneas mal formadas se muestran como resultados.
 
 ### 3.5 Fuente — archivo CSV
-<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="Selector de CSV" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-file.webp" width="400" alt="Selector de CSV" /></p>
 
 Una tarjeta muestra el icono y el nombre del archivo seleccionado. Solo se lee la primera columna, así que funcionan incluso las exportaciones desordenadas.
 
 ### 3.6 Resultados — el corazón del producto
-<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Lista de resultados" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-results.webp" width="400" alt="Lista de resultados" /></p>
 
 Cada fila muestra la dirección, una insignia de estado con color, una línea de motivo y acciones por fila. Los chips de fuentes opcionales muestran los identificadores de las fuentes que respondieron.
 
 ### 3.7 Filtro y búsqueda
 <p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Menú de filtro" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Búsqueda en vivo" />
+  <img src="assets/screenshots/es/sections/section-filter.webp" width="220" alt="Menú de filtro" />
+  <img src="assets/screenshots/es/sections/section-search.webp" width="220" alt="Búsqueda en vivo" />
 </p>
 
 Siete estados de filtro y un campo de búsqueda expandible funcionan juntos; un retardo de 80 ms mantiene la escritura fluida.
@@ -101,12 +101,12 @@ Siete estados de filtro y un campo de búsqueda expandible funcionan juntos; un 
 Selecciona una dirección o un enlace `mailto:` en cualquier página y elige **Verificar esta dirección de correo**. El resultado se abre en el popup y respeta el modo privacidad, por lo que no se realiza ninguna llamada externa cuando está activado.
 
 ### 3.9 Ajustes
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Ajustes" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-options.webp" width="400" alt="Ajustes" /></p>
 
 El modo privacidad, el resaltado de la página, los chips de fuentes y la autocorrección opcional de CSV son interruptores explícitos. La autocorrección está desactivada por defecto y solo reescribe errores conocidos de dominio en CSV subidos; nunca adivina errores desconocidos. Activar el modo privacidad también vacía la caché de dominio en memoria.
 
 ### 3.10 Ocho idiomas, RTL real
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Menú de idiomas" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-language.webp" width="220" alt="Menú de idiomas" /></p>
 
 Cambia al instante entre English, Español, Français, Deutsch, Português (Brasil), Русский, العربية y 中文（简体）. El árabe invierte todo el diseño de forma lógica, no cosmética.
 
@@ -115,17 +115,17 @@ Cambia al instante entre English, Español, Français, Deutsch, Português (Bras
 Un fondo realmente negro con contraste ajustado, activado desde la cabecera y recordado entre sesiones.
 
 ### 3.12 Panel lateral para listas largas
-<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Panel lateral" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-side.webp" width="320" alt="Panel lateral" /></p>
 
 El mismo controlador, un lienzo más ancho y un único contenedor de desplazamiento: sin barras anidadas.
 
 ### 3.13 Estado vacío
-<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Estado vacío" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-empty.webp" width="400" alt="Estado vacío" /></p>
 
 Una invitación honesta a escanear o pegar, nunca una caja vacía.
 
 ### 3.14 Apoyar el desarrollo continuo
-<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Sección de apoyo" /></p>
+<p align="center"><img src="assets/screenshots/es/sections/section-donate.webp" width="400" alt="Sección de apoyo" /></p>
 
 Mail Aura es gratuito y de código abierto. PayPal y una opción destacada de InstaPay ayudan a mejorarlo. Ambos se abren en una pestaña nueva; la extensión no envía datos.
 ## 4. Ocho fuentes gratuitas
@@ -156,18 +156,7 @@ No se requiere ningún paso de compilación ni dependencias externas.
 
 ## 6. Desarrollo
 
-```powershell
-node --test tests/
-node --check ui.js             # comprobación de sintaxis de cada archivo JS
-node scripts/check-ui.mjs      # IDs del DOM, archivos del manifiesto, CSP, HTTPS
-node scripts/build-preview.mjs # regenera dev/preview.html y preview-side.html
-```
-
-Se requiere Chrome para el script de capturas:
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
-```
+El repositorio publicado contiene solo la extensión y su documentación. Los archivos de desarrollo, los scripts auxiliares y la suite de pruebas local se mantienen fuera del repositorio a propósito; GitHub Actions valida el manifiesto, el CSP, la cobertura de idiomas y los archivos incluidos en cada push.
 
 ---
 

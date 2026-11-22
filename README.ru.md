@@ -59,39 +59,39 @@
 ## 3. Обзор интерфейса — все части расширения
 
 ### 3.1 Заголовок — всё под рукой
-<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="Заголовок" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-header.webp" width="400" alt="Заголовок" /></p>
 
 Заголовок, выбор языка, переключатель темы, ссылка на GitHub и кнопка боковой панели находятся в одном компактном ряду.
 
 ### 3.2 Одно основное действие
-<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Основное действие" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-hero.webp" width="400" alt="Основное действие" /></p>
 
 Одна кнопка с градиентом выполняет работу для активного источника. Под ней доступны **Копировать корректные** и **Экспорт CSV**; панель результатов также предлагает **Копировать показанные**, **Очистить результаты** и кнопку копирования в каждой строке. Строка состояния точно сообщает, что произошло.
 
 ### 3.3 Источник — текущая страница
-<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Источник — страница" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-source.webp" width="400" alt="Источник — страница" /></p>
 
 Сканируются только адреса, видимые на текущей странице. Ничто не читается, пока вы не нажмёте кнопку.
 
 ### 3.4 Источник — вставленный список
-<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="Ручной ввод" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-manual.webp" width="400" alt="Ручной ввод" /></p>
 
 Вставьте по одному адресу в строке или через запятую. Дубликаты удаляются до проверки; некорректные строки остаются видимыми как результаты.
 
 ### 3.5 Источник — CSV-файл
-<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="Выбор CSV" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-file.webp" width="400" alt="Выбор CSV" /></p>
 
 Карточка файла показывает значок и имя выбранного файла. Читается только первый столбец, поэтому даже беспорядочные экспорты работают.
 
 ### 3.6 Результаты — основа продукта
-<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Список результатов" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-results.webp" width="400" alt="Список результатов" /></p>
 
 Каждая строка показывает адрес, цветной значок состояния, строку причины и действия для строки. Дополнительные метки источников показывают идентификаторы ответивших служб.
 
 ### 3.7 Фильтр и поиск
 <p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Меню фильтра" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Живой поиск" />
+  <img src="assets/screenshots/ru/sections/section-filter.webp" width="220" alt="Меню фильтра" />
+  <img src="assets/screenshots/ru/sections/section-search.webp" width="220" alt="Живой поиск" />
 </p>
 
 Семь состояний фильтра и раскрывающееся поле поиска работают вместе; задержка 80 мс сохраняет плавность ввода.
@@ -101,12 +101,12 @@
 Выделите адрес или ссылку `mailto:` на любой странице и выберите **Проверить этот адрес электронной почты**. Результат открывается во всплывающем окне и соблюдает режим конфиденциальности: при включённом режиме внешние запросы не выполняются.
 
 ### 3.9 Настройки
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Настройки" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-options.webp" width="400" alt="Настройки" /></p>
 
 Режим конфиденциальности, подсветка страницы, метки источников и дополнительная автокоррекция CSV — явные переключатели. Автокоррекция по умолчанию выключена и исправляет только известные опечатки доменов в загруженных CSV; неизвестные опечатки не угадываются. Включение режима конфиденциальности также очищает кэш доменов в памяти.
 
 ### 3.10 Восемь языков, настоящий RTL
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Меню языков" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-language.webp" width="220" alt="Меню языков" /></p>
 
 Мгновенно переключайтесь между English, Español, Français, Deutsch, Português (Brasil), Русский, العربية и 中文（简体）. Арабский логически, а не косметически меняет всё расположение.
 
@@ -115,17 +115,17 @@
 Действительно чёрный фон с подобранным контрастом, включается в заголовке и запоминается между сеансами.
 
 ### 3.12 Боковая панель для длинных списков
-<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Боковая панель" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-side.webp" width="320" alt="Боковая панель" /></p>
 
 Тот же контроллер, более широкая область и один контейнер прокрутки — без вложенных полос.
 
 ### 3.13 Пустое состояние
-<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Пустое состояние" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-empty.webp" width="400" alt="Пустое состояние" /></p>
 
 Честное приглашение отсканировать или вставить, а не пустая рамка.
 
 ### 3.14 Поддержать разработку
-<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Раздел поддержки" /></p>
+<p align="center"><img src="assets/screenshots/ru/sections/section-donate.webp" width="400" alt="Раздел поддержки" /></p>
 
 Mail Aura бесплатен и с открытым исходным кодом. PayPal и выделенный вариант InstaPay помогают улучшать его. Оба открываются в новой вкладке; расширение не отправляет данные.
 ## 4. Восемь бесплатных источников
@@ -156,18 +156,7 @@ Mail Aura бесплатен и с открытым исходным кодом.
 
 ## 6. Разработка
 
-```powershell
-node --test tests/
-node --check ui.js             # проверка синтаксиса каждого JS-файла
-node scripts/check-ui.mjs      # ID в DOM, файлы манифеста, CSP, HTTPS
-node scripts/build-preview.mjs # пересоздать dev/preview.html и preview-side.html
-```
-
-Для помощника со скриншотами нужен Chrome:
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
-```
+Опубликованный репозиторий содержит только расширение и документацию. Тестовые фикстуры, вспомогательные скрипты и локальный набор тестов намеренно исключены; GitHub Actions проверяет манифест, CSP, полноту переводов и включённые файлы при каждом push.
 
 ---
 

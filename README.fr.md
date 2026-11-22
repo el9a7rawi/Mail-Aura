@@ -59,39 +59,39 @@ Aucun service public ne peut prouver qu'une boîte mail donnée existe sans envo
 ## 3. Visite de l'interface — toutes les parties de l'extension
 
 ### 3.1 En-tête — tout à portée de main
-<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="En-tête" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-header.webp" width="400" alt="En-tête" /></p>
 
 Le titre, le sélecteur de langue, le changement de thème, le lien GitHub et le bouton du panneau latéral sont sur une seule ligne compacte.
 
 ### 3.2 Une action principale
-<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Action principale" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-hero.webp" width="400" alt="Action principale" /></p>
 
 Un seul bouton dégradé effectue le travail pour la source active. En dessous, **Copier les valides** et **Exporter CSV** sont à un clic ; la barre d'outils propose aussi **Copier les résultats affichés**, **Effacer les résultats** et un bouton de copie sur chaque ligne. La ligne d'état indique exactement ce qui s'est passé.
 
 ### 3.3 Source — page actuelle
-<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Source de la page" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-source.webp" width="400" alt="Source de la page" /></p>
 
 Analyse uniquement les adresses visibles sur la page que vous lisez. Rien n'est lu avant que vous n'appuyiez sur le bouton.
 
 ### 3.4 Source — liste collée
-<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="Saisie manuelle" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-manual.webp" width="400" alt="Saisie manuelle" /></p>
 
 Collez une adresse par ligne ou séparez-les par des virgules. Les doublons disparaissent avant la vérification ; les lignes mal formées restent visibles comme résultats.
 
 ### 3.5 Source — fichier CSV
-<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="Sélecteur CSV" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-file.webp" width="400" alt="Sélecteur CSV" /></p>
 
 Une carte affiche l'icône et le nom du fichier sélectionné. Seule la première colonne est lue : même les exports désordonnés fonctionnent.
 
 ### 3.6 Résultats — le cœur du produit
-<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Liste des résultats" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-results.webp" width="400" alt="Liste des résultats" /></p>
 
 Chaque ligne affiche l'adresse, un badge de statut coloré, une ligne de motif et des actions par ligne. Les pastilles de sources optionnelles montrent les identifiants des sources ayant répondu.
 
 ### 3.7 Filtre et recherche
 <p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Menu de filtre" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Recherche en direct" />
+  <img src="assets/screenshots/fr/sections/section-filter.webp" width="220" alt="Menu de filtre" />
+  <img src="assets/screenshots/fr/sections/section-search.webp" width="220" alt="Recherche en direct" />
 </p>
 
 Sept états de filtre et un champ de recherche déployable fonctionnent ensemble ; un délai de 80 ms garde la saisie fluide.
@@ -101,12 +101,12 @@ Sept états de filtre et un champ de recherche déployable fonctionnent ensemble
 Sélectionnez une adresse ou un lien `mailto:` sur n'importe quelle page, puis choisissez **Vérifier cette adresse e-mail**. Le résultat s'ouvre dans le popup et respecte le mode confidentialité : aucun appel externe n'est effectué lorsqu'il est activé.
 
 ### 3.9 Paramètres
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Paramètres" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-options.webp" width="400" alt="Paramètres" /></p>
 
 Le mode confidentialité, la mise en évidence de la page, les pastilles de sources et la correction automatique optionnelle des CSV sont des interrupteurs explicites. La correction est désactivée par défaut et ne réécrit que les erreurs de domaine connues dans les CSV importés ; aucune erreur inconnue n'est devinée. Activer le mode confidentialité vide aussi le cache de domaine en mémoire.
 
 ### 3.10 Huit langues, vrai RTL
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Menu des langues" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-language.webp" width="220" alt="Menu des langues" /></p>
 
 Basculez instantanément entre English, Español, Français, Deutsch, Português (Brasil), Русский, العربية et 中文（简体）. L'arabe inverse toute la mise en page de façon logique, et non cosmétique.
 
@@ -115,17 +115,17 @@ Basculez instantanément entre English, Español, Français, Deutsch, Português
 Un vrai fond noir avec un contraste réglé, activé depuis l'en-tête et mémorisé entre les sessions.
 
 ### 3.12 Panneau latéral pour les longues listes
-<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Panneau latéral" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-side.webp" width="320" alt="Panneau latéral" /></p>
 
 Le même contrôleur, un canevas plus large et un seul conteneur de défilement : pas de barres imbriquées.
 
 ### 3.13 État vide
-<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="État vide" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-empty.webp" width="400" alt="État vide" /></p>
 
 Une invitation honnête à analyser ou coller, jamais une boîte vide.
 
 ### 3.14 Soutenir le développement continu
-<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Section de soutien" /></p>
+<p align="center"><img src="assets/screenshots/fr/sections/section-donate.webp" width="400" alt="Section de soutien" /></p>
 
 Mail Aura est gratuit et open source. PayPal et une option InstaPay mise en avant aident à l'améliorer. Les deux s'ouvrent dans un nouvel onglet ; l'extension n'envoie aucune donnée.
 ## 4. Huit sources gratuites
@@ -156,18 +156,7 @@ Aucune étape de compilation ni dépendance externe n'est requise.
 
 ## 6. Développement
 
-```powershell
-node --test tests/
-node --check ui.js             # vérification syntaxique de chaque fichier JS
-node scripts/check-ui.mjs      # identifiants DOM, fichiers manifest, CSP, HTTPS
-node scripts/build-preview.mjs # régénérer dev/preview.html et preview-side.html
-```
-
-Chrome est nécessaire pour l'utilitaire de capture d'écran :
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
-```
+Le dépôt publié ne contient que l’extension et sa documentation. Les fixtures de développement, les scripts d’aide et la suite de tests locale sont volontairement exclus ; GitHub Actions valide le manifeste, le CSP, la couverture des langues et les fichiers embarqués à chaque push.
 
 ---
 

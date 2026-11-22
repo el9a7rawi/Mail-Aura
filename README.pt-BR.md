@@ -59,39 +59,39 @@ Nenhum serviço público consegue provar que uma caixa de correio específica ex
 ## 3. Visão geral da interface — todas as partes da extensão
 
 ### 3.1 Cabeçalho — tudo ao alcance
-<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="Cabeçalho" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-header.webp" width="400" alt="Cabeçalho" /></p>
 
 O título, o seletor de idioma, o alternador de tema, o link do GitHub e o botão do painel lateral ficam em uma única linha compacta.
 
 ### 3.2 Uma ação principal
-<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Ação principal" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-hero.webp" width="400" alt="Ação principal" /></p>
 
 Um único botão gradiente faz o trabalho da fonte ativa. Abaixo, **Copiar válidos** e **Exportar CSV** estão a um clique; a barra de resultados também oferece **Copiar resultados exibidos**, **Limpar resultados** e um botão de copiar em cada linha. A linha de status diz exatamente o que aconteceu.
 
 ### 3.3 Fonte — página atual
-<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Fonte da página" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-source.webp" width="400" alt="Fonte da página" /></p>
 
 Escaneie apenas os endereços visíveis na página que você está lendo. Nada é lido até você pressionar o botão.
 
 ### 3.4 Fonte — lista colada
-<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="Entrada manual" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-manual.webp" width="400" alt="Entrada manual" /></p>
 
 Cole um endereço por linha ou separe-os com vírgulas. Duplicatas desaparecem antes da verificação; linhas malformadas permanecem visíveis como resultados.
 
 ### 3.5 Fonte — arquivo CSV
-<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="Seletor de CSV" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-file.webp" width="400" alt="Seletor de CSV" /></p>
 
 Um cartão mostra o ícone e o nome do arquivo selecionado. Apenas a primeira coluna é lida, então exportações bagunçadas ainda funcionam.
 
 ### 3.6 Resultados — o núcleo do produto
-<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Lista de resultados" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-results.webp" width="400" alt="Lista de resultados" /></p>
 
 Cada linha mostra o endereço, um selo de status com cor, uma linha de motivo e ações por linha. Chips de fontes opcionais mostram os identificadores das fontes que realmente responderam.
 
 ### 3.7 Filtro e busca
 <p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Menu de filtro" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Busca ao vivo" />
+  <img src="assets/screenshots/pt-BR/sections/section-filter.webp" width="220" alt="Menu de filtro" />
+  <img src="assets/screenshots/pt-BR/sections/section-search.webp" width="220" alt="Busca ao vivo" />
 </p>
 
 Sete estados de filtro e um campo de busca expansível trabalham juntos; um atraso de 80 ms mantém a digitação suave.
@@ -101,12 +101,12 @@ Sete estados de filtro e um campo de busca expansível trabalham juntos; um atra
 Selecione um endereço ou um link `mailto:` em qualquer página e escolha **Verificar este endereço de e-mail**. O resultado abre no popup e respeita o modo privacidade, portanto nenhuma chamada externa ocorre quando ele está ativado.
 
 ### 3.9 Configurações
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Configurações" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-options.webp" width="400" alt="Configurações" /></p>
 
 O modo privacidade, o destaque na página, os chips de fontes e a autocorreção opcional de CSV são interruptores explícitos. A autocorreção vem desligada e só reescreve erros conhecidos de domínio em CSVs enviados; erros desconhecidos nunca são adivinhados. Ativar o modo privacidade também limpa o cache de domínio em memória.
 
 ### 3.10 Oito idiomas, RTL real
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Menu de idiomas" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-language.webp" width="220" alt="Menu de idiomas" /></p>
 
 Alterne instantaneamente entre English, Español, Français, Deutsch, Português (Brasil), Русский, العربية e 中文（简体）. O árabe inverte todo o layout de forma lógica, não apenas cosmética.
 
@@ -115,17 +115,17 @@ Alterne instantaneamente entre English, Español, Français, Deutsch, Português
 Um fundo realmente preto com contraste ajustado, ativado no cabeçalho e lembrado entre sessões.
 
 ### 3.12 Painel lateral para listas longas
-<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Painel lateral" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-side.webp" width="320" alt="Painel lateral" /></p>
 
 O mesmo controlador, uma área mais ampla e um único contêiner de rolagem — sem barras aninhadas.
 
 ### 3.13 Estado vazio
-<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Estado vazio" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-empty.webp" width="400" alt="Estado vazio" /></p>
 
 Um convite honesto para escanear ou colar, nunca uma caixa vazia.
 
 ### 3.14 Apoiar o desenvolvimento contínuo
-<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Seção de apoio" /></p>
+<p align="center"><img src="assets/screenshots/pt-BR/sections/section-donate.webp" width="400" alt="Seção de apoio" /></p>
 
 O Mail Aura é gratuito e de código aberto. PayPal e uma opção InstaPay em destaque ajudam a melhorá-lo. Ambos abrem em uma nova aba; a extensão não envia dados.
 ## 4. Oito fontes gratuitas
@@ -156,18 +156,7 @@ Não é necessária nenhuma etapa de compilação nem dependências externas.
 
 ## 6. Desenvolvimento
 
-```powershell
-node --test tests/
-node --check ui.js             # verificação de sintaxe de todos os arquivos JS
-node scripts/check-ui.mjs      # IDs do DOM, arquivos do manifesto, CSP, HTTPS
-node scripts/build-preview.mjs # regenera dev/preview.html e preview-side.html
-```
-
-O Chrome é necessário para o auxiliar de capturas de tela:
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
-```
+O repositório publicado contém apenas a extensão e sua documentação. Arquivos de desenvolvimento, scripts auxiliares e a suíte de testes local ficam de fora intencionalmente; o GitHub Actions valida o manifesto, o CSP, a cobertura de idiomas e os arquivos incluídos a cada push.
 
 ---
 

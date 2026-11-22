@@ -161,18 +161,7 @@ Privacy is covered in section 7 below and in `privacy.html`.
 
 ## 6. Development
 
-```powershell
-node --test tests/
-node --check ui.js             # syntax check for ui.js (repeat for other scripts)
-node scripts/check-ui.mjs      # DOM ids, manifest files, CSP, HTTPS, locale keys
-node scripts/build-preview.mjs # regenerate dev fixtures from the real markup
-```
-
-Chrome is required for the screenshot helper:
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light" --out dev/preview-light.png --format webp --round --viewport
-```
+The published repository contains the extension and its documentation only. Development fixtures, helper scripts and the local test suite are intentionally kept out of the repository; GitHub Actions validates the manifest, CSP, locale coverage and bundled assets on every push.
 
 ---
 

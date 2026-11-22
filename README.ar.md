@@ -59,39 +59,39 @@ Chrome ومتصفحات Chromium هي الهدف الأساسي. يدعم Firefo
 ## 3. جولة في الواجهة — كل جزء من الإضافة
 
 ### 3.1 الرأس — كل شيء في متناول اليد
-<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="الرأس" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-header.webp" width="400" alt="الرأس" /></p>
 
 العنوان ومختر اللغة وتبديل الثيم ورابط GitHub وزر اللوحة الجانبية كلها في صف واحد مدمج.
 
 ### 3.2 إجراء رئيسي واحد
-<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="الإجراء الرئيسي" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-hero.webp" width="400" alt="الإجراء الرئيسي" /></p>
 
 زر واحد بتدرج لوني ينجز العمل للمصدر النشط. تحته مباشرة **نسخ الصالحات** و**تصدير CSV** بنقرة واحدة؛ كما توفر شريط النتائج **نسخ النتائج المعروضة** و**مسح النتائج** وزر نسخ لكل صف. سطر الحالة يخبرك بالضبط بما حدث.
 
 ### 3.3 المصدر — الصفحة الحالية
-<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="مصدر الصفحة" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-source.webp" width="400" alt="مصدر الصفحة" /></p>
 
 امسح فقط العناوين الظاهرة في الصفحة التي تقرأها. لا تُقرأ أي بيانات قبل أن تضغط الزر.
 
 ### 3.4 المصدر — القائمة الملصقة
-<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="الإدخال اليدوي" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-manual.webp" width="400" alt="الإدخال اليدوي" /></p>
 
 الصق عنواناً في كل سطر أو افصل بينها بفواصل. تختفي التكرارات قبل التحقق، وتبقى الأسطر غير الصحيحة ظاهرة كنتائج.
 
 ### 3.5 المصدر — ملف CSV
-<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="اختيار CSV" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-file.webp" width="400" alt="اختيار CSV" /></p>
 
 بطاقة الملف تعرض الأيقونة واسم الملف المحدد. تُقرأ الأعمدة الأولى فقط، لذا حتى التصديرات الفوضوية تعمل.
 
 ### 3.6 النتائج — جوهر المنتج
-<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="قائمة النتائج" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-results.webp" width="400" alt="قائمة النتائج" /></p>
 
 كل صف يعرض العنوان وشارة حالة ملونة وسطر سبب وإجراءات خاصة بالصف. شرائح المصادر الاختيارية تعرض معرّفات المصادر التي أجابت فعلاً.
 
 ### 3.7 التصفية والبحث
 <p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="قائمة التصفية" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="بحث مباشر" />
+  <img src="assets/screenshots/ar/sections/section-filter.webp" width="220" alt="قائمة التصفية" />
+  <img src="assets/screenshots/ar/sections/section-search.webp" width="220" alt="بحث مباشر" />
 </p>
 
 سبع حالات تصفية وحقل بحث قابل للتوسيع يعملان معاً؛ تأخير 80 مللي ثانية يحافظ على سلاسة الكتابة.
@@ -101,12 +101,12 @@ Chrome ومتصفحات Chromium هي الهدف الأساسي. يدعم Firefo
 حدد عنوان بريد أو رابط `mailto:` في أي صفحة ثم اختر **التحقق من عنوان البريد هذا**. تظهر النتيجة في النافذة المنبثقة مع احترام وضع الخصوصية، فلا يحدث أي اتصال خارجي عند تفعيله.
 
 ### 3.9 الإعدادات
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="الإعدادات" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-options.webp" width="400" alt="الإعدادات" /></p>
 
 وضع الخصوصية وإبراز العناوين في الصفحة وشرائح المصادر والتصحيح التلقائي الاختياري لملفات CSV كلها مفاتيح صريحة. التصحيح التلقائي مطفأ افتراضياً ولا يصلح إلا أخطاء النطاقات المعروفة في ملفات CSV المرفوعة؛ ولا يُخمّن أخطاء غير معروفة. تبديل وضع الخصوصية يمسح أيضاً ذاكرة تخزين النطاقات المؤقتة.
 
 ### 3.10 ثماني لغات وRTL حقيقي
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="قائمة اللغات" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-language.webp" width="220" alt="قائمة اللغات" /></p>
 
 التبديل فوراً بين English وEspañol وFrançais وDeutsch وPortuguês (Brasil) وРусский والعربية و中文（简体）. العربية تعكس التخطيط بالكامل بمنطق وليس بمظهر شكلي فقط.
 
@@ -115,17 +115,17 @@ Chrome ومتصفحات Chromium هي الهدف الأساسي. يدعم Firefo
 خلفية سوداء حقيقية بتباين مضبوط، تُفعّل من الرأس وتُتذكر بين الجلسات.
 
 ### 3.12 اللوحة الجانبية للقوائم الطويلة
-<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="اللوحة الجانبية" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-side.webp" width="320" alt="اللوحة الجانبية" /></p>
 
 نفس المتحكم ومساحة أوسع وحاوية تمرير واحدة — بلا أشرطة تمرير متداخلة.
 
 ### 3.13 الحالة الفارغة
-<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="الحالة الفارغة" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-empty.webp" width="400" alt="الحالة الفارغة" /></p>
 
 دعوة صادقة للمسح أو اللصق، وليس مربعاً فارغاً أبداً.
 
 ### 3.14 دعم التطوير المستمر
-<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="قسم الدعم" /></p>
+<p align="center"><img src="assets/screenshots/ar/sections/section-donate.webp" width="400" alt="قسم الدعم" /></p>
 
 Mail Aura مجاني ومفتوح المصدر. PayPal وخيار InstaPay البارز يساعدان على تحسينه. كلاهما يُفتح في تبويب جديد، والإضافة لا ترسل أي بيانات.
 ## 4. ثمانية مصادر مجانية
@@ -156,18 +156,7 @@ Mail Aura مجاني ومفتوح المصدر. PayPal وخيار InstaPay ال�
 
 ## 6. التطوير
 
-```powershell
-node --test tests/
-node --check ui.js             # syntax check for ui.js (repeat for other scripts)
-node scripts/check-ui.mjs      # DOM ids, manifest files, CSP, HTTPS
-node scripts/build-preview.mjs # regenerate dev/preview.html and preview-side.html
-```
-
-يلزم وجود Chrome لأداة التقاط اللقطات:
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
-```
+المستودع المنشور يحتوي على الإضافة ووثائقها فقط. أدوات التطوير والاختبارات المحلية مستبعدة قصداً؛ يتحقق GitHub Actions من الـ manifest وCSP وتطابق اللغات والملفات المضمّنة مع كل دفع.
 
 ---
 

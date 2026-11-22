@@ -59,39 +59,39 @@ Kein öffentlicher Dienst kann nachweisen, dass ein bestimmtes Postfach existier
 ## 3. Oberflächen-Rundgang — jeder Teil der Erweiterung
 
 ### 3.1 Kopfzeile — alles erreichbar
-<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="Kopfzeile" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-header.webp" width="400" alt="Kopfzeile" /></p>
 
 Titel, Sprachauswahl, Theme-Umschalter, GitHub-Link und Seitenleisten-Button sitzen in einer einzigen kompakten Zeile.
 
 ### 3.2 Eine Hauptaktion
-<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="Hauptaktion" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-hero.webp" width="400" alt="Hauptaktion" /></p>
 
 Eine einzige Verlaufstaste erledigt die Arbeit für die aktive Quelle. Darunter sind **Gültige kopieren** und **CSV exportieren** einen Klick entfernt; die Ergebnisleiste bietet außerdem **Angezeigte Ergebnisse kopieren**, **Ergebnisse löschen** und eine Kopierschaltfläche pro Zeile. Die Statuszeile sagt genau, was passiert ist.
 
 ### 3.3 Quelle — aktuelle Seite
-<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="Seitenquelle" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-source.webp" width="400" alt="Seitenquelle" /></p>
 
 Es werden nur die auf der aktuellen Seite sichtbaren Adressen gescannt. Nichts wird gelesen, bevor Sie die Taste drücken.
 
 ### 3.4 Quelle — eingefügte Liste
-<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="Manuelle Eingabe" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-manual.webp" width="400" alt="Manuelle Eingabe" /></p>
 
 Eine Adresse pro Zeile oder mit Kommas getrennt einfügen. Duplikate verschwinden vor der Prüfung; fehlerhafte Zeilen bleiben als Ergebnisse sichtbar.
 
 ### 3.5 Quelle — CSV-Datei
-<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="CSV-Auswahl" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-file.webp" width="400" alt="CSV-Auswahl" /></p>
 
 Eine Dateikarte zeigt Symbol und Dateinamen. Es wird nur die erste Spalte gelesen, sodass auch unordentliche Exporte funktionieren.
 
 ### 3.6 Ergebnisse — das Kernstück
-<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="Ergebnisliste" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-results.webp" width="400" alt="Ergebnisliste" /></p>
 
 Jede Zeile zeigt die Adresse, ein farbiges Statussymbol, eine Begründung und Aktionen pro Zeile. Optionale Quellen-Chips zeigen die Bezeichnungen der tatsächlich antwortenden Dienste.
 
 ### 3.7 Filter und Suche
 <p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="Filtermenü" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="Live-Suche" />
+  <img src="assets/screenshots/de/sections/section-filter.webp" width="220" alt="Filtermenü" />
+  <img src="assets/screenshots/de/sections/section-search.webp" width="220" alt="Live-Suche" />
 </p>
 
 Sieben Filterzustände und ein ausklappbares Suchfeld arbeiten zusammen; eine Verzögerung von 80 ms hält die Eingabe flüssig.
@@ -101,12 +101,12 @@ Sieben Filterzustände und ein ausklappbares Suchfeld arbeiten zusammen; eine Ve
 Markieren Sie eine Adresse oder einen `mailto:`-Link auf einer beliebigen Seite und wählen Sie **Diese E-Mail-Adresse prüfen**. Das Ergebnis öffnet sich im Popup und beachtet den Datenschutzmodus: Ist er aktiv, findet kein externer Aufruf statt.
 
 ### 3.9 Einstellungen
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Einstellungen" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-options.webp" width="400" alt="Einstellungen" /></p>
 
 Datenschutzmodus, Hervorhebung auf der Seite, Quellen-Chips und die optionale CSV-Autokorrektur sind ausdrückliche Schalter. Die Autokorrektur ist standardmäßig aus und korrigiert nur bekannte Domain-Tippfehler in hochgeladenen CSVs; unbekannte Fehler werden nie geraten. Das Umschalten des Datenschutzmodus leert außerdem den Domain-Cache im Speicher.
 
 ### 3.10 Acht Sprachen, echtes RTL
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="Sprachmenü" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-language.webp" width="220" alt="Sprachmenü" /></p>
 
 Sofortiger Wechsel zwischen English, Español, Français, Deutsch, Português (Brasil), Русский, العربية und 中文（简体）. Arabisch kehrt das gesamte Layout logisch um, nicht nur optisch.
 
@@ -115,17 +115,17 @@ Sofortiger Wechsel zwischen English, Español, Français, Deutsch, Português (B
 Ein wirklich schwarzer Hintergrund mit abgestimmtem Kontrast, umschaltbar in der Kopfzeile und über Sitzungen hinweg gespeichert.
 
 ### 3.12 Seitenleiste für lange Listen
-<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="Seitenleiste" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-side.webp" width="320" alt="Seitenleiste" /></p>
 
 Derselbe Controller, eine breitere Fläche und ein einziger Scroll-Bereich — keine verschachtelten Scrollleisten.
 
 ### 3.13 Leerer Zustand
-<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="Leerer Zustand" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-empty.webp" width="400" alt="Leerer Zustand" /></p>
 
 Eine ehrliche Einladung zum Scannen oder Einfügen, nie eine leere Box.
 
 ### 3.14 Weiterentwicklung unterstützen
-<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="Supportbereich" /></p>
+<p align="center"><img src="assets/screenshots/de/sections/section-donate.webp" width="400" alt="Supportbereich" /></p>
 
 Mail Aura ist kostenlos und Open Source. PayPal und eine hervorgehobene InstaPay-Option helfen bei der Weiterentwicklung. Beide öffnen in einem neuen Tab; die Erweiterung sendet keine Daten.
 ## 4. Acht kostenlose Quellen
@@ -156,18 +156,7 @@ Es ist kein Build-Schritt und sind keine externen Abhängigkeiten erforderlich.
 
 ## 6. Entwicklung
 
-```powershell
-node --test tests/
-node --check ui.js             # Syntaxprüfung für jede JS-Datei
-node scripts/check-ui.mjs      # DOM-IDs, Manifestdateien, CSP, HTTPS
-node scripts/build-preview.mjs # dev/preview.html und preview-side.html neu erzeugen
-```
-
-Für das Screenshot-Hilfsprogramm ist Chrome erforderlich:
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
-```
+Das veröffentlichte Repository enthält nur die Erweiterung und ihre Dokumentation. Entwicklungsfixtures, Hilfsskripte und die lokale Testsuite bleiben bewusst außerhalb; GitHub Actions prüft bei jedem Push Manifest, CSP, Sprachabdeckung und gebündelte Dateien.
 
 ---
 

@@ -59,39 +59,39 @@ Chrome 和 Chromium 浏览器是主要目标。从 140 版起通过专用归档�
 ## 3. 界面导览 — 扩展的每个部分
 
 ### 3.1 顶部栏 — 触手可及
-<p align="center"><img src="assets/screenshots/en/sections/section-header.webp" width="400" alt="顶部栏" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-header.webp" width="400" alt="顶部栏" /></p>
 
 标题、语言选择器、主题切换、GitHub 链接和侧边栏按钮都在同一行紧凑排列。
 
 ### 3.2 一个主操作
-<p align="center"><img src="assets/screenshots/en/sections/section-hero.webp" width="400" alt="主操作" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-hero.webp" width="400" alt="主操作" /></p>
 
 一个渐变按钮完成当前来源的工作。下方**复制有效地址**和**导出 CSV**一键可达；结果工具栏还提供**复制显示的结果**、**清除结果**以及每行一个复制按钮。状态行准确说明发生了什么。
 
 ### 3.3 来源 — 当前页面
-<p align="center"><img src="assets/screenshots/en/sections/section-source.webp" width="400" alt="页面来源" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-source.webp" width="400" alt="页面来源" /></p>
 
 只扫描您正在阅读的页面上可见的地址。按下按钮前不会读取任何内容。
 
 ### 3.4 来源 — 粘贴的列表
-<p align="center"><img src="assets/screenshots/en/sections/section-manual.webp" width="400" alt="手动输入" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-manual.webp" width="400" alt="手动输入" /></p>
 
 每行粘贴一个地址，或用逗号分隔。重复项在验证前被去除，格式错误的行仍作为结果显示。
 
 ### 3.5 来源 — CSV 文件
-<p align="center"><img src="assets/screenshots/en/sections/section-file.webp" width="400" alt="CSV 选择器" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-file.webp" width="400" alt="CSV 选择器" /></p>
 
 文件卡片显示图标和所选文件名。只读取第一列，因此即使导出文件杂乱也能正常工作。
 
 ### 3.6 结果 — 产品的核心
-<p align="center"><img src="assets/screenshots/en/sections/section-results.webp" width="400" alt="结果列表" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-results.webp" width="400" alt="结果列表" /></p>
 
 每行显示地址、彩色状态徽章、一行原因和行内操作。可选来源标签显示实际响应的来源标识。
 
 ### 3.7 筛选与搜索
 <p align="center">
-  <img src="assets/screenshots/en/sections/section-filter.webp" width="220" alt="筛选菜单" />
-  <img src="assets/screenshots/en/sections/section-search.webp" width="220" alt="实时搜索" />
+  <img src="assets/screenshots/zh-CN/sections/section-filter.webp" width="220" alt="筛选菜单" />
+  <img src="assets/screenshots/zh-CN/sections/section-search.webp" width="220" alt="实时搜索" />
 </p>
 
 七种筛选状态与可展开的搜索框协同工作；80 毫秒防抖让输入保持流畅。
@@ -101,12 +101,12 @@ Chrome 和 Chromium 浏览器是主要目标。从 140 版起通过专用归档�
 在任何页面选中一个电子邮件地址或 `mailto:` 链接，然后选择**验证此电子邮件地址**。结果在弹出窗口中打开，并遵循隐私模式：启用时不会发起任何外部调用。
 
 ### 3.9 设置
-<p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="设置" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-options.webp" width="400" alt="设置" /></p>
 
 隐私模式、页面高亮、来源标签和可选的 CSV 自动更正都是明确开关。自动更正默认关闭，只修正上传 CSV 中已知域名拼写错误；绝不猜测未知错误。切换隐私模式还会清除内存中的域名缓存。
 
 ### 3.10 八种语言与真正的 RTL
-<p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="220" alt="语言菜单" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-language.webp" width="220" alt="语言菜单" /></p>
 
 即时切换 English、Español、Français、Deutsch、Português (Brasil)、Русский、العربية 和 中文（简体）。阿拉伯语按逻辑而非表面完整地翻转整个布局。
 
@@ -115,17 +115,17 @@ Chrome 和 Chromium 浏览器是主要目标。从 140 版起通过专用归档�
 真正的纯黑背景，经过对比度调优，从顶部栏切换并在会话间记住。
 
 ### 3.12 长列表侧边栏
-<p align="center"><img src="assets/screenshots/en/sections/section-side.webp" width="320" alt="侧边栏" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-side.webp" width="320" alt="侧边栏" /></p>
 
 相同的控制器、更宽的画布和单一滚动容器 — 没有嵌套滚动条。
 
 ### 3.13 空状态
-<p align="center"><img src="assets/screenshots/en/sections/section-empty.webp" width="400" alt="空状态" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-empty.webp" width="400" alt="空状态" /></p>
 
 诚实地邀请您扫描或粘贴，绝不是空白框。
 
 ### 3.14 支持持续开发
-<p align="center"><img src="assets/screenshots/en/sections/section-donate.webp" width="400" alt="支持区域" /></p>
+<p align="center"><img src="assets/screenshots/zh-CN/sections/section-donate.webp" width="400" alt="支持区域" /></p>
 
 Mail Aura 免费且开源。PayPal 和醒目的 InstaPay 选项帮助持续改进。两者都在新标签页打开；扩展不发送任何数据。
 ## 4. 八个免费来源
@@ -156,18 +156,7 @@ Mail Aura 免费且开源。PayPal 和醒目的 InstaPay 选项帮助持续改�
 
 ## 6. 开发
 
-```powershell
-node --test tests/
-node --check ui.js             # 检查所有 JS 文件的语法
-node scripts/check-ui.mjs      # 检查 DOM ID、清单文件、CSP、HTTPS
-node scripts/build-preview.mjs # 重新生成 dev/preview.html 和 preview-side.html
-```
-
-截图辅助工具需要 Chrome：
-
-```powershell
-node scripts/screenshot.mjs --url "file:///C:/.../dev/preview.html?theme=light&tall=1" --out dev/preview-light.png
-```
+发布的仓库只包含扩展及其文档。开发样例、辅助脚本和本地测试套件有意不纳入仓库；每次 push 时 GitHub Actions 都会校验清单、CSP、语言覆盖和随附资源。
 
 ---
 
