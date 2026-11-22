@@ -113,6 +113,9 @@ export function t(key, vars) {
 export function applyTranslations(root = document) {
   root.querySelectorAll('[data-i18n]').forEach((node) => {
     node.textContent = t(node.dataset.i18n);
+    // Translated text must be pronounced with the active locale's voice; the
+    // native <option>s otherwise keep their hardcoded lang="en".
+    node.lang = localeCode();
   });
   root.querySelectorAll('[data-i18n-attr]').forEach((node) => {
     node.dataset.i18nAttr.split(';').forEach((pair) => {

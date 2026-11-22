@@ -152,7 +152,7 @@ function showSkeleton() {
 function visibleResults() {
   const needle = query.trim().toLowerCase();
   return results.filter((result) => {
-    const status = result.confidence.status;
+    const status = result.confidence?.status ?? 'unknown';
     if (settings.filter !== 'all' && status !== settings.filter) return false;
     return !needle || result.email.toLowerCase().includes(needle);
   });
@@ -189,7 +189,7 @@ function render() {
 
 function summarize() {
   const counts = results.reduce((map, result) => {
-    const status = result.confidence.status;
+    const status = result.confidence?.status ?? 'unknown';
     map[status] = (map[status] ?? 0) + 1;
     return map;
   }, {});
@@ -423,8 +423,15 @@ function exportCsv() {
 
 async function openSidePanel() {
   try {
-    const win = await chrome.windows.getCurrent();
-    await chrome.sidePanel.open({ windowId: win.id });
+    if (chrome.sidePanel?.open) {
+      const win = await chrome.windows.getCurrent();
+      await chrome.sidePanel.open({ windowId: win.id });
+    } else if (chrome.sidebarAction?.open) {
+      // Firefox exposes the same surface as sidebarAction instead of sidePanel.
+      await chrome.sidebarAction.open();
+    } else {
+      await chrome.tabs.create({ url: chrome.runtime.getURL('sidepanel.html') });
+    }
     window.close();
   } catch {
     setStatus(t('statusPanelError'), 'error');
@@ -487,6 +494,9 @@ function bindEvents() {
     await saveSettings(settings);
     await loadLocale(settings.lang);
     applyTranslations(document);
+    // The theme label is action-oriented ("Switch to dark"), so it must be
+    // reapplied after a locale switch rather than left in the previous language.
+    applyTheme(theme, t);
     refreshCustomSelects();
     applySettingsToUI();
     render();
@@ -534,6 +544,10 @@ function bindEvents() {
   els.privacyMode.addEventListener('change', () => {
     settings.privacy = els.privacyMode.checked;
     clearDomainCache();
+    // A batch already in flight captured the old privacy mode and must not be
+    // allowed to render remote results after the user has switched to local-only.
+    scanToken += 1;
+    setBusy(false);
     saveSettings(settings);
     setStatus(settings.privacy
       ? t('connectionPrivate')
@@ -621,6 +635,10 @@ async function pendingResult() {
     // A result left behind by an old context-menu click must not appear later.
     const { at, ...result } = data.pendingResult;
     if (typeof at === 'number' && Date.now() - at > 60_000) return;
+    // Invalidate any running batch first: it still holds the previous token and
+    // would otherwise overwrite the freshly delivered context-menu result.
+    scanToken += 1;
+    setBusy(false);
     results = [result];
     render();
     setStatus(t('statusContextResult'));
@@ -658,10 +676,12 @@ async function init() {
 
   theme = await loadTheme();
   await loadLocale(settings.lang);
-  applyTheme(theme, t);
 
   enhanceCustomSelects();
   applyTranslations(document);
+  // Translations set the generic label; the theme controller then supplies the
+  // localized action name, so this order must be preserved.
+  applyTheme(theme, t);
   refreshCustomSelects();
   applySettingsToUI();
 

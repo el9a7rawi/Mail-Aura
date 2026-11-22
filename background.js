@@ -34,12 +34,18 @@ chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'local' && changes[SETTINGS_KEY]) void refreshContextMenuTitle();
 });
 
-chrome.contextMenus.onClicked.addListener(async (info) => {
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId !== 'mail-aura-verify') return;
 
-  const raw = info.linkUrl?.startsWith('mailto:')
-    ? decodeURIComponent(info.linkUrl.slice(7).split(/[?#]/u)[0])
-    : (info.selectionText ?? '');
+  let raw = info.selectionText ?? '';
+  if (info.linkUrl?.startsWith('mailto:')) {
+    try {
+      raw = decodeURIComponent(info.linkUrl.slice(7).split(/[?#]/u)[0]);
+    } catch {
+      // A page controls the href, so a stray '%' must not kill the whole action.
+      // Keep the selected text (often the visible address) as the fallback.
+    }
+  }
 
   const parsed = normalizeEmail(raw);
   if (!parsed) return;
@@ -49,6 +55,26 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
   const settings = await loadSettings();
   const result = await verifyEmail(parsed.normalized, { privacyMode: settings.privacy });
   await chrome.storage.session.set({ pendingResult: { ...result, at: Date.now() } });
-  if (chrome.action?.openPopup) await chrome.action.openPopup();
-  else await chrome.sidePanel?.open({ windowId: info.tab?.windowId });
+
+  // openPopup is exposed to every extension from Chrome 127; on 121-126 it may
+  // exist but reject. Presence alone is therefore not a capability check.
+  try {
+    if (chrome.action?.openPopup) {
+      await chrome.action.openPopup();
+      return;
+    }
+  } catch {
+    // Fall through to the side panel on builds where the call is gated.
+  }
+  try {
+    if (chrome.sidePanel?.open && tab?.id) {
+      await chrome.sidePanel.open({ tabId: tab.id });
+    } else if (chrome.sidebarAction?.open) {
+      await chrome.sidebarAction.open();
+    } else {
+      await chrome.tabs.create({ url: chrome.runtime.getURL('popup.html') });
+    }
+  } catch {
+    await chrome.tabs.create({ url: chrome.runtime.getURL('popup.html') });
+  }
 });

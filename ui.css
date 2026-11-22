@@ -72,7 +72,9 @@
   --warn: #b45309;
   --warn-soft: #fdf3e3;
   --muted-soft: #f1f2f6;
-  --switch-off: #cbd0dd;
+  /* >=3:1 against the card, since the clipped checkbox makes this the only
+     visible indicator of the OFF state. */
+  --switch-off: #8b93a7;
   --switch-knob-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   --menu-shadow: 0 12px 32px rgba(20, 24, 38, 0.14);
 
@@ -102,7 +104,7 @@ body[data-theme="dark"] {
   --warn: #fbbf24;
   --warn-soft: #2a2110;
   --muted-soft: #1c1c21;
-  --switch-off: #3f3f46;
+  --switch-off: #6b7280;
   --menu-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
 
   --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
@@ -130,9 +132,10 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* تعطيل تحديد النص إلا في الحقول القابلة للنسخ. */
+/* تعطيل تحديد النص إلا في الحقول القابلة للنسخ والمحتوى المعلوماتي. */
 .app { -webkit-user-select: none; user-select: none; }
-.result-email, .field, .file-name, .privacy-page { -webkit-user-select: text; user-select: text; }
+.result-email, .field, .file-name, .privacy-page,
+.result-detail, .result-caveat, .hint, .opt-text { -webkit-user-select: text; user-select: text; }
 
 .app {
   padding: 16px 16px 12px;
@@ -222,10 +225,11 @@ a.ghost-btn { text-decoration: none; }
 
 .status {
   font-size: 12.5px; color: var(--success); margin: 2px 2px 0;
-  font-weight: 700; min-height: 0; line-height: 1.5;
+  font-weight: 700; min-height: 1.5em; line-height: 1.5;
 }
-/* Keep the live region mounted so screen readers register it before text arrives. */
-.status:empty { visibility: hidden; }
+/* Keep the live region in the accessibility tree while empty. Hiding it makes
+   the text and the node appear in the same mutation, so announcements are lost. */
+.status:empty { color: transparent; }
 .status.error { color: var(--danger); }
 .status.busy { color: var(--accent); }
 
@@ -271,7 +275,7 @@ a.ghost-btn { text-decoration: none; }
 .switch::after {
   content: ""; position: absolute; top: 2px; inset-inline-start: 2px;
   width: 18px; height: 18px; border-radius: 50%; background: #ffffff; transition: transform 0.2s;
-  box-shadow: var(--switch-knob-shadow);
+  box-shadow: var(--switch-knob-shadow); border: 1px solid rgba(0, 0, 0, 0.25);
 }
 .switch-opt input:checked + .switch { background: var(--primary); }
 .switch-opt input:checked + .switch::after { transform: translateX(18px); }
@@ -523,19 +527,18 @@ a.ghost-btn { text-decoration: none; }
 .badge[data-status="invalid"] { background: var(--danger-soft); color: var(--danger); }
 
 .result-detail {
-  display: flex; align-items: baseline; gap: 4px; margin-top: 2px;
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px; margin-top: 2px;
   font-size: 11.5px; color: var(--muted); font-variant-numeric: tabular-nums;
-  white-space: nowrap; overflow: hidden;
 }
 .result-detail b { color: var(--text); font-weight: 700; }
 .result-score { flex-shrink: 0; }
 .result-detail .sep { opacity: 0.5; flex-shrink: 0; }
-.result-reason {
-  min-width: 0; overflow: hidden; text-overflow: ellipsis;
-}
+.result-reason { min-width: 0; overflow-wrap: anywhere; }
+/* Caveats carry safety wording ("does not prove the mailbox exists"), so they
+   must wrap rather than truncate with no way to reveal the full text. */
 .result-caveat {
   margin: 4px 0 0; font-size: 11px; line-height: 1.35; color: var(--muted);
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 .sources { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
 .source-chip {

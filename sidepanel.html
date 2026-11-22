@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark" />
-  <title>Mail Aura — Side Panel</title>
+  <title data-i18n="docTitleSide">Mail Aura — Side Panel</title>
   <link rel="stylesheet" href="ui.css" />
 </head>
 <body class="sidepanel" data-theme="light">
@@ -94,7 +94,7 @@
         <label class="sr-only" for="manualInput" data-i18n="modeManual">Paste addresses</label>
         <textarea id="manualInput" class="field" dir="ltr" spellcheck="false" data-i18n-placeholder="manualPlaceholder" placeholder="name@example.com&#10;team@company.com"></textarea>
         <div class="pane-foot">
-          <span id="manualCount" class="counter">0</span>
+          <span id="manualCount" class="counter" aria-live="polite">0</span>
           <button id="clearManual" class="link-btn" type="button" data-i18n="clearField">Clear field</button>
         </div>
       </div>
@@ -107,7 +107,7 @@
             <span class="file-stub-type">CSV</span>
           </span>
           <span class="file-body">
-            <span id="fileName" class="file-name" dir="ltr">No file selected</span>
+            <span id="fileName" class="file-name" dir="ltr" aria-live="polite">No file selected</span>
             <span class="file-caption" data-i18n="fileHint">Only the first column is read</span>
           </span>
           <button id="pickFile" class="file-pick" type="button" data-i18n-attr="aria-label:pickFile;title:pickFile" aria-label="Choose CSV">
@@ -183,22 +183,22 @@
       <div class="opts">
         <label class="opt switch-opt">
           <span class="opt-text"><span class="opt-num" aria-hidden="true">1.</span><span data-i18n="privacyOption">Privacy mode — local checks only</span></span>
-          <input type="checkbox" id="privacyMode" />
+          <input type="checkbox" role="switch" id="privacyMode" />
           <span class="switch" aria-hidden="true"></span>
         </label>
         <label class="opt switch-opt">
           <span class="opt-text"><span class="opt-num" aria-hidden="true">2.</span><span data-i18n="highlightOption">Highlight addresses on the page</span></span>
-          <input type="checkbox" id="highlightPage" checked />
+          <input type="checkbox" role="switch" id="highlightPage" checked />
           <span class="switch" aria-hidden="true"></span>
         </label>
         <label class="opt switch-opt">
           <span class="opt-text"><span class="opt-num" aria-hidden="true">3.</span><span data-i18n="showSourcesOption">Show source details in each result</span></span>
-          <input type="checkbox" id="showSources" />
+          <input type="checkbox" role="switch" id="showSources" />
           <span class="switch" aria-hidden="true"></span>
         </label>
         <label class="opt switch-opt">
           <span class="opt-text"><span class="opt-num" aria-hidden="true">4.</span><span data-i18n="autoFixOption">Auto-correct common CSV typos</span></span>
-          <input type="checkbox" id="autoFix" />
+          <input type="checkbox" role="switch" id="autoFix" />
           <span class="switch" aria-hidden="true"></span>
         </label>
       </div>

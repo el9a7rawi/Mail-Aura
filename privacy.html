@@ -7,7 +7,8 @@
     <title>Mail Aura — Privacy Policy</title>
     <link rel="stylesheet" href="ui.css" />
   </head>
-  <body class="privacy-page">
+  <body class="privacy-page" data-theme="light">
+    <main>
     <h1>Privacy Policy and Disclosure</h1>
 
     <p>
@@ -60,14 +61,7 @@
       Compliance: data received is used only for the stated purpose, in line with the
       Chrome Web Store User Data Policy, including the Limited Use requirements.
     </p>
-  <script type="module">
-    import { applyTheme, loadTheme } from './ui/theme.js';
-    import { loadLocale } from './i18n.js';
-    import { loadSettings } from './lib/settings.js';
-
-    const [theme, settings] = await Promise.all([loadTheme(), loadSettings()]);
-    applyTheme(theme);
-    await loadLocale(settings.lang ?? 'en');
-  </script>
+    </main>
+    <script type="module" src="privacy.js"></script>
   </body>
 </html>

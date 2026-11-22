@@ -12,6 +12,8 @@ function buildOptions(native, button, menu) {
     const item = document.createElement('li');
     item.className = 'cselect-option';
     item.setAttribute('role', 'option');
+    // Native options carry lang; keep it so screen readers use the right voice.
+    item.lang = option.lang;
     item.dataset.value = option.value;
     item.dataset.index = String(index);
     item.id = `${native.id}-option-${index}`;
@@ -19,6 +21,7 @@ function buildOptions(native, button, menu) {
 
     const label = document.createElement('span');
     label.className = 'cselect-opt-label';
+    label.lang = option.lang;
     label.textContent = option.textContent;
 
     const check = document.createElement('span');
@@ -46,6 +49,7 @@ export function enhanceCustomSelects() {
     if (!native || !button || !menu) return;
 
     menu.id = `${native.id}-options`;
+    button.setAttribute('role', 'combobox');
     button.setAttribute('aria-controls', menu.id);
     buildOptions(native, button, menu);
 
@@ -101,12 +105,16 @@ export function refreshCustomSelects() {
 export function syncCustomSelects() {
   document.querySelectorAll('.cselect').forEach((wrap) => {
     const native = document.getElementById(wrap.dataset.select);
+    const button = wrap.querySelector('.cselect-btn');
     const label = wrap.querySelector('.cselect-value');
     const menu = wrap.querySelector('.cselect-menu');
     if (!native || !menu) return;
 
     const current = Array.from(native.options).find((option) => option.value === native.value);
     if (label && current) label.textContent = current.textContent;
+    // aria-labelledby overrides descendant content, so the selected value must
+    // be exposed separately for the select-only combobox pattern.
+    button?.setAttribute('aria-valuetext', current?.textContent ?? '');
     menu.querySelectorAll('.cselect-option').forEach((item) => {
       item.setAttribute('aria-selected', item.dataset.value === native.value ? 'true' : 'false');
     });
