@@ -45,7 +45,7 @@
 
 **Firefox** (file `mail-aura-firefox-v{{VERSION}}.zip`):
 
-This archive has its own Firefox manifest (sidebar action, classic background script). Do not use the Chrome archive on Firefox.
+This archive has its own Firefox manifest (sidebar action, module-based event page). Do not use the Chrome archive on Firefox.
 
 1. Unzip the archive.
 2. Open `about:debugging` → This Firefox → Load Temporary Add-on → select `manifest.json`.
@@ -58,7 +58,8 @@ This archive has its own Firefox manifest (sidebar action, classic background sc
 
 | Browser | Minimum version |
 |---|---|
-| Chrome / Edge / Brave / Opera | **121+** |
+| Chrome / Edge | **121+** |
+| Brave / Opera | current releases (Chromium 121+) |
 | Firefox | **140+** (Firefox Android 142+) |
 
 </div>

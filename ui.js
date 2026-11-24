@@ -69,6 +69,12 @@ let searchTimer = 0;
 // Invalidated by "clear results" or a source switch so a late batch cannot
 // repopulate results the user has already discarded.
 let scanToken = 0;
+// Resolved at load time so the side-panel button can call the gesture-gated
+// API synchronously; querying the window inside the click handler loses it.
+let currentWindowId = null;
+void globalThis.chrome?.windows?.getCurrent?.().then?.((win) => {
+  currentWindowId = win?.id ?? null;
+}).catch?.(() => {});
 
 /* ---------- Source / hero ---------- */
 
@@ -443,21 +449,26 @@ function exportCsv() {
 
 /* ---------- Side panel ---------- */
 
-async function openSidePanel() {
+function openSidePanel() {
   try {
-    if (chrome.sidePanel?.open) {
-      const win = await chrome.windows.getCurrent();
-      await chrome.sidePanel.open({ windowId: win.id });
+    // open() must be called synchronously from the click: an await here loses
+    // the user gesture and the call is rejected by both browsers.
+    if (chrome.sidePanel?.open && currentWindowId !== null) {
+      void chrome.sidePanel.open({ windowId: currentWindowId }).catch(() => openPanelFallback());
     } else if (chrome.sidebarAction?.open) {
       // Firefox exposes the same surface as sidebarAction instead of sidePanel.
-      await chrome.sidebarAction.open();
+      void chrome.sidebarAction.open().catch(() => openPanelFallback());
     } else {
-      await chrome.tabs.create({ url: chrome.runtime.getURL('sidepanel.html') });
+      openPanelFallback();
     }
     window.close();
   } catch {
     setStatus(t('statusPanelError'), 'error');
   }
+}
+
+function openPanelFallback() {
+  try { void chrome.tabs.create({ url: chrome.runtime.getURL('sidepanel.html') }); } catch { /* no tab API */ }
 }
 
 /* ---------- Search ---------- */

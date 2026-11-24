@@ -34,9 +34,40 @@ chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'local' && changes[SETTINGS_KEY]) void refreshContextMenuTitle();
 });
 
-chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId !== 'mail-aura-verify') return;
+function openFallbackSurface() {
+  try { void chrome.tabs.create({ url: chrome.runtime.getURL('popup.html') }); } catch { /* no tab API */ }
+}
 
+// Panel APIs are gesture-gated: the call must happen in the same turn as the
+// click, before any promise is awaited. The result reaches the surface later
+// through storage.session, so ordering the calls this way is safe.
+function openResultSurface(tab) {
+  try {
+    if (chrome.sidePanel?.open && tab?.id) {
+      void chrome.sidePanel.open({ tabId: tab.id }).catch(() => openFallbackSurface());
+      return;
+    }
+    if (chrome.sidebarAction?.open) {
+      void chrome.sidebarAction.open().catch(() => openFallbackSurface());
+      return;
+    }
+    if (chrome.action?.openPopup) {
+      void chrome.action.openPopup().catch(() => openFallbackSurface());
+      return;
+    }
+  } catch {
+    // An unavailable API in this browser; use the tab fallback below.
+  }
+  openFallbackSurface();
+}
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId !== 'mail-aura-verify') return;
+  openResultSurface(tab);
+  void verifyFromContextMenu(info);
+});
+
+async function verifyFromContextMenu(info) {
   let raw = info.selectionText ?? '';
   if (info.linkUrl?.startsWith('mailto:')) {
     try {
@@ -55,26 +86,4 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   const settings = await loadSettings();
   const result = await verifyEmail(parsed.normalized, { privacyMode: settings.privacy });
   await chrome.storage.session.set({ pendingResult: { ...result, at: Date.now() } });
-
-  // openPopup is exposed to every extension from Chrome 127; on 121-126 it may
-  // exist but reject. Presence alone is therefore not a capability check.
-  try {
-    if (chrome.action?.openPopup) {
-      await chrome.action.openPopup();
-      return;
-    }
-  } catch {
-    // Fall through to the side panel on builds where the call is gated.
-  }
-  try {
-    if (chrome.sidePanel?.open && tab?.id) {
-      await chrome.sidePanel.open({ tabId: tab.id });
-    } else if (chrome.sidebarAction?.open) {
-      await chrome.sidebarAction.open();
-    } else {
-      await chrome.tabs.create({ url: chrome.runtime.getURL('popup.html') });
-    }
-  } catch {
-    await chrome.tabs.create({ url: chrome.runtime.getURL('popup.html') });
-  }
-});
+}

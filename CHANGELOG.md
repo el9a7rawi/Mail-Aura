@@ -6,6 +6,19 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.6] - 2026-11-24
+
+### Fixed
+
+- Open the side panel and the context-menu result surface synchronously from
+  the click handler, before any `await`, so the user gesture survives and the
+  panel opens in Chrome, Edge, Brave, Opera and Firefox.
+- Give the Firefox package its own privacy disclosure (`sidebar_action` and
+  Mozilla policies instead of `sidePanel` and Chrome Web Store wording).
+- Replace the build-time `sed` patch with a reviewable transform that removes
+  the Chrome-only branches entirely instead of leaving dead `if (undefined)` code.
+- Correct the browser-version and background-model wording in the release notes.
+
 ## [0.1.5] - 2026-11-22
 
 ### Changed
@@ -75,7 +88,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Initial MV3 release: eight keyless HTTPS sources, eight locales, CSV import and
   export, context-menu verification, side panel, dark theme, and privacy mode.
 
-[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.5...HEAD
+[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.6...HEAD
+[0.1.6]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.2...v0.1.3
