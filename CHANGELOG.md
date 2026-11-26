@@ -6,6 +6,14 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.9] - 2026-11-26
+
+### Changed
+
+- Displayed success now starts at 100% and deducts only concrete evidence gaps
+  (disagreement, corrections, risk signals, missing local evidence). The caveat
+  that the estimate does not prove mailbox existence remains unchanged.
+
 ## [0.1.8] - 2026-11-26
 
 ### Added
@@ -131,7 +139,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Initial MV3 release: eight keyless HTTPS sources, eight locales, CSV import and
   export, context-menu verification, side panel, dark theme, and privacy mode.
 
-[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.8...HEAD
+[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.9...HEAD
+[0.1.9]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.8...v0.1.9
 [0.1.8]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.7...v0.1.8
 [0.1.7]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.5...v0.1.6
