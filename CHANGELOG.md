@@ -6,22 +6,36 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.7] - 2026-11-26
+
+### Fixed
+
+- Never rewrite real domains such as `ymail.com` or `dmail.com` into a different
+  provider: general letter substitution is replaced by documented digit slips
+  and explicitly protected hosts.
+- Treat the dedicated language key as authoritative when a stale settings object
+  disagrees, and reflect the saved language in the language selector after reopen.
+- Apply the same alias-aware duplicate rule in auto-fix as in the paste parser.
+- Reject any correction that would produce an invalid address.
+
 ### Added
 
-- A conservative local typo engine covering 523 explicit scenarios: known suffix
-  mistakes, duplicated/missing/swapped label characters, and role-mailbox typos,
-  corrected only when a single well-known domain matches.
+- Suffix and label scenarios total 522, plus fixed negative cases for real
+  providers and ambiguous typos.
+
+## [0.1.6] - 2026-11-24
+
+### Added
+
+- A conservative local typo engine covering 522 systematic scenarios: known
+  suffix mistakes, duplicated/missing/swapped label characters, and role-mailbox
+  typos, corrected only when a single well-known domain matches.
 - Auto-correction now applies to pasted lists as well as CSV uploads, including
   in Privacy mode.
 
 ### Fixed
 
 - A language chosen in the side panel survives closing and reopening it.
-
-## [0.1.6] - 2026-11-24
-
-### Fixed
-
 - Open the side panel and the context-menu result surface synchronously from
   the click handler, before any `await`, so the user gesture survives and the
   panel opens in Chrome, Edge, Brave, Opera and Firefox.
@@ -100,7 +114,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Initial MV3 release: eight keyless HTTPS sources, eight locales, CSV import and
   export, context-menu verification, side panel, dark theme, and privacy mode.
 
-[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.6...HEAD
+[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.7...HEAD
+[0.1.7]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.3...v0.1.4

@@ -499,6 +499,7 @@ function collapseSearch() {
 /* ---------- Init ---------- */
 
 function applySettingsToUI() {
+  if (els.lang) els.lang.value = settings.lang ?? 'en';
   els.mode.value = settings.mode;
   els.filter.value = settings.filter;
   els.privacyMode.checked = settings.privacy;
