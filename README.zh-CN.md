@@ -100,7 +100,7 @@ Chrome 和 Chromium 浏览器是主要目标。从 140 版起通过专用归档�
 ### 3.9 设置
 <p align="center"><img src="assets/screenshots/zh-CN/sections/section-options.webp" width="400" alt="设置" /></p>
 
-隐私模式、页面高亮、来源标签和可选的 CSV 自动更正都是明确开关。自动更正默认关闭，只修正上传 CSV 中已知域名拼写错误；绝不猜测未知错误。切换隐私模式还会清除内存中的域名缓存。
+隐私模式、页面高亮、来源标签和可选自动更正都是明确开关。自动更正默认关闭，只修正粘贴列表、页面扫描和 CSV 中已知的域名拼写错误——隐私模式下同样有效。未知或有歧义的错误绝不会猜测。切换隐私模式还会清除内存中的域名缓存。
 
 ### 3.10 八种语言与真正的 RTL
 <p align="center"><img src="assets/screenshots/zh-CN/sections/section-language.webp" width="400" alt="语言菜单" /></p>

@@ -310,14 +310,27 @@ async function scanPage(token) {
   }
 }
 
+// Auto-correction is local, so it stays available in Privacy mode and for
+// pasted lists as well as CSV uploads.
+function applyAutoFix(list, note) {
+  if (!settings.autoFix) return { list, note, correctedFrom: [] };
+  const fixed = autoFixEmails(list);
+  const applied = fixed.corrections ? t('statusAutoFixed', { n: fixed.corrections }) : '';
+  return {
+    list: fixed.emails,
+    correctedFrom: fixed.correctedFrom,
+    note: applied ? (note ? `${note} ${applied}` : applied) : note
+  };
+}
+
 async function checkManual(token) {
   const parsed = parsedManual();
-  const list = fromParsed(parsed);
-  if (!list.length) {
+  const fixed = applyAutoFix(fromParsed(parsed), duplicatesNote(parsed.duplicates));
+  if (!fixed.list.length) {
     setStatus(t('statusNeedManual'), 'error');
     return;
   }
-  await verifyList(list, duplicatesNote(parsed.duplicates), token);
+  await verifyList(fixed.list, fixed.note, token, fixed.correctedFrom);
 }
 
 async function checkFile(token) {
@@ -332,26 +345,14 @@ async function checkFile(token) {
   }
 
   const parsed = parseEmailLines(csvEmails(await file.text()).join('\n'));
-  let list = fromParsed(parsed);
-  let note = duplicatesNote(parsed.duplicates);
-  let correctedFrom = [];
+  const fixed = applyAutoFix(fromParsed(parsed), duplicatesNote(parsed.duplicates));
 
-  if (settings.autoFix) {
-    const fixed = autoFixEmails(list);
-    list = fixed.emails;
-    correctedFrom = fixed.correctedFrom;
-    if (fixed.corrections) {
-      const applied = t('statusAutoFixed', { n: fixed.corrections });
-      note = note ? `${note} ${applied}` : applied;
-    }
-  }
-
-  if (!list.length) {
+  if (!fixed.list.length) {
     setStatus(t('statusFileEmpty'), 'error');
     return;
   }
 
-  await verifyList(list, note, token, correctedFrom);
+  await verifyList(fixed.list, fixed.note, token, fixed.correctedFrom);
 }
 
 async function applyFix(result) {

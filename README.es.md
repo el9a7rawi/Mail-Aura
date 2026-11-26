@@ -100,7 +100,7 @@ Selecciona una dirección o un enlace `mailto:` en cualquier página y elige **V
 ### 3.9 Ajustes
 <p align="center"><img src="assets/screenshots/es/sections/section-options.webp" width="400" alt="Ajustes" /></p>
 
-El modo privacidad, el resaltado de la página, los chips de fuentes y la autocorrección opcional de CSV son interruptores explícitos. La autocorrección está desactivada por defecto y solo reescribe errores conocidos de dominio en CSV subidos; nunca adivina errores desconocidos. Activar el modo privacidad también vacía la caché de dominio en memoria.
+El modo privacidad, el resaltado de la página, los chips de fuentes y la autocorrección opcional son interruptores explícitos. La autocorrección está desactivada por defecto y solo reescribe errores conocidos de dominio en listas pegadas, escaneos de página y CSV — también en modo privacidad. Los errores desconocidos o ambiguos nunca se adivinan. Activar el modo privacidad también vacía la caché de dominio en memoria.
 
 ### 3.10 Ocho idiomas, RTL real
 <p align="center"><img src="assets/screenshots/es/sections/section-language.webp" width="400" alt="Menú de idiomas" /></p>

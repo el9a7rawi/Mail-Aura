@@ -53,7 +53,7 @@
   "emptyTitle": "Noch keine Ergebnisse",
   "emptyHint": "Scanne eine Seite oder füge eine Liste ein, um zu beginnen.",
   "settingsTitle": "Einstellungen",
-  "autoFixOption": "Häufige CSV-Tippfehler automatisch korrigieren",
+  "autoFixOption": "Häufige Domain-Tippfehler automatisch korrigieren",
   "statusAutoFixed": {
     "one": "{n} Adresse automatisch korrigiert",
     "other": "{n} Adressen automatisch korrigiert"

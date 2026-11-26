@@ -100,7 +100,7 @@ Sélectionnez une adresse ou un lien `mailto:` sur n'importe quelle page, puis c
 ### 3.9 Paramètres
 <p align="center"><img src="assets/screenshots/fr/sections/section-options.webp" width="400" alt="Paramètres" /></p>
 
-Le mode confidentialité, la mise en évidence de la page, les pastilles de sources et la correction automatique optionnelle des CSV sont des interrupteurs explicites. La correction est désactivée par défaut et ne réécrit que les erreurs de domaine connues dans les CSV importés ; aucune erreur inconnue n'est devinée. Activer le mode confidentialité vide aussi le cache de domaine en mémoire.
+Le mode confidentialité, la mise en évidence de la page, les pastilles de sources et la correction automatique optionnelle sont des interrupteurs explicites. La correction est désactivée par défaut et ne réécrit que les erreurs de domaine connues dans les listes collées, les analyses de page et les CSV — y compris en mode confidentialité. Aucune erreur inconnue ou ambiguë n'est devinée. Activer le mode confidentialité vide aussi le cache de domaine en mémoire.
 
 ### 3.10 Huit langues, vrai RTL
 <p align="center"><img src="assets/screenshots/fr/sections/section-language.webp" width="400" alt="Menu des langues" /></p>

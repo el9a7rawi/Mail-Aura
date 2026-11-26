@@ -100,7 +100,7 @@ Markieren Sie eine Adresse oder einen `mailto:`-Link auf einer beliebigen Seite 
 ### 3.9 Einstellungen
 <p align="center"><img src="assets/screenshots/de/sections/section-options.webp" width="400" alt="Einstellungen" /></p>
 
-Datenschutzmodus, Hervorhebung auf der Seite, Quellen-Chips und die optionale CSV-Autokorrektur sind ausdrückliche Schalter. Die Autokorrektur ist standardmäßig aus und korrigiert nur bekannte Domain-Tippfehler in hochgeladenen CSVs; unbekannte Fehler werden nie geraten. Das Umschalten des Datenschutzmodus leert außerdem den Domain-Cache im Speicher.
+Datenschutzmodus, Hervorhebung auf der Seite, Quellen-Chips und die optionale Autokorrektur sind ausdrückliche Schalter. Die Autokorrektur ist standardmäßig aus und korrigiert nur bekannte Domain-Tippfehler in eingefügten Listen, Seitenscans und CSV-Dateien — auch im Datenschutzmodus. Unbekannte oder mehrdeutige Fehler werden nie geraten. Das Umschalten des Datenschutzmodus leert außerdem den Domain-Cache im Speicher.
 
 ### 3.10 Acht Sprachen, echtes RTL
 <p align="center"><img src="assets/screenshots/de/sections/section-language.webp" width="400" alt="Sprachmenü" /></p>

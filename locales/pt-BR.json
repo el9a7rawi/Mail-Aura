@@ -53,7 +53,7 @@
   "emptyTitle": "Nenhum resultado ainda",
   "emptyHint": "Escaneie uma página ou cole uma lista para começar.",
   "settingsTitle": "Configurações",
-  "autoFixOption": "Corrigir automaticamente erros comuns de CSV",
+  "autoFixOption": "Corrigir automaticamente erros comuns de domínio",
   "statusAutoFixed": {
     "one": "{n} endereço corrigido automaticamente",
     "other": "{n} endereços corrigidos automaticamente"

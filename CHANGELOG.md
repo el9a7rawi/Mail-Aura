@@ -6,6 +6,18 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- A conservative local typo engine covering 523 explicit scenarios: known suffix
+  mistakes, duplicated/missing/swapped label characters, and role-mailbox typos,
+  corrected only when a single well-known domain matches.
+- Auto-correction now applies to pasted lists as well as CSV uploads, including
+  in Privacy mode.
+
+### Fixed
+
+- A language chosen in the side panel survives closing and reopening it.
+
 ## [0.1.6] - 2026-11-24
 
 ### Fixed

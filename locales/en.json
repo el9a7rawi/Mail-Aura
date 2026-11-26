@@ -53,7 +53,7 @@
   "emptyTitle": "No results yet",
   "emptyHint": "Scan a page or paste a list to begin.",
   "settingsTitle": "Settings",
-  "autoFixOption": "Auto-correct common CSV typos",
+  "autoFixOption": "Auto-correct common domain typos",
   "statusAutoFixed": {
     "one": "Auto-corrected {n} address",
     "other": "Auto-corrected {n} addresses"

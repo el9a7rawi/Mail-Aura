@@ -53,7 +53,7 @@
   "emptyTitle": "Aucun résultat pour l'instant",
   "emptyHint": "Analysez une page ou collez une liste pour commencer.",
   "settingsTitle": "Paramètres",
-  "autoFixOption": "Corriger automatiquement les fautes CSV courantes",
+  "autoFixOption": "Corriger automatiquement les fautes de domaine courantes",
   "statusAutoFixed": {
     "one": "{n} adresse corrigée automatiquement",
     "other": "{n} adresses corrigées automatiquement"

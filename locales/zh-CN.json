@@ -53,7 +53,7 @@
   "emptyTitle": "暂无结果",
   "emptyHint": "扫描页面或粘贴列表即可开始。",
   "settingsTitle": "设置",
-  "autoFixOption": "自动修正 CSV 中的常见拼写错误",
+  "autoFixOption": "自动更正常见域名拼写错误",
   "statusAutoFixed": {
     "other": "已自动修正 {n} 个地址"
   },

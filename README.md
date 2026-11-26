@@ -101,7 +101,7 @@ Select an email address or a `mailto:` link on any page, then choose **Verify th
 ### 3.9 Settings
 <p align="center"><img src="assets/screenshots/en/sections/section-options.webp" width="400" alt="Settings" /></p>
 
-Privacy mode, page highlighting, source chips, and optional CSV auto-correction are explicit switches. Auto-correction is off by default and only rewrites known domain typos in uploaded CSVs; unknown typos are never guessed. Toggling Privacy mode also clears the in-memory domain cache.
+Privacy mode, page highlighting, source chips, and optional auto-correction are explicit switches. Auto-correction is off by default and rewrites only well-known domain typos in pasted lists, page scans and CSV uploads — including in Privacy mode. Ambiguous or unknown typos are never guessed. Toggling Privacy mode also clears the in-memory domain cache.
 
 ### 3.10 Eight languages, real RTL
 <p align="center"><img src="assets/screenshots/en/sections/section-language.webp" width="400" alt="Language menu" /></p>
