@@ -522,10 +522,17 @@ function bindEvents() {
   });
   els.openPanel?.addEventListener('click', openSidePanel);
 
-  els.lang?.addEventListener('change', async () => {
+  els.lang?.addEventListener('change', () => {
     settings.lang = els.lang.value;
-    await saveSettings(settings);
-    await loadLocale(settings.lang);
+    // Dispatch both writes in this turn: the side panel is destroyed as soon as
+    // it is closed, so neither write may wait on an await to be sent.
+    void saveSettings(settings);
+    void chrome.storage?.local?.set?.({ lang: settings.lang });
+    void applyLanguage(settings.lang);
+  });
+
+  async function applyLanguage(code) {
+    await loadLocale(code);
     applyTranslations(document);
     // The theme label is action-oriented ("Switch to dark"), so it must be
     // reapplied after a locale switch rather than left in the previous language.
@@ -533,7 +540,7 @@ function bindEvents() {
     refreshCustomSelects();
     applySettingsToUI();
     render();
-  });
+  }
 
   els.mode.addEventListener('change', () => {
     if (busy) {
