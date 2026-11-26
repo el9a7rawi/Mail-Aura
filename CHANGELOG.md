@@ -6,12 +6,22 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.8] - 2026-11-26
+
 ### Added
 
 - A local email intelligence module that detects plain, angle-bracket, `mailto:`
   and obfuscated addresses, classifies providers, reports risk signals, suggests
   conservative corrections and produces a bounded local estimate.
 - Privacy mode now shows that local estimate while keeping the `unknown` status.
+
+### Fixed
+
+- One shared syntax validator now governs the brain, correction engine and
+  validation; invalid addresses are never rewritten into other invalid ones.
+- Detection no longer invents addresses from URL or mailto query syntax.
+- Source weights are prototype-safe and duplicate answers from one provider can
+  no longer promote a verdict.
 
 ## [0.1.7] - 2026-11-26
 
@@ -121,7 +131,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Initial MV3 release: eight keyless HTTPS sources, eight locales, CSV import and
   export, context-menu verification, side panel, dark theme, and privacy mode.
 
-[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.7...HEAD
+[Unreleased]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.8...HEAD
+[0.1.8]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.7...v0.1.8
 [0.1.7]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/el9a7rawi/Mail-Aura/compare/v0.1.4...v0.1.5
