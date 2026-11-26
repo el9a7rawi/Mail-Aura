@@ -6,6 +6,13 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- A local email intelligence module that detects plain, angle-bracket, `mailto:`
+  and obfuscated addresses, classifies providers, reports risk signals, suggests
+  conservative corrections and produces a bounded local estimate.
+- Privacy mode now shows that local estimate while keeping the `unknown` status.
+
 ## [0.1.7] - 2026-11-26
 
 ### Fixed
